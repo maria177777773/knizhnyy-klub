@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="10 вариантов книжного клуба">
-<meta property="og:description" content="Имя и визуал книжного клуба: плакат, ачивка, мерч и экран голосования">
+<meta property="og:description" content="Плакат, ачивка, мерч и экран голосования в десяти вариантах">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>10 вариантов книжного клуба</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,20 +61,6 @@ p{margin:0}
 .intro h1{font-size:var(--fs-xxl);font-weight:900;letter-spacing:-.02em}
 .lead{font-size:var(--fs-l);max-width:100ch;color:var(--muted)}
 .lead b{color:var(--ink)}
-.rank{display:grid;gap:10px}
-.rank h2,.frame h2{font-size:var(--fs-xl);font-weight:700}
-.rank ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:r}
-.rank li{counter-increment:r;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:var(--fs-m)}
-.rank li::before{content:counter(r);font:500 var(--fs-s) var(--f-mono);color:var(--muted)}
-.rank li a{color:var(--ink);font-weight:700;text-decoration:none}
-.rank li span{font:500 var(--fs-s) var(--f-mono);color:var(--muted)}
-.rank li.best{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.rank li.best a,.rank li.best span,.rank li.best::before{color:var(--paper)}
-.frame{display:grid;gap:12px}
-.frame .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.frame article{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:8px;align-content:start}
-.frame h3{font-size:var(--fs-l);font-weight:700}
-.frame p{font-size:var(--fs-m);color:var(--muted)}
 
 /* ---------- variant ---------- */
 .v{padding-block:44px;border-top:1px solid var(--line);display:grid;gap:18px;scroll-margin-top:72px}
@@ -83,7 +69,6 @@ p{margin:0}
 .vnum{font:500 var(--fs-m) var(--f-mono);background:var(--chip);border-radius:8px;padding:4px 10px}
 .vh h2{font-size:var(--fs-xl);font-weight:900}
 .vh .concept{flex-basis:100%;order:5;color:var(--muted);font-size:var(--fs-m)}
-.score{font:500 var(--fs-m) var(--f-mono);padding:4px 10px;border-radius:8px;border:1px solid var(--line)}
 .acts{margin-left:auto;display:flex;gap:8px}
 .acts button{height:var(--btn-h);border-radius:10px;font:700 var(--fs-m) var(--f-body);cursor:pointer;padding:0 18px}
 .acts .ok{background:var(--go);color:var(--go-ink);border:0}
@@ -115,11 +100,6 @@ p{margin:0}
 .w-btn{display:inline-flex;align-items:center;height:40px;padding:0 16px;background:var(--wfg);color:var(--wbg);border-radius:var(--wr);font-weight:700;font-size:17px}
 .w-foot small{font-size:14px;opacity:.75}
 
-.verdict{display:grid;grid-template-columns:2fr 1.3fr 1.3fr auto;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.verdict h4{margin:0 0 6px;font-size:var(--fs-s);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
-.verdict ul{margin:0;padding-left:18px;display:grid;gap:4px}
-.verdict .big{font:900 44px/1 var(--f-body);text-align:right;white-space:nowrap}
-.verdict .big small{font-size:18px;color:var(--muted);font-weight:500}
 
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:12px;font-size:var(--fs-m);max-width:min(560px,calc(100vw - 32px));z-index:30;display:grid;gap:6px}
 .toast input{font:500 var(--fs-m) var(--f-body);padding:8px 10px;border-radius:8px;border:0;width:100%}
@@ -128,14 +108,11 @@ p{margin:0}
 @media (max-width:1000px){
   .apps{grid-template-columns:1fr 1fr}
   .apps .app.wide{grid-column:1/-1}
-  .verdict{grid-template-columns:1fr 1fr}
-  .verdict .big{text-align:left}
-}
+    }
 @media (max-width:560px){
   body{padding:0 16px}
   .top{margin:0 -16px;padding:8px 16px}
-  .apps,.verdict{grid-template-columns:1fr}
-  .app svg{max-width:300px}
+  .apps,  .app svg{max-width:300px}
   .acts{margin-left:0;width:100%}
   .acts .ok{flex:1}
 }
@@ -158,82 +135,14 @@ p{margin:0}
 <main class="wrap">
   <section class="intro">
     <h1>10 вариантов книжного клуба</h1>
-    <p class="lead">Имя и визуал клуба в десяти вариантах. Под каждым плакатом значок-ачивка, шоппер с цитатой и экран голосования за книгу. Цифры голосов в экранах пример.</p>
+    <p class="lead">Под каждым плакатом значок-ачивка, шоппер с цитатой и экран голосования за книгу. Цифры голосов в экранах пример.</p>
 
-    <div class="rank">
-      <h2>Рейтинг</h2>
-      <ol>
-        <li class="best"><a href="#g9">G9 Человек читающий · революция</a><span>9/10</span></li>
-        <li class="best"><a href="#g11">G11 Корешки · кореша</a><span>9/10</span></li>
-        <li><a href="#g6">G6 Корешки · ризограф</a><span>8/10</span></li>
-        <li><a href="#g8">G8 Человек читающий · пиктограммы</a><span>8/10</span></li>
-        <li><a href="#g1">G1 Че-Че · книжная революция</a><span>7/10</span></li>
-        <li><a href="#g2">G2 Че-Че · стикерпак</a><span>6/10</span></li>
-        <li><a href="#g10">G10 Чегевара · вождь</a><span>5/10</span></li>
-        <li><a href="#g3">G3 Чегевара · поп-арт</a><span>5/10</span></li>
-        <li><a href="#g4">G4 Чегевара · кубинский плакат</a><span>5/10</span></li>
-        <li><a href="#g5">G5 Клуб</a><span>4/10</span></li>
-      </ol>
-    </div>
-
-    <div class="frame">
-      <h2>Что важно до выбора</h2>
-      <div class="cards">
-        <article>
-          <h3>Имени два уровня</h3>
-          <p>Платформа продаётся HR и партнёрам структуры, а клуб живёт внутри компании. Имя платформы должно стоять рядом с чужим брендом: «Книжный клуб Сбера на платформе Человек читающий». Компания вправе назвать свой клуб как хочет.</p>
-        </article>
-        <article id="che-law">
-          <h3>Имена по реестру знаков</h3>
-          <p>«Чегевара» не зарегистрировать: имя известного человека без согласия наследников (ГК РФ, ст. 1483, п. 9), фото Корды под охраной до 2071 года, а изображение самого Че в коммерции требует согласия его детей. У «Че-Че» высокий риск: в 41 классе действуют знаки «ЧЕ» и «ТЕЛЕКАНАЛ ЧЕ ЧЕ». «Клуб» не охраняется. Чистые: «Корешки» и «Человек читающий».</p>
-        </article>
-        <article>
-          <h3>Рекомендация: G9 и G11</h3>
-          <p>G9: революционный визуал G1 и чистое имя «Человек читающий», в разговоре «ЧЧ», то есть «Че-Че». G11: корешки-кореша как маскоты клуба, имя тоже чистое. Слоган «Чё читаешь?» подходит к обоим.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ G9 ============ -->
-  <section class="v" id="g9" data-name="Человек читающий, книжная революция">
-    <div class="vh">
-      <span class="vnum">G9</span><h2>Человек читающий</h2><span class="score">9/10</span>
-      <div class="acts"><button class="ok" type="button">Утверждаю G9</button><button class="x" type="button" aria-label="Убрать G9 из сравнения">×</button></div>
-      <p class="concept">концепция: визуал G1 с чистым именем, слоган «Чё читаешь?», в разговоре «ЧЧ» · подход: конструктивизм, рупор, красный и чёрный</p>
-    </div>
-    <div class="poster">
-      <svg viewBox="0 0 1600 900" role="img" aria-label="Плакат Человек читающий: рупор кричит «Чё читаешь?»">
-        <rect width="1600" height="900" fill="#EFE6D2"/>
-        <circle cx="900" cy="128" r="58" fill="#141414"/>
-        <text x="66" y="172" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#141414">ЧЕЛОВЕК</text>
-        <text x="66" y="318" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#141414">ЧИТАЮЩИЙ</text>
-        <rect x="72" y="344" width="340" height="62" fill="#E8361F"/>
-        <text x="92" y="388" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="36" fill="#EFE6D2" letter-spacing="5">КНИЖНЫЙ КЛУБ</text>
-        <g transform="translate(150 760) rotate(-15)">
-          <polygon points="380,-150 1800,-500 1800,500 380,150" fill="#E8361F"/>
-          <text x="480" y="54" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#EFE6D2" letter-spacing="2">ЧЁ ЧИТАЕШЬ?</text>
-          <polygon points="0,-48 0,48 380,150 380,-150" fill="#141414"/>
-          <ellipse cx="380" cy="0" rx="26" ry="150" fill="#141414"/>
-          <rect x="-80" y="-32" width="90" height="64" fill="#141414"/>
-          <rect x="70" y="40" width="44" height="130" fill="#141414" transform="rotate(12 92 40)"/>
-        </g>
-        <text x="1530" y="858" text-anchor="end" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="44" fill="#141414" letter-spacing="3">3 МЕСЯЦА · 3 КНИГИ · 3 ВСТРЕЧИ</text>
-      </svg>
-    </div>
-    <div class="apps" data-v="g9"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Лучшее из двух миров: самый сильный визуал и имя, которое можно защитить. Имя продаёт главное: клуб развивает людей, а не раздаёт книги.</p></div>
-      <div><h4>Плюсы</h4><ul><li>По реестру знаков в классах 9, 41, 42 совпадений нет</li><li>«ЧЧ» звучит как «Че-Че», слоган «Чё читаешь?» живёт в чате</li><li>Солидно для банков и дилеров, ярко для сцены eCamp</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Имя длинное, на иконке приложения только «ЧЧ»</li><li>Различительную способность фразы оценит экспертиза Роспатента</li></ul></div>
-      <div class="big">9<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G1 ============ -->
   <section class="v" id="g1" data-name="Че-Че, книжная революция">
     <div class="vh">
-      <span class="vnum">G1</span><h2>Че-Че</h2><span class="score">7/10</span>
+      <span class="vnum">G1</span><h2>Че-Че · революция</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G1</button><button class="x" type="button" aria-label="Убрать G1 из сравнения">×</button></div>
       <p class="concept">концепция: книжная революция, слоган «Чё читаешь?» · подход: конструктивизм, отсылка к плакату Родченко для Ленгиза «Книги по всем отраслям знаний»</p>
     </div>
@@ -256,18 +165,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g1"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Самый сильный визуал и крючок «Чё читаешь?», но имя упирается в чужие знаки. Поэтому этот визуал взят в G9 с чистым именем.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Слоган сам запускает разговор в офисе и в чате</li><li>Русский авангард выглядит дорого на мерче и на сцене</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Высокий риск: в 41 классе знаки «ЧЕ» и «ТЕЛЕКАНАЛ ЧЕ ЧЕ»</li><li>Без слогана «Че-Че» непонятно</li></ul></div>
-      <div class="big">7<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G2 ============ -->
   <section class="v" id="g2" data-name="Че-Че, стикерпак">
     <div class="vh">
-      <span class="vnum">G2</span><h2>Че-Че</h2><span class="score">6/10</span>
+      <span class="vnum">G2</span><h2>Че-Че · стикеры</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G2</button><button class="x" type="button" aria-label="Убрать G2 из сравнения">×</button></div>
       <p class="concept">концепция: клуб как переписка в чате · подход: стикеры, жирный контур, жёсткая тень</p>
     </div>
@@ -302,18 +205,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g2"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>То же имя на языке мессенджеров. Стиль стоит забрать в стикерпак клуба при любом имени.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Стикерпак и реакции в чате клуба с первого дня</li><li>Ярко, живо, вирусно внутри компании</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>То же имя, тот же риск со знаками «ЧЕ»</li><li>Для клуба директоров и дилеров несерьёзно</li></ul></div>
-      <div class="big">6<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G3 ============ -->
   <section class="v" id="g3" data-name="Чегевара, поп-арт">
     <div class="vh">
-      <span class="vnum">G3</span><h2>Чегевара</h2><span class="score">5/10</span>
+      <span class="vnum">G3</span><h2>Чегевара · поп-арт</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G3</button><button class="x" type="button" aria-label="Убрать G3 из сравнения">×</button></div>
       <p class="concept">концепция: бунтарь стал читателем, берет и круглые очки вместо лица · подход: поп-арт, четыре оттиска как у Уорхола</p>
     </div>
@@ -364,18 +261,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g3"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Самый громкий визуал, но имя упирается в закон о товарных знаках и в политику.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Узнаётся за секунду, мерч продаёт себя сам</li><li>Берет и очки превращают бунтаря в читателя без чужого лица</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Имя известного человека не зарегистрировать без наследников</li><li>Часть HR банков и госкомпаний откажется от революционера в бренде</li></ul></div>
-      <div class="big">5<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G4 ============ -->
   <section class="v" id="g4" data-name="Чегевара, кубинский плакат">
     <div class="vh">
-      <span class="vnum">G4</span><h2>Чегевара</h2><span class="score">5/10</span>
+      <span class="vnum">G4</span><h2>Чегевара · кубинский плакат</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G4</button><button class="x" type="button" aria-label="Убрать G4 из сравнения">×</button></div>
       <p class="concept">концепция: «Революция начинается с одной страницы», книга поднята как знамя · подход: кубинский шелкографический плакат 60-х, плоские цвета и лучи</p>
     </div>
@@ -407,18 +298,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g4"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Эффектно для сцены eCamp и баннера, но как бренд платформы тяжелее G1 и с тем же риском имени, что у G3.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Плакатная энергия, лучший вариант для сцены</li><li>Лозунг продаёт главную ценность: изменения в компании</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Имя не зарегистрировать</li><li>Лучи и рука плохо сжимаются до иконки приложения</li></ul></div>
-      <div class="big">5<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G5 ============ -->
   <section class="v" id="g5" data-name="Клуб, кислотная швейцарка">
     <div class="vh">
-      <span class="vnum">G5</span><h2>Клуб</h2><span class="score">4/10</span>
+      <span class="vnum">G5</span><h2>Клуб</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G5</button><button class="x" type="button" aria-label="Убрать G5 из сравнения">×</button></div>
       <p class="concept">концепция: расписание цикла как афиша · подход: швейцарская типографика, электрический синий и кислотный жёлтый</p>
     </div>
@@ -442,18 +327,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g5"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Чистая модная типографика, но имя слишком общее: его не присвоить и не найти в поиске.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Спокойный дизайнерский вариант, встаёт рядом с любым брендом клиента</li><li>Ритм цикла показан прямо на плакате</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>«Клуб» не защитить товарным знаком (дело СИП-169/2025 про CLUB)</li><li>Без второго слова нет характера</li></ul></div>
-      <div class="big">4<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G6 ============ -->
   <section class="v" id="g6" data-name="Корешки, ризограф">
     <div class="vh">
-      <span class="vnum">G6</span><h2>Корешки · ризограф</h2><span class="score">8/10</span>
+      <span class="vnum">G6</span><h2>Корешки · ризограф</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G6</button><button class="x" type="button" aria-label="Убрать G6 из сравнения">×</button></div>
       <p class="concept">концепция: книжные корешки и «кореша» в одном слове, клуб сближает · подход: ризограф в два цвета, персонажи-корешки</p>
     </div>
@@ -472,20 +351,81 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g6"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Самое тёплое имя: оно прямо говорит, что клуб сближает команду. Ради этого компании и покупают.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Игра слов понятна без объяснений; в 9, 41, 42 классах совпадений нет</li><li>Персонажи-корешки сразу готовые маскоты для ачивок и стикеров</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Сленг, для банков и госкомпаний может быть слишком простым</li><li>Для мерча учесть знак «ВЕРШКИ И КОРЕШКИ» в 16 классе</li></ul></div>
-      <div class="big">8<small>/10</small></div>
+  </section>
+
+  <!-- ============ G8 ============ -->
+  <section class="v" id="g8" data-name="Человек читающий, пиктограммы">
+    <div class="vh">
+      <span class="vnum">G8</span><h2>Человек читающий · пиктограммы</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю G8</button><button class="x" type="button" aria-label="Убрать G8 из сравнения">×</button></div>
+      <p class="concept">концепция: эволюция команды от ленты к клубу, монограмма ЧЧ звучит как «Че-Че» · подход: олимпийские пиктограммы</p>
     </div>
+    <div class="poster">
+      <svg viewBox="0 0 1600 900" role="img" aria-label="Плакат: четыре фигурки эволюционируют от ленты к клубу">
+        <rect width="1600" height="900" fill="#FF6A13"/>
+        <text x="84" y="196" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="150" fill="#111">ЧЕЛОВЕК</text>
+        <text x="84" y="336" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="150" fill="#FFFFFF">ЧИТАЮЩИЙ</text>
+        <circle cx="1424" cy="170" r="108" fill="#111"/>
+        <text x="1424" y="210" text-anchor="middle" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="110" fill="#FF6A13">ЧЧ</text>
+        <text x="88" y="404" font-family="'Golos Text', Arial, sans-serif" font-weight="500" font-size="34" fill="#111">следующая ступень эволюции команды</text>
+        <g stroke="#111" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <g transform="translate(40 0)"><path d="M282 650 L232 722"/><path d="M232 722 L200 780"/><path d="M232 722 L270 780"/><path d="M278 662 L318 690"/></g>
+          <g transform="translate(110 0)"><path d="M572 552 L556 660"/><path d="M556 660 L530 780"/><path d="M556 660 L592 780"/><path d="M570 572 L612 640"/></g>
+          <g transform="translate(180 0)"><path d="M860 486 L860 640"/><path d="M860 640 L826 780"/><path d="M860 640 L898 780"/><path d="M860 510 L824 604"/><path d="M860 510 L892 566 L880 606"/></g>
+          <g transform="translate(250 0)"><path d="M1160 486 L1160 640"/><path d="M1160 640 L1140 780"/><path d="M1160 640 L1182 780"/><path d="M1160 510 L1142 578 L1192 556"/><path d="M1160 510 L1188 584 L1222 552"/></g>
+        </g>
+        <g fill="#111">
+          <circle cx="346" cy="622" r="30"/><circle cx="700" cy="520" r="30"/><circle cx="1042" cy="450" r="30"/><circle cx="1422" cy="452" r="30"/>
+        </g>
+        <rect x="352" y="672" width="22" height="34" rx="4" fill="#FFFFFF" stroke="#111" stroke-width="4" transform="rotate(-20 363 689)"/>
+        <rect x="1054" y="540" width="34" height="56" rx="3" fill="#FFFFFF" stroke="#111" stroke-width="5"/>
+        <g stroke="#111" stroke-width="5" stroke-linejoin="round" fill="#FFFFFF" transform="translate(250 0)">
+          <polygon points="1180,556 1216,544 1216,508 1180,520"/><polygon points="1216,544 1252,556 1252,520 1216,508"/>
+        </g>
+        <rect x="120" y="780" width="1400" height="8" fill="#111"/>
+        <g font-family="'Golos Text', Arial, sans-serif" font-weight="700" font-size="30" fill="#111" text-anchor="middle">
+          <text x="290" y="842">лента</text><text x="672" y="842">саммари</text><text x="1042" y="842">книга</text><text x="1420" y="842">клуб</text>
+        </g>
+      </svg>
+    </div>
+    <div class="apps" data-v="g8"></div>
+  </section>
+
+  <!-- ============ G9 ============ -->
+  <section class="v" id="g9" data-name="Человек читающий, книжная революция">
+    <div class="vh">
+      <span class="vnum">G9</span><h2>Человек читающий · рупор</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю G9</button><button class="x" type="button" aria-label="Убрать G9 из сравнения">×</button></div>
+      <p class="concept">концепция: визуал G1 с именем «Человек читающий», слоган «Чё читаешь?», коротко «ЧЧ» · подход: конструктивизм, рупор, красный и чёрный</p>
+    </div>
+    <div class="poster">
+      <svg viewBox="0 0 1600 900" role="img" aria-label="Плакат Человек читающий: рупор кричит «Чё читаешь?»">
+        <rect width="1600" height="900" fill="#EFE6D2"/>
+        <circle cx="900" cy="128" r="58" fill="#141414"/>
+        <text x="66" y="172" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#141414">ЧЕЛОВЕК</text>
+        <text x="66" y="318" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#141414">ЧИТАЮЩИЙ</text>
+        <rect x="72" y="344" width="340" height="62" fill="#E8361F"/>
+        <text x="92" y="388" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="36" fill="#EFE6D2" letter-spacing="5">КНИЖНЫЙ КЛУБ</text>
+        <g transform="translate(150 760) rotate(-15)">
+          <polygon points="380,-150 1800,-500 1800,500 380,150" fill="#E8361F"/>
+          <text x="480" y="54" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="150" fill="#EFE6D2" letter-spacing="2">ЧЁ ЧИТАЕШЬ?</text>
+          <polygon points="0,-48 0,48 380,150 380,-150" fill="#141414"/>
+          <ellipse cx="380" cy="0" rx="26" ry="150" fill="#141414"/>
+          <rect x="-80" y="-32" width="90" height="64" fill="#141414"/>
+          <rect x="70" y="40" width="44" height="130" fill="#141414" transform="rotate(12 92 40)"/>
+        </g>
+        <text x="1530" y="858" text-anchor="end" font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="700" font-size="44" fill="#141414" letter-spacing="3">3 МЕСЯЦА · 3 КНИГИ · 3 ВСТРЕЧИ</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="g9"></div>
   </section>
 
   <!-- ============ G10 ============ -->
   <section class="v" id="g10" data-name="Чегевара, вождь читает">
     <div class="vh">
-      <span class="vnum">G10</span><h2>Чегевара · вождь</h2><span class="score">5/10</span>
+      <span class="vnum">G10</span><h2>Чегевара · вождь</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G10</button><button class="x" type="button" aria-label="Убрать G10 из сравнения">×</button></div>
-      <p class="concept">концепция: сам Че с книгой месяца, «Вождь читает. А ты?» · подход: трафаретный революционный плакат, красный, чёрный, жёлтая звезда; портрет нарисован заново, без фото Корды</p>
+      <p class="concept">концепция: сам Че с книгой месяца, «Вождь читает. А ты?» · подход: трафаретный революционный плакат, красный, чёрный, жёлтая звезда; портрет нарисован заново</p>
     </div>
     <div class="poster">
       <svg viewBox="0 0 1600 900" role="img" aria-label="Плакат: Че Гевара в берете со звездой держит книгу месяца">
@@ -525,18 +465,12 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g10"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Самый плакатный вариант: вождь узнаётся без подписи, а «Вождь читает. А ты?» звучит как вызов. Для сцены eCamp и вечеринки клуба огонь, для бренда платформы нет.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Максимальная узнаваемость и драйв</li><li>Готовый мерч и стикеры для ивента клуба</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Изображение Че в коммерции только с согласия его детей (ГК РФ, ст. 152.1), имя не регистрируется</li><li>Банки и госкомпании политический образ не возьмут</li></ul></div>
-      <div class="big">5<small>/10</small></div>
-    </div>
   </section>
 
   <!-- ============ G11 ============ -->
   <section class="v" id="g11" data-name="Корешки, кореша">
     <div class="vh">
-      <span class="vnum">G11</span><h2>Корешки · кореша</h2><span class="score">9/10</span>
+      <span class="vnum">G11</span><h2>Корешки · кореша</h2>
       <div class="acts"><button class="ok" type="button">Утверждаю G11</button><button class="x" type="button" aria-label="Убрать G11 из сравнения">×</button></div>
       <p class="concept">концепция: банда корешков-корешей, у каждого свой характер · подход: плоские персонажи с жирным контуром, яркие цвета, руки на плечах друг у друга</p>
     </div>
@@ -552,59 +486,9 @@ p{margin:0}
       </svg>
     </div>
     <div class="apps" data-v="g11"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Корешки становятся героями клуба: у каждого свой характер, их можно выдавать как ачивки и стикеры. Самый тёплый и живой вариант.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Готовая система маскотов: новый кореш за каждую прочитанную книгу</li><li>Имя чистое в 9, 41, 42 классах</li><li>«Кореша по книгам» объясняет пользу клуба без слов</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Мультяшность подойдёт не каждому банку</li><li>Для мерча учесть знак «ВЕРШКИ И КОРЕШКИ» в 16 классе</li></ul></div>
-      <div class="big">9<small>/10</small></div>
-    </div>
   </section>
 
-  <!-- ============ G8 ============ -->
-  <section class="v" id="g8" data-name="Человек читающий, пиктограммы">
-    <div class="vh">
-      <span class="vnum">G8</span><h2>Человек читающий</h2><span class="score">8/10</span>
-      <div class="acts"><button class="ok" type="button">Утверждаю G8</button><button class="x" type="button" aria-label="Убрать G8 из сравнения">×</button></div>
-      <p class="concept">концепция: эволюция команды от ленты к клубу, монограмма ЧЧ звучит как «Че-Че» · подход: олимпийские пиктограммы</p>
-    </div>
-    <div class="poster">
-      <svg viewBox="0 0 1600 900" role="img" aria-label="Плакат: четыре фигурки эволюционируют от ленты к клубу">
-        <rect width="1600" height="900" fill="#FF6A13"/>
-        <text x="84" y="196" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="150" fill="#111">ЧЕЛОВЕК</text>
-        <text x="84" y="336" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="150" fill="#FFFFFF">ЧИТАЮЩИЙ</text>
-        <circle cx="1424" cy="170" r="108" fill="#111"/>
-        <text x="1424" y="210" text-anchor="middle" font-family="'Golos Text', Arial, sans-serif" font-weight="900" font-size="110" fill="#FF6A13">ЧЧ</text>
-        <text x="88" y="404" font-family="'Golos Text', Arial, sans-serif" font-weight="500" font-size="34" fill="#111">следующая ступень эволюции команды</text>
-        <g stroke="#111" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" fill="none">
-          <g transform="translate(40 0)"><path d="M282 650 L232 722"/><path d="M232 722 L200 780"/><path d="M232 722 L270 780"/><path d="M278 662 L318 690"/></g>
-          <g transform="translate(110 0)"><path d="M572 552 L556 660"/><path d="M556 660 L530 780"/><path d="M556 660 L592 780"/><path d="M570 572 L612 640"/></g>
-          <g transform="translate(180 0)"><path d="M860 486 L860 640"/><path d="M860 640 L826 780"/><path d="M860 640 L898 780"/><path d="M860 510 L824 604"/><path d="M860 510 L892 566 L880 606"/></g>
-          <g transform="translate(250 0)"><path d="M1160 486 L1160 640"/><path d="M1160 640 L1140 780"/><path d="M1160 640 L1182 780"/><path d="M1160 510 L1142 578 L1192 556"/><path d="M1160 510 L1188 584 L1222 552"/></g>
-        </g>
-        <g fill="#111">
-          <circle cx="346" cy="622" r="30"/><circle cx="700" cy="520" r="30"/><circle cx="1042" cy="450" r="30"/><circle cx="1422" cy="452" r="30"/>
-        </g>
-        <rect x="352" y="672" width="22" height="34" rx="4" fill="#FFFFFF" stroke="#111" stroke-width="4" transform="rotate(-20 363 689)"/>
-        <rect x="1054" y="540" width="34" height="56" rx="3" fill="#FFFFFF" stroke="#111" stroke-width="5"/>
-        <g stroke="#111" stroke-width="5" stroke-linejoin="round" fill="#FFFFFF" transform="translate(250 0)">
-          <polygon points="1180,556 1216,544 1216,508 1180,520"/><polygon points="1216,544 1252,556 1252,520 1216,508"/>
-        </g>
-        <rect x="120" y="780" width="1400" height="8" fill="#111"/>
-        <g font-family="'Golos Text', Arial, sans-serif" font-weight="700" font-size="30" fill="#111" text-anchor="middle">
-          <text x="290" y="842">лента</text><text x="672" y="842">саммари</text><text x="1042" y="842">книга</text><text x="1420" y="842">клуб</text>
-        </g>
-      </svg>
-    </div>
-    <div class="apps" data-v="g8"></div>
-    <div class="verdict">
-      <div><h4>Вывод</h4><p>Умная метафора роста: команда эволюционирует через чтение. Имя чистое; визуал спокойнее, чем у G9.</p></div>
-      <div><h4>Плюсы</h4><ul><li>Ступени эволюции сразу дают систему ачивок</li><li>Пиктограммы чисто сжимаются до иконок приложения</li></ul></div>
-      <div><h4>Минусы</h4><ul><li>Длинное имя, в разговоре сократят до «ЧЧ»</li><li>Образ эволюции человека часто пародируют в рекламе</li></ul></div>
-      <div class="big">8<small>/10</small></div>
-    </div>
-  </section>
-
-  <footer class="foot">Эскизы, 6 октября 2026, проверка имён по реестру знаков 6 октября. Это не финальные логотипы: после выбора дорабатываются знак, шрифтовая пара и иконка приложения. Цитаты на шопперах только из книг в общественном достоянии: так их можно печатать на мерче без лицензии. Голоса в экранах пример.</footer>
+  <footer class="foot">Эскизы, 6 октября 2026. Цифры голосов в экранах пример.</footer>
 </main>
 
 <div class="toast" id="toast" hidden></div>
