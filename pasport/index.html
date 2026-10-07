@@ -31,7 +31,7 @@
 
   /* ── обложка ── */
   .oblozhka { background: var(--chorny); color: #fff; padding: 0 0 56px; }
-  .oblozhka .plakat { width: 100%; aspect-ratio: 16/9; object-fit: cover; max-height: 62vh; }
+  .oblozhka .plakat { width: 100%; height: auto; }
   .oblozhka-niz { margin-top: -10px; }
   .nadzagolovok {
     font: 500 15px/1 var(--display); letter-spacing: .22em; text-transform: uppercase;
@@ -136,9 +136,14 @@
     font: 700 15px/1 var(--display);
   }
   .telefon-okno {
-    border-radius: 18px; overflow: hidden; border: 1px solid var(--ramka); background: var(--bg);
-    height: 460px;
+    position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--ramka);
+    background: var(--bg); height: 520px;
   }
+  .telefon-okno::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,253,248,0), var(--karta));
+  }
+
   .telefon-okno img { width: 100%; height: auto; }
 
   .shirokiy { margin-top: 20px; }
@@ -375,19 +380,19 @@ Lean Coffee: 7 тем по 7 минут
     <div class="telefony">
       <div class="telefon">
         <p class="telefon-podpis"><i>1</i>Вход по ссылке, два касания</p>
-        <div class="telefon-okno"><img src="img/che-join.webp" width="410" height="579" loading="lazy" alt="Экран входа в клуб"></div>
+        <div class="telefon-okno"><img src="img/che-join.webp" fetchpriority="high" width="410" height="579" alt="Экран входа в клуб"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>2</i>Главная: книга, видео, подборка топа</p>
-        <div class="telefon-okno"><img src="img/che-home.webp" width="410" height="2020" loading="lazy" alt="Главный экран участника"></div>
+        <div class="telefon-okno"><img src="img/che-home.webp" fetchpriority="high" width="410" height="2020" alt="Главный экран участника"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>3</i>Книга и прогресс чтения</p>
-        <div class="telefon-okno"><img src="img/che-book.webp" width="410" height="1457" loading="lazy" alt="Экран книги и прогресса"></div>
+        <div class="telefon-okno"><img src="img/che-book.webp" fetchpriority="high" width="410" height="1457" alt="Экран книги и прогресса"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>4</i>Голосование за книгу цикла</p>
-        <div class="telefon-okno"><img src="img/che-vote.webp" width="410" height="2381" loading="lazy" alt="Экран голосования"></div>
+        <div class="telefon-okno"><img src="img/che-vote.webp" fetchpriority="high" width="410" height="2381" alt="Экран голосования"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>5</i>Встреча идёт по таймеру сама</p>
