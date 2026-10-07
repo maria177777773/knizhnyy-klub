@@ -14,24 +14,24 @@
 <style>
   :root {
     --bg: #f4efe6; --ink: #141414; --ink2: #3a3530; --ink3: #6b6258;
-    --krasny: #c8211b; --myagky: #f6dcd9; --zholty: #ffd400; --laym: #d4f02a;
+    --krasny: #c8211b; --myagky: #f6dcd9; --zholty: #ffd400;
     --karta: #fffdf8; --ramka: #e2d8c8; --chorny: #141414;
     --display: 'Oswald', 'Arial Narrow', sans-serif;
     --tekst: 'Golos Text', -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --telo: 19px; --btn-h: 58px; --max: 1400px; --sekciya: 120px;
+    --telo: 19px; --btn-h: 58px; --max: 1400px; --sekciya: 110px;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--bg); color: var(--ink);
-    font: var(--telo)/1.62 var(--tekst); -webkit-font-smoothing: antialiased; }
+    font: var(--telo)/1.6 var(--tekst); -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; display: block; }
   .shirina { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
   /* ── обложка ── */
-  .oblozhka { background: var(--chorny); color: #fff; padding: 0 0 56px; }
+  .oblozhka { background: var(--chorny); color: #fff; padding: 0 0 52px; }
   .oblozhka-setka {
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
-    min-height: min(62vh, 620px); padding: 44px 0;
+    min-height: min(60vh, 600px); padding: 44px 0;
   }
   .oblozhka .plakat { width: 100%; height: auto; border-radius: 20px; }
   .nadzagolovok {
@@ -42,11 +42,9 @@
     font: 700 clamp(46px, 7.4vw, 104px)/0.95 var(--display); text-transform: uppercase;
     letter-spacing: -.015em; margin: 0;
   }
-  h1 small { display: block; font: 500 clamp(17px, 2.2vw, 30px)/1.25 var(--display);
-    letter-spacing: .18em; color: #fff; opacity: .72; margin-top: 16px; text-transform: uppercase; }
   .oblozhka-stroki {
-    display: flex; flex-wrap: wrap; gap: 18px 40px; margin-top: 34px;
-    padding-top: 28px; border-top: 2px solid rgba(255,255,255,.16);
+    display: flex; flex-wrap: wrap; gap: 18px 40px; margin-top: 32px;
+    padding-top: 26px; border-top: 2px solid rgba(255,255,255,.16);
   }
   .oblozhka-stroki div { min-width: 170px; }
   .oblozhka-stroki b { display: block; font: 600 15px/1 var(--tekst); letter-spacing: .1em;
@@ -54,21 +52,21 @@
   .oblozhka-stroki span { font-size: 20px; color: #fff; }
 
   /* ── манифест ── */
-  .manifest { background: var(--krasny); color: #fff; padding: 72px 0; }
+  .manifest { background: var(--krasny); color: #fff; padding: 64px 0; }
   .manifest p {
-    margin: 0; font: 700 clamp(28px, 4.4vw, 60px)/1.1 var(--display);
-    text-transform: uppercase; letter-spacing: -.01em; max-width: 22ch;
+    margin: 0; font: 700 clamp(30px, 4.6vw, 64px)/1.08 var(--display);
+    text-transform: uppercase; letter-spacing: -.01em; max-width: 20ch;
   }
   .manifest span { color: var(--zholty); }
 
   /* ── секции ── */
   section { padding: var(--sekciya) 0 0; }
-  .zagolovok-sekcii { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
+  .zagolovok-sekcii { display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
   .nomer-sekcii { font: 700 clamp(46px, 6vw, 84px)/1 var(--display); color: var(--krasny); letter-spacing: -.03em; }
   h2 { font: 700 clamp(30px, 4.2vw, 46px)/1.05 var(--display); text-transform: uppercase; margin: 0;
     letter-spacing: -.01em; }
-  h3 { font: 700 30px/1.2 var(--display); text-transform: uppercase; margin: 56px 0 20px; }
-  .pod-zagolovkom { color: var(--ink3); font-size: 20px; margin: 0 0 40px; max-width: 56ch; }
+  h3 { font: 700 30px/1.2 var(--display); text-transform: uppercase; margin: 52px 0 18px; }
+  .pod-zagolovkom { color: var(--ink3); font-size: 20px; margin: 0 0 36px; max-width: 54ch; }
   .zhdyot {
     display: inline-block; font: 600 15px/1 var(--tekst); letter-spacing: .08em; text-transform: uppercase;
     color: var(--ink3); border: 2px solid var(--ramka); border-radius: 99px; padding: 9px 16px;
@@ -78,42 +76,55 @@
   .setka { display: grid; gap: 20px; }
   .setka.dva { grid-template-columns: repeat(2, 1fr); }
   .setka.tri { grid-template-columns: repeat(3, 1fr); }
-  .karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 22px; padding: 30px 32px; }
+  .karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 22px; padding: 28px 30px; }
   .karta.aktsent { background: var(--chorny); color: #fff; border-color: var(--chorny); }
   .karta.aktsent .imya { color: var(--zholty); }
   .karta .imya {
     font: 600 15px/1.35 var(--tekst); letter-spacing: .1em; text-transform: uppercase;
     color: var(--krasny); margin: 0 0 14px;
   }
-  .karta p { margin: 0 0 14px; }
+  .karta p { margin: 0 0 12px; }
   .karta p:last-child { margin-bottom: 0; }
   .karta ul { margin: 0; padding-left: 24px; }
-  .karta ul + p { margin-top: 16px; }
-  .karta li { margin-bottom: 11px; }
+  .karta li { margin-bottom: 10px; }
   .karta li:last-child { margin-bottom: 0; }
   code { background: var(--myagky); border-radius: 7px; padding: 3px 8px;
     font: 500 17px/1.4 ui-monospace, 'SF Mono', Menlo, monospace; }
   .karta.aktsent code { background: rgba(255,255,255,.13); color: #ffe9a8; }
 
+  /* ── комиксный пузырь ── */
+  .puzyr {
+    position: relative; background: #fff; border: 3px solid var(--chorny); border-radius: 22px;
+    padding: 22px 26px; font: 700 23px/1.3 var(--display); text-transform: uppercase;
+    letter-spacing: -.01em; box-shadow: 7px 7px 0 var(--chorny);
+  }
+  .puzyr::after {
+    content: ''; position: absolute; left: 44px; bottom: -21px; width: 0; height: 0;
+    border: 11px solid transparent; border-top-color: var(--chorny); border-bottom: 0;
+  }
+  .puzyr.zholty { background: var(--zholty); }
+  .puzyr.krasny { background: var(--krasny); color: #fff; }
+  .puzyri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
   /* ── цифры ── */
   .cifry { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .cifra { background: var(--karta); border: 2px solid var(--ramka); border-radius: 22px; padding: 30px 28px; }
+  .cifra { background: var(--karta); border: 2px solid var(--ramka); border-radius: 22px; padding: 28px 26px; }
   .cifra b { display: block; font: 700 clamp(46px, 5vw, 84px)/1 var(--display); color: var(--krasny);
-    letter-spacing: -.03em; margin-bottom: 12px; }
+    letter-spacing: -.03em; margin-bottom: 10px; }
   .cifra span { color: var(--ink2); font-size: 17px; line-height: 1.45; display: block; }
 
   /* ── улика ── */
   .ulika {
-    margin: 20px 0 0; background: var(--chorny); color: #e8e3da; border-radius: 22px; padding: 28px 30px;
+    margin: 18px 0 0; background: var(--chorny); color: #e8e3da; border-radius: 22px; padding: 26px 28px;
     overflow-x: auto; font: 17px/1.7 ui-monospace, 'SF Mono', Menlo, monospace; white-space: pre;
   }
   .ulika .zel { color: #7ee787; }
   .ulika-podpis { font: 600 15px/1 var(--tekst); letter-spacing: .08em; text-transform: uppercase;
-    color: var(--ink3); margin: 26px 0 0; }
+    color: var(--ink3); margin: 24px 0 0; }
 
   /* ── экраны телефонов ── */
-  .telefony { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 12px; }
-  .telefon { background: var(--karta); border: 2px solid var(--ramka); border-radius: 26px; padding: 16px;
+  .telefony { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 10px; }
+  .telefon { background: var(--karta); border: 2px solid var(--ramka); border-radius: 26px; padding: 14px;
     display: flex; flex-direction: column; }
   .telefon-podpis {
     font: 600 17px/1.35 var(--tekst); margin: 0 0 12px; padding: 0 6px;
@@ -136,13 +147,18 @@
 
   figure { margin: 0; }
   figcaption { color: var(--ink3); font-size: 17px; margin-top: 12px; }
-  .shirokiy img { border-radius: 22px; border: 2px solid var(--ramka); width: 100%; height: auto; }
+
+  /* ── приветствие Че ── */
+  .che-setka { display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: start; }
+  .che-foto { border-radius: 22px; border: 2px solid var(--ramka); width: 100%; height: auto; }
+  .che-ekran { border-radius: 26px; overflow: hidden; border: 2px solid var(--ramka); background: var(--karta); }
+  .che-ekran img { width: 100%; height: auto; }
 
   /* ── шаги ── */
-  .shagi { display: grid; gap: 14px; }
+  .shagi { display: grid; gap: 12px; }
   .shag {
     display: grid; grid-template-columns: 62px 1fr auto; gap: 22px; align-items: center;
-    background: var(--karta); border: 2px solid var(--ramka); border-radius: 20px; padding: 20px 26px;
+    background: var(--karta); border: 2px solid var(--ramka); border-radius: 20px; padding: 18px 24px;
   }
   .shag-num { font: 700 30px/1 var(--display); color: var(--ink3); letter-spacing: -.03em; }
   .shag.gotov { border-color: #bcd9b8; }
@@ -159,57 +175,42 @@
   .plakaty { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .plakat-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 20px;
     padding: 14px; display: flex; flex-direction: column; }
-  .plakat-karta .podpis { margin-top: 12px; min-height: 76px; }
   .plakat-karta img { border-radius: 14px; width: 100%; height: auto; }
-  .plakat-karta p { margin: 12px 6px 4px; font-size: 17px; font-weight: 600; }
+  .plakat-karta .podpis { margin-top: 12px; min-height: 54px; }
+  .plakat-karta p { margin: 0 6px 4px; font-size: 17px; font-weight: 600; }
   .plakat-karta span { display: block; margin: 0 6px 6px; font-size: 17px; color: var(--ink3); }
-
-  /* ── гид ── */
-  .gid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .gid-para { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .gid-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 24px; padding: 14px;
-    display: flex; flex-direction: column; }
-  .gid-karta p { min-height: 54px; }
-  .gid-karta .okno { border-radius: 16px; overflow: hidden; border: 1px solid var(--ramka);
-    height: 470px; position: relative; }
-  .gid-karta .okno img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
-  .gid-karta .okno::after {
-    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 70px; pointer-events: none;
-    background: linear-gradient(to bottom, rgba(255,253,248,0), var(--karta));
-  }
-  .gid-karta p { margin: 12px 6px 6px; font-size: 17px; font-weight: 600; }
 
   /* ── ссылки ── */
   .ssylki { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .ssylka {
     display: flex; flex-direction: column; justify-content: space-between; gap: 18px;
-    background: var(--chorny); color: #fff; border-radius: 22px; padding: 30px 32px;
-    text-decoration: none; min-height: 168px;
+    background: var(--chorny); color: #fff; border-radius: 22px; padding: 28px 30px;
+    text-decoration: none; min-height: 160px;
   }
   .ssylka:hover { background: var(--krasny); }
   .ssylka b { font: 700 24px/1.2 var(--display); text-transform: uppercase; }
   .ssylka span { color: #cfc8bd; font-size: 17px; word-break: break-all; }
   .ssylka:hover span { color: #ffe9a8; }
 
-  .podval { margin-top: var(--sekciya); background: var(--chorny); color: #cfc8bd; padding: 56px 0; }
+  .podval { margin-top: var(--sekciya); background: var(--chorny); color: #cfc8bd; padding: 52px 0; }
   .podval p { margin: 0 0 10px; font-size: 17px; max-width: 70ch; }
   .podval b { color: #fff; }
 
   @media (max-width: 1100px) {
     .cifry, .telefony { grid-template-columns: repeat(2, 1fr); }
-    .plakaty, .ssylki { grid-template-columns: repeat(2, 1fr); }
-    .gid { grid-template-columns: repeat(3, 1fr); }
+    .plakaty, .ssylki, .puzyri { grid-template-columns: repeat(2, 1fr); }
+    .che-setka { grid-template-columns: 1fr; }
   }
   @media (max-width: 760px) {
-    :root { --telo: 18px; --sekciya: 72px; }
+    :root { --telo: 18px; --sekciya: 68px; }
     .shirina { padding: 0 18px; }
-    .setka.dva, .setka.tri, .cifry, .telefony, .plakaty, .ssylki, .gid, .gid-para { grid-template-columns: 1fr; }
-    .karta { padding: 24px 22px; }
-    .telefon-okno, .gid-karta .okno { height: auto; }
-    .telefon-okno::after, .gid-karta .okno::after { display: none; }
-    .shag { grid-template-columns: 44px 1fr; row-gap: 8px; padding: 18px 20px; }
+    .setka.dva, .setka.tri, .cifry, .telefony, .plakaty, .ssylki, .puzyri { grid-template-columns: 1fr; }
+    .karta { padding: 22px 20px; }
+    .telefon-okno { height: auto; }
+    .telefon-okno::after { display: none; }
+    .shag { grid-template-columns: 44px 1fr; row-gap: 8px; padding: 16px 18px; }
     .shag-status { grid-column: 2; }
-    .oblozhka-setka { grid-template-columns: 1fr; gap: 28px; min-height: 0; padding: 28px 0 8px; }
+    .oblozhka-setka { grid-template-columns: 1fr; gap: 26px; min-height: 0; padding: 26px 0 8px; }
     .oblozhka-tekst { order: 2; }
     .oblozhka .plakat { order: 1; }
   }
@@ -229,59 +230,35 @@
           <div><b>Практики</b><span>1 и 2 закрыты</span></div>
         </div>
       </div>
-      <img class="plakat" src="img/plakaty/p6.webp" width="1000" height="425" fetchpriority="high" alt="Плакат клуба: «Кто не читает, тот не ест пиццу на встрече клуба»">
+      <img class="plakat" src="img/plakaty/p3.webp" width="1200" height="510" fetchpriority="high" alt="Плакат клуба: «Вива ла книга»">
     </div>
   </div>
 </header>
 
 <div class="manifest">
   <div class="shirina">
-    <p>Клуб ведёт <span>платформа</span>, а не человек с таймером в руках</p>
+    <p>Книжный клуб со <span>своей платформой</span></p>
   </div>
 </div>
 
-<section id="pochemu" style="padding-top:88px">
+<section id="pochemu" style="padding-top:84px">
   <div class="shirina">
     <div class="zagolovok-sekcii"><h2>Почему клуб назван ЧЕ</h2></div>
     <p class="pod-zagolovkom">У клуба есть хранитель. Он встречает человека на первом входе
     и сам объясняет, при чём тут он.</p>
 
-    <div class="setka dva" style="align-items:start">
-      <div class="karta aktsent">
-        <p class="imya">¡Hola, compañero!</p>
-        <p>«Привет, товарищ! Я Че, хранитель клуба.</p>
-        <p>Почему клуб назван в мою честь? Я читал всю жизнь. Из-за астмы мама учила меня читать
-        дома, потом я брал книги в горы и в джунгли и записывал каждую прочитанную.</p>
-        <p>Буду подсказывать, что где, и платить песо за главы.»</p>
-        <p style="color:#cfc8bd;font-size:17px;margin-top:18px">Текст живёт в приложении: это первое,
-        что видит сотрудник, когда открывает клуб по ссылке приглашения. Дальше Че подсказывает
-        по экранам и ведёт счёт прочитанного.</p>
+    <div class="che-setka">
+      <div class="che-ekran">
+        <img src="img/che-privet.webp" width="780" height="1688" fetchpriority="high" alt="Приветствие Че на первом входе в клуб">
       </div>
-      <div class="gid-para">
-        <div class="gid-karta">
-          <div class="okno"><img src="img/gid/a-greeting.webp" width="780" height="1688" fetchpriority="high" alt="Приветствие Че на первом входе"></div>
-          <p>Первый вход в клуб</p>
-        </div>
-        <div class="gid-karta">
-          <div class="okno"><img src="img/gid/a-about-2.webp" width="780" height="1688" decoding="async" alt="Че рассказывает про книги в походах"></div>
-          <p>Факты: книги в горах и джунглях</p>
-        </div>
-      </div>
-    </div>
-
-    <h3>Че подсказывает по ходу</h3>
-    <div class="gid">
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/a-about-0.webp" width="780" height="1688" decoding="async" alt="Че рассказывает о себе"></div>
-        <p>Обо мне: список прочитанного</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/390-2-tip.webp" width="780" height="1688" decoding="async" alt="Подсказка Че по экрану"></div>
-        <p>Подсказка по экрану</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/390-3-reto.webp" width="780" height="1688" decoding="async" alt="Задание недели от Че"></div>
-        <p>Задание недели и песо за главы</p>
+      <div>
+        <figure>
+          <img class="che-foto" src="img/che-foto.webp" width="750" height="637" decoding="async" alt="Че Гевара читает газету, 1961 год">
+          <figcaption>Че читал всю жизнь: из-за астмы мама учила его читать дома, потом он возил
+          книги в горы и в джунгли и записывал каждую прочитанную.</figcaption>
+        </figure>
+        <div class="puzyr krasny" style="margin-top:30px">Я вождь Че. Читать будем все</div>
+        <div class="puzyr zholty" style="margin-top:38px">Глава в день. Героизм не требуется</div>
       </div>
     </div>
   </div>
@@ -296,15 +273,13 @@
       <div class="karta">
         <p class="imya">Название</p>
         <p>«Набор в книжный клуб». Платформа корпоративных книжных клубов: продаётся компаниям,
-        внутри каждой компании живёт свой клуб со своим именем и своим характером.</p>
-        <p>Наш первый клуб называется «книжный клуб ЧЕ»: герой, голос и весь визуал построены
-        вокруг Че как вечного читателя.</p>
+        внутри каждой живёт свой клуб со своим именем и характером.</p>
+        <p>Наш первый клуб называется «книжный клуб ЧЕ».</p>
       </div>
       <div class="karta aktsent">
         <p class="imya">Что делает, одной фразой</p>
-        <p>Ведёт корпоративный книжный клуб вместо живого модератора: предлагает книги, собирает
-        голосование, проводит встречу по таймеру, задаёт вопросы по прочитанному и отдаёт HR
-        отчёт о вовлечённости.</p>
+        <p>Ведёт книжный клуб вместо живого модератора: предлагает книги, собирает голосование,
+        проводит встречу по таймеру, задаёт вопросы по прочитанному и отдаёт HR отчёт.</p>
       </div>
     </div>
 
@@ -312,44 +287,35 @@
       <div class="karta">
         <p class="imya">Кто им пользуется, кроме меня</p>
         <ul>
-          <li><b>Участник клуба</b>: сотрудник компании-клиента, живёт в телефоне.</li>
-          <li><b>HR компании</b>: владелец клуба, собирает цикл и смотрит дашборд.</li>
-          <li><b>Партнёр</b>: продаёт клуб своим клиентам под своим логотипом.</li>
-          <li><b>Руководитель-амбассадор</b>: записывает приветствие и свою подборку книг.</li>
+          <li><b>Участник</b>: сотрудник компании, живёт в телефоне.</li>
+          <li><b>HR</b>: собирает цикл и смотрит дашборд.</li>
+          <li><b>Партнёр</b>: продаёт клуб своим клиентам.</li>
+          <li><b>Руководитель</b>: записывает приветствие и подборку книг.</li>
         </ul>
       </div>
       <div class="karta">
         <p class="imya">Как я пойму, что он работает</p>
         <ul>
-          <li>Первый клуб прошёл цикл целиком на платформе, без ведущего с таймером в руках.</li>
-          <li>До финала цикла дошли не меньше 60% участников.</li>
-          <li>HR получил отчёт и смог показать его руководству.</li>
-          <li>Партнёр повторил запуск на второй компании сам, без моего участия.</li>
+          <li>Клуб прошёл цикл целиком на платформе.</li>
+          <li>До финала дошли не меньше 60% участников.</li>
+          <li>HR показал отчёт руководству.</li>
+          <li>Партнёр запустил вторую компанию сам.</li>
         </ul>
       </div>
     </div>
 
-    <figure class="shirokiy" style="margin-top:20px">
-      <img src="img/plakaty/p2.webp" width="1000" height="425" decoding="async" alt="Плакат клуба: «Вождь всё сказал. Иди и читай»">
-      <figcaption>Клуб продаётся не методичкой, а характером: голос Че превращает корпоративное
-      чтение в игру, в которую хочется вернуться.</figcaption>
-    </figure>
-
     <div class="karta" style="margin-top:20px">
-      <p class="imya">Какую задачу снимает и сколько времени она отнимает сейчас</p>
-      <p>Сейчас клуб держится на человеке. На одну встречу уходит около 5 часов: подготовка
-      сценария и вопросов 3 часа, ведение 1,5 часа, сбор итогов и напоминания полчаса.
-      Цикл из 3 встреч занимает примерно 16 часов на один клуб.</p>
-      <p>Это и есть потолок: вести так десять клубов в десяти компаниях одновременно невозможно,
-      а продавать нужно именно столько. Платформа убирает из этих 16 часов всё, кроме живого
-      разговора участников.</p>
+      <p class="imya">Какую задачу снимает</p>
+      <p>Клуб держится на человеке: 5 часов на встречу, 16 часов на цикл. Вести так десять клубов
+      в десяти компаниях невозможно, а продавать нужно именно столько. Платформа убирает из этих
+      16 часов всё, кроме живого разговора участников.</p>
     </div>
 
-    <div class="cifry" style="margin-top:40px">
-      <div class="cifra"><b>16 ч</b><span>уходит на один клуб за цикл, если вести руками</span></div>
-      <div class="cifra"><b>3 нед</b><span>до первого живого клуба, срок внешний и не двигается</span></div>
-      <div class="cifra"><b>51/51</b><span>сквозной прогон прототипа, ошибок страницы нет</span></div>
-      <div class="cifra"><b>24</b><span>плаката нарисованы кодом, в подборке ниже 9 лучших</span></div>
+    <div class="cifry" style="margin-top:36px">
+      <div class="cifra"><b>16 ч</b><span>на один клуб за цикл, если вести руками</span></div>
+      <div class="cifra"><b>3 нед</b><span>до первого живого клуба</span></div>
+      <div class="cifra"><b>51/51</b><span>сквозной прогон прототипа</span></div>
+      <div class="cifra"><b>24</b><span>плаката нарисованы кодом</span></div>
     </div>
   </div>
 </section>
@@ -361,81 +327,68 @@
 
     <div class="setka dva">
       <div class="karta">
-        <p class="imya">Рабочее место: что поставил и настроил</p>
-        <p>VS Code с расширением Claude Code, модель Opus. Папка проекта
-        <code>~/Desktop/Catalyst-BookClub</code>, под ней прототип на Vite, React и Tailwind,
-        макеты, ресёрч и спека.</p>
-        <p>Сверху два своих ограничителя, которые срабатывают сами: проверка интерфейса перед
-        показом любого экрана и чек-лист правок, который переживает переезд в новый чат.</p>
+        <p class="imya">Рабочее место</p>
+        <p>VS Code с Claude Code, модель Opus. Папка <code>Catalyst-BookClub</code>: прототип
+        на Vite и React, макеты, ресёрч, спека.</p>
+        <p>Сверху два своих ограничителя: проверка интерфейса перед показом экрана и чек-лист
+        правок, который переживает переезд в новый чат.</p>
       </div>
       <div class="karta">
-        <p class="imya">Права агента: что можно без спроса и что нельзя никогда</p>
-        <p><b>Без спроса:</b> читать проект, править прототип, макеты и спеку, собирать и гонять
-        прогоны, поднимать локальный сервер, делать коммит, спрашивать свежую документацию.</p>
-        <p><b>Запрещено совсем:</b> <code>git push</code>, выкладка на зарубежный хостинг, чтение
-        секретов, <code>rm -rf</code>, команды к базе, прямые запросы к Telegram.</p>
-        <p><b>Спрашивает каждый раз:</b> публикация страницы наружу, вход на сервер, копирование
-        файлов на сервер.</p>
+        <p class="imya">Права агента</p>
+        <p><b>Без спроса:</b> править прототип и макеты, гонять прогоны, поднимать локальный
+        сервер, делать коммит, спрашивать документацию.</p>
+        <p><b>Нельзя никогда:</b> <code>git push</code>, зарубежный хостинг, чтение секретов,
+        <code>rm -rf</code>, команды к базе, запросы к Telegram.</p>
       </div>
     </div>
 
     <div class="karta" style="margin-top:20px">
-      <p class="imya">Правила проекта: красные линии, которые не нарушает ни одна правка</p>
+      <p class="imya">Красные линии проекта</p>
       <ul>
-        <li>Данные сотрудников клиентов живут только на сервере в России. Зарубежный хостинг
-        для этого продукта не используется ни для фронта, ни для базы.</li>
-        <li>Книги не храним: в каталоге карточка и ссылки «где читать легально». Саммари чужой
-        книги — это переработка, публиковать её нельзя.</li>
-        <li>Нейросеть задаёт вопросы по тексту и никогда не оценивает людей.</li>
-        <li>Вопрос не спойлерит дальше глав, до которых человек дочитал.</li>
+        <li>Данные сотрудников живут только на сервере в России.</li>
+        <li>Книги не храним: карточка и ссылки «где читать легально».</li>
+        <li>Нейросеть задаёт вопросы по тексту и не оценивает людей.</li>
+        <li>Вопрос не спойлерит дальше прочитанных глав.</li>
         <li>Мульти-тенантность с первого дня: партнёр, компания, клуб, цикл.</li>
       </ul>
-      <p>Рядом с каждым запретом лежит строка «почему»: через месяц правило без причины снимают первым.</p>
     </div>
 
     <div class="setka dva" style="margin-top:20px">
       <div class="karta">
-        <p class="imya">Свой скилл: сценарий встречи клуба</p>
-        <p><code>vstrecha-kluba</code> собирает сценарий встречи. На входе книга, главы, число
-        участников и длительность. На выходе сценарий ведущему и экран встречи с живым таймером.</p>
-        <p>Это шаг, который повторяется больше всего: встреча идёт у каждого клуба каждый месяц.
-        Скилл считает раскладку кодом, а не выдумывает: пропорции методологии, сумма шагов ровно
-        равна длительности, разбивка на пары и четвёрки, минимум 7 минут на тему, вопросы
-        по рамкам без пересказа книги.</p>
+        <p class="imya">Свой скилл</p>
+        <p><code>vstrecha-kluba</code> собирает сценарий встречи: на входе книга, главы, число
+        участников и длительность, на выходе сценарий ведущему и экран с живым таймером.</p>
+        <p>Встреча идёт у каждого клуба каждый месяц, поэтому раскладка считается кодом: сумма
+        шагов ровно равна длительности, пары и четвёрки, минимум 7 минут на тему.</p>
       </div>
       <div class="karta">
         <p class="imya">Субагент и внешние инструменты</p>
-        <p><code>knizhnyy-resyorcher</code> собирает карточку книги для каталога: автор, год,
-        объём, время чтения, где читать легально, цена, риски. Возвращает карточку, весь поиск
-        оставляет у себя.</p>
-        <p>Свой <code>publish-page.py</code> выкладывает макет страницей для пересылки партнёру.
-        Context7 даёт свежую документацию перед правкой кода: именно из устаревшего знания
-        о React родился баг первой итерации.</p>
+        <p><code>knizhnyy-resyorcher</code> собирает карточку книги: автор, объём, где читать
+        легально, цена, риски. Возвращает карточку, весь поиск оставляет у себя.</p>
+        <p>Свой <code>publish-page.py</code> выкладывает макет страницей для партнёра.
+        Context7 даёт свежую документацию: из устаревшего знания о React родился баг итерации 1.</p>
       </div>
     </div>
 
     <p class="ulika-podpis">Улика: прогон скилла на встрече №1</p>
-    <pre class="ulika">$ python3 .claude/skills/vstrecha-kluba/tools/stsenariy.py \
-    --kniga "Кради как художник" --avtor "Остин Клеон" \
-    --glavy "1-5" --uchastnikov 12 --minut 90 --nomer 1
+    <pre class="ulika">$ python3 stsenariy.py --kniga "Кради как художник" \
+    --glavy "1-5" --uchastnikov 12 --minut 90
 
-<span class="zel">Встреча №1, книга «Кради как художник», главы 1-5
-Шагов 5, сумма минут 90 (задано 90)
+<span class="zel">Шагов 5, сумма минут 90 (задано 90)
 Lean Coffee: 7 тем по 7 минут
 Участников 12: 6 пар, затем 3 четвёрок.
-Готово: tmp/vstrecha-1/stsenariy.md
 Готово: tmp/vstrecha-1/index.html</span></pre>
 
     <h3>План проекта</h3>
     <div class="shagi">
-      <div class="shag gotov"><span class="shag-num">1</span><span class="shag-tekst">Фирменный стиль и имя: выбранное направление становится темой клуба</span><span class="shag-status">сделано</span></div>
-      <div class="shag gotov"><span class="shag-num">2</span><span class="shag-tekst">Видимая часть: кликабельный прототип участника и HR, сквозной сценарий цикла</span><span class="shag-status">сделано</span></div>
-      <div class="shag seychas"><span class="shag-num">3</span><span class="shag-tekst">Думающая часть: вопросы по прочитанному, подбор книг под тему компании, разбор итогов встречи</span><span class="shag-status">здесь я сейчас</span></div>
-      <div class="shag"><span class="shag-num">4</span><span class="shag-tekst">Боевой каркас: база, вход через Telegram, мульти-тенантность, таймер встречи по вебсокету</span><span class="shag-status">дальше</span></div>
-      <div class="shag"><span class="shag-num">5</span><span class="shag-tekst">Сервер в России: развёртывание и автоподъём после перезагрузки</span><span class="shag-status">дальше</span></div>
-      <div class="shag"><span class="shag-num">6</span><span class="shag-tekst">Пилот: один живой клуб на уже выбранной книге, три встречи, отчёт HR</span><span class="shag-status">дальше</span></div>
-      <div class="shag"><span class="shag-num">7</span><span class="shag-tekst">Второй цикл: каталог, питч-неделя, голосование</span><span class="shag-status">дальше</span></div>
-      <div class="shag"><span class="shag-num">8</span><span class="shag-tekst">Упаковка на продажу: витрина, цена, логотип партнёра из настроек</span><span class="shag-status">дальше</span></div>
+      <div class="shag gotov"><span class="shag-num">1</span><span class="shag-tekst">Стиль и имя клуба</span><span class="shag-status">сделано</span></div>
+      <div class="shag gotov"><span class="shag-num">2</span><span class="shag-tekst">Видимая часть: прототип участника и HR</span><span class="shag-status">сделано</span></div>
+      <div class="shag seychas"><span class="shag-num">3</span><span class="shag-tekst">Думающая часть: вопросы по прочитанному, подбор книг</span><span class="shag-status">здесь я сейчас</span></div>
+      <div class="shag"><span class="shag-num">4</span><span class="shag-tekst">Боевой каркас: база, вход через Telegram, таймер по вебсокету</span><span class="shag-status">дальше</span></div>
+      <div class="shag"><span class="shag-num">5</span><span class="shag-tekst">Сервер в России и автоподъём</span><span class="shag-status">дальше</span></div>
+      <div class="shag"><span class="shag-num">6</span><span class="shag-tekst">Пилот: живой клуб, три встречи, отчёт HR</span><span class="shag-status">дальше</span></div>
+      <div class="shag"><span class="shag-num">7</span><span class="shag-tekst">Второй цикл: каталог, питч, голосование</span><span class="shag-status">дальше</span></div>
+      <div class="shag"><span class="shag-num">8</span><span class="shag-tekst">Упаковка на продажу</span><span class="shag-status">дальше</span></div>
     </div>
   </div>
 </section>
@@ -443,124 +396,121 @@ Lean Coffee: 7 тем по 7 минут
 <section id="r2">
   <div class="shirina">
     <div class="zagolovok-sekcii"><span class="nomer-sekcii">2</span><h2>Видимая часть</h2></div>
-    <p class="pod-zagolovkom">Блок 3. Одна поверхность, через которую один сценарий проходится целиком:
-    участник в телефоне, HR в браузере.</p>
+    <p class="pod-zagolovkom">Блок 3. Один сценарий проходится целиком: участник в телефоне, HR в браузере.</p>
 
     <div class="telefony">
       <div class="telefon">
         <p class="telefon-podpis"><i>1</i>Вход по ссылке, два касания</p>
-        <div class="telefon-okno"><img src="img/che-join.webp" width="410" height="579" fetchpriority="high" alt="Экран входа в клуб"></div>
+        <div class="telefon-okno"><img src="img/che-join.webp" width="820" height="1158" fetchpriority="high" alt="Экран входа в клуб"></div>
       </div>
       <div class="telefon">
-        <p class="telefon-podpis"><i>2</i>Главная: книга, видео, подборка топа</p>
-        <div class="telefon-okno"><img src="img/che-home.webp" width="410" height="2020" fetchpriority="high" alt="Главный экран участника"></div>
+        <p class="telefon-podpis"><i>2</i>Главная: книга, видео, подборка</p>
+        <div class="telefon-okno"><img src="img/che-home.webp" width="820" height="4260" fetchpriority="high" alt="Главный экран участника"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>3</i>Книга и прогресс чтения</p>
-        <div class="telefon-okno"><img src="img/che-book.webp" width="410" height="1457" decoding="async" alt="Экран книги и прогресса"></div>
+        <div class="telefon-okno"><img src="img/che-book.webp" width="820" height="4312" decoding="async" alt="Экран книги и прогресса"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>4</i>Голосование за книгу цикла</p>
-        <div class="telefon-okno"><img src="img/che-vote.webp" width="410" height="2381" decoding="async" alt="Экран голосования"></div>
+        <div class="telefon-okno"><img src="img/che-vote.webp" width="820" height="4622" decoding="async" alt="Экран голосования"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>5</i>Встреча идёт по таймеру сама</p>
-        <div class="telefon-okno"><img src="img/che-meet.webp" width="410" height="831" decoding="async" alt="Экран встречи с таймером"></div>
+        <div class="telefon-okno"><img src="img/che-meet.webp" width="820" height="1522" decoding="async" alt="Экран встречи с таймером"></div>
       </div>
       <div class="telefon">
         <p class="telefon-podpis"><i>6</i>Вопрос по прочитанным главам</p>
-        <div class="telefon-okno"><img src="img/che-ai.webp" width="410" height="766" decoding="async" alt="Экран вопросов по книге"></div>
+        <div class="telefon-okno"><img src="img/che-ai.webp" width="820" height="1512" decoding="async" alt="Экран вопросов по книге"></div>
       </div>
       <div class="telefon">
-        <p class="telefon-podpis"><i>7</i>Монеты, значки, рейтинг клуба</p>
-        <div class="telefon-okno"><img src="img/che-rewards.webp" width="410" height="1493" decoding="async" alt="Экран наград"></div>
+        <p class="telefon-podpis"><i>7</i>Песо, значки, коллекция портретов</p>
+        <div class="telefon-okno"><img src="img/che-rewards.webp" width="820" height="2846" decoding="async" alt="Экран наград"></div>
       </div>
       <div class="telefon">
-        <p class="telefon-podpis"><i>8</i>Тот же клуб на маленьком телефоне</p>
-        <div class="telefon-okno"><img src="img/mobile-che.webp" width="390" height="844" decoding="async" alt="Клуб на экране 390 пикселей"></div>
+        <p class="telefon-podpis"><i>8</i>Че подсказывает по экранам</p>
+        <div class="telefon-okno"><img src="img/che-podskazka.webp" width="780" height="1688" decoding="async" alt="Подсказка Че поверх экрана"></div>
       </div>
     </div>
 
-    <div class="setka dva" style="margin-top:40px">
+    <div class="setka dva" style="margin-top:36px">
       <figure>
-        <img src="img/che-hr.webp" width="900" height="758" decoding="async" style="border-radius:22px;border:2px solid var(--ramka)" alt="Дашборд HR">
+        <img src="img/che-hr.webp" width="1700" height="1432" decoding="async" style="border-radius:22px;border:2px solid var(--ramka)" alt="Дашборд HR">
         <figcaption>Дашборд HR: кто дошёл, кто читает, какие решения взяли в работу.</figcaption>
       </figure>
       <figure>
-        <img src="img/che-wizard.webp" width="900" height="563" decoding="async" style="border-radius:22px;border:2px solid var(--ramka)" alt="Мастер сборки цикла">
+        <img src="img/che-wizard.webp" width="1700" height="1063" decoding="async" style="border-radius:22px;border:2px solid var(--ramka)" alt="Мастер сборки цикла">
         <figcaption>Мастер цикла: тема, книги, даты встреч, участники и запуск.</figcaption>
       </figure>
     </div>
 
-    <div class="setka dva" style="margin-top:40px">
+    <div class="puzyri" style="margin-top:48px">
+      <div class="puzyr">Открыл ссылку, уже в клубе</div>
+      <div class="puzyr zholty">Отметил главу, упало 5 песо</div>
+      <div class="puzyr krasny">Пропустил встречу, Че заметит</div>
+    </div>
+
+    <div class="setka dva" style="margin-top:48px">
       <div class="karta">
         <p class="imya">Сквозной сценарий участника</p>
-        <p>Открыл ссылку приглашения, попал в клуб. Увидел книгу цикла, приветствие руководителя
-        и подборку топа. Отметил прогресс. Ответил на вопрос по прочитанным главам. Пришёл
-        на встречу, где шаги идут по таймеру. Зафиксировал своё действие до следующей встречи.
-        Получил монеты и значок, увидел себя в рейтинге клуба.</p>
-        <p>Бренды переключаются на лету: один и тот же экран показывает разные клубы, потому что
-        платформа продаётся партнёрам под их логотипом.</p>
+        <p>Открыл ссылку, попал в клуб. Увидел книгу, приветствие руководителя и подборку топа.
+        Отметил прогресс, ответил на вопрос по главам, пришёл на встречу с таймером, зафиксировал
+        своё действие, получил песо и значок.</p>
       </div>
       <div class="karta aktsent">
         <p class="imya">Две итерации, как положено</p>
-        <p><b>Первая.</b> Экраны при переходе прокручивались не туда, и только в свежем браузере.
-        Корень: прокрутка срабатывала в эффекте React до того, как экран вставал на место.
-        Починил не экран, а переход вообще, класс ошибки записал в общий трекер.</p>
-        <p><b>Вторая.</b> Проверяющий агент нашёл две группы дефектов: монеты начислялись
-        за повторное нажатие, а значки были прописаны руками и расходились с состоянием; на
-        телефонах 390 и 360 пикселей нижние кнопки уезжали за край. Монеты и значки теперь
-        считаются из состояния, оба размера экрана в прогоне.</p>
+        <p><b>Первая.</b> Экраны прокручивались не туда и только в свежем браузере. Корень:
+        прокрутка срабатывала в эффекте React раньше, чем экран вставал на место. Починил переход
+        вообще, а не этот экран.</p>
+        <p><b>Вторая.</b> Проверяющий агент нашёл накрутку песо за повторное нажатие и значки,
+        прописанные руками. Теперь и то и другое считается из состояния, малые телефоны в прогоне.</p>
       </div>
     </div>
   </div>
 </section>
 
-
-
 <section id="plakaty">
   <div class="shirina">
     <div class="zagolovok-sekcii"><span class="nomer-sekcii">3</span><h2>Голос клуба</h2></div>
-    <p class="pod-zagolovkom">Плакаты живут внутри приложения: шапка, приглашение, афиша встречи,
-    экран голосования, награды. Это не украшение, а то, ради чего сотрудник открывает клуб
-    во второй раз. Нарисованы кодом, поэтому новый плакат стоит минуту, а не вечер в редакторе.</p>
+    <p class="pod-zagolovkom">Плакаты живут внутри приложения: шапка, приглашение, афиша,
+    голосование, награды. Нарисованы кодом, поэтому новый стоит минуту.</p>
 
     <div class="plakaty">
       <div class="plakat-karta">
-        <img src="img/plakaty/p3.webp" width="760" height="323" decoding="async" alt="Плакат «Вива ла книга» на жёлтом фоне">
-        <div class="podpis"><p>Вива ла книга</p><span>Шапка клуба, листается как лента</span></div>
+        <img src="img/plakaty/p3.webp" width="1200" height="510" decoding="async" alt="Плакат «Вива ла книга» на жёлтом фоне">
+        <div class="podpis"><p>Вива ла книга</p><span>Шапка клуба</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p7.webp" width="760" height="323" decoding="async" alt="Плакат «Аста ла глава, сьемпре» на розовом фоне">
+        <img src="img/plakaty/p7.webp" width="1200" height="510" decoding="async" alt="Плакат «Аста ла глава, сьемпре» на розовом фоне">
         <div class="podpis"><p>Аста ла глава, сьемпре</p><span>До последней главы, всегда</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p2.webp" width="760" height="323" decoding="async" alt="Плакат «Вождь всё сказал» на чёрном фоне">
-        <div class="podpis"><p>Вождь всё сказал</p><span>Главу не отметил, значит не читал</span></div>
+        <img src="img/plakaty/p4.webp" width="1200" height="510" decoding="async" alt="Плакат на фиолетовом фоне">
+        <div class="podpis"><p>Фиолетовый разворот</p><span>Другой фон для той же шапки</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p1.webp" width="760" height="323" decoding="async" alt="Плакат «Читай как Чегевара»">
-        <div class="podpis"><p>Читай как Чегевара</p><span>Берет по желанию. Книга обязательно.</span></div>
+        <img src="img/plakaty/p1.webp" width="1200" height="510" decoding="async" alt="Плакат «Читай как Чегевара»">
+        <div class="podpis"><p>Читай как Чегевара</p><span>Берет по желанию, книга обязательно</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p21.webp" width="760" height="323" decoding="async" alt="Плакат «Ну че, читаем?»">
+        <img src="img/plakaty/p21.webp" width="1200" height="510" decoding="async" alt="Плакат «Ну че, читаем?»">
         <div class="podpis"><p>Ну че, читаем?</p><span>Вопрос, с которого начинается цикл</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p10.webp" width="760" height="323" decoding="async" alt="Плакат «Вся власть читателям»">
-        <div class="podpis"><p>Вся власть читателям</p><span>Лозунг для экрана голосования</span></div>
+        <img src="img/plakaty/p10.webp" width="1200" height="510" decoding="async" alt="Плакат «Вся власть читателям»">
+        <div class="podpis"><p>Вся власть читателям</p><span>Экран голосования</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p15.webp" width="760" height="323" decoding="async" alt="Плакат «Вождь верит в тебя»">
-        <div class="podpis"><p>Вождь верит в тебя</p><span>Напоминание отстающим без укора</span></div>
+        <img src="img/plakaty/p15.webp" width="1200" height="510" decoding="async" alt="Плакат «Вождь верит в тебя»">
+        <div class="podpis"><p>Вождь верит в тебя</p><span>Напоминание без укора</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p23.webp" width="760" height="323" decoding="async" alt="Плакат «Читатели всех отделов, соединяйтесь»">
-        <div class="podpis"><p>Читатели всех отделов</p><span>Про клуб между отделами компании</span></div>
+        <img src="img/plakaty/p23.webp" width="1200" height="510" decoding="async" alt="Плакат «Читатели всех отделов, соединяйтесь»">
+        <div class="podpis"><p>Читатели всех отделов</p><span>Клуб между отделами</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p24.webp" width="760" height="323" decoding="async" alt="Плакат «Книжная герилья»">
-        <div class="podpis"><p>Книжная герилья</p><span>Для тех, кто читает в обед тайком</span></div>
+        <img src="img/plakaty/p24.webp" width="1200" height="510" decoding="async" alt="Плакат «Книжная герилья»">
+        <div class="podpis"><p>Книжная герилья</p><span>Для тех, кто читает в обед</span></div>
       </div>
     </div>
   </div>
@@ -568,30 +518,30 @@ Lean Coffee: 7 тем по 7 минут
 
 <section id="dalshe">
   <div class="shirina">
-    <div class="zagolovok-sekcii"><h2>Разделы, которые заполню дальше</h2></div>
+    <div class="zagolovok-sekcii"><h2>Заполню дальше</h2></div>
     <div class="setka tri">
-      <div class="karta"><p class="imya">Раздел 3 · блок 4</p><p>Думающая часть: какое решение
-      принимает агент, память, внешняя связь, где он ошибается.</p><p class="zhdyot">заполняется позже</p></div>
-      <div class="karta"><p class="imya">Раздел 4 · блок 5</p><p>Жизнь на сервере: провайдер,
-      развёртывание, автоподъём, первые живые пользователи.</p><p class="zhdyot">заполняется позже</p></div>
-      <div class="karta"><p class="imya">Раздел 5 · блок 8</p><p>Прод и защита: репозиторий,
-      логи, секреты, стоимость недели, презентация.</p><p class="zhdyot">заполняется позже</p></div>
+      <div class="karta"><p class="imya">Раздел 3 · блок 4</p><p>Думающая часть: решения агента,
+      память, внешняя связь, где он ошибается.</p><p class="zhdyot">позже</p></div>
+      <div class="karta"><p class="imya">Раздел 4 · блок 5</p><p>Жизнь на сервере: развёртывание,
+      автоподъём, первые живые пользователи.</p><p class="zhdyot">позже</p></div>
+      <div class="karta"><p class="imya">Раздел 5 · блок 8</p><p>Прод и защита: логи, секреты,
+      стоимость недели, презентация.</p><p class="zhdyot">позже</p></div>
     </div>
   </div>
 </section>
 
 <section id="ssylki">
   <div class="shirina">
-    <div class="zagolovok-sekcii"><h2>Что можно открыть и потрогать</h2></div>
+    <div class="zagolovok-sekcii"><h2>Открыть и потрогать</h2></div>
     <div class="ssylki">
       <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/app/">
         <b>Живой прототип</b><span>maria177777773.github.io/knizhnyy-klub/app/</span>
       </a>
       <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/pochemu-che/">
-        <b>Почему клуб назван Че</b><span>maria177777773.github.io/knizhnyy-klub/pochemu-che/</span>
+        <b>Почему клуб назван ЧЕ</b><span>maria177777773.github.io/knizhnyy-klub/pochemu-che/</span>
       </a>
       <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/vse/">
-        <b>Все материалы клуба</b><span>maria177777773.github.io/knizhnyy-klub/vse/</span>
+        <b>Все материалы</b><span>maria177777773.github.io/knizhnyy-klub/vse/</span>
       </a>
     </div>
   </div>
@@ -599,13 +549,11 @@ Lean Coffee: 7 тем по 7 минут
 
 <footer class="podval">
   <div class="shirina">
-    <p><b>Практика 1.</b> Проект выбран и описан, рабочее место собрано, правила проекта и права
-    агента с причинами, скилл сценария встречи работает, субагент-ресёрчер, план из 8 шагов.</p>
-    <p><b>Практика 2.</b> Поверхность участника и HR, сквозной сценарий от приглашения до значка
-    проходится целиком, две итерации с настоящими дефектами и их корнем.</p>
-    <p><b>Сейчас.</b> Шаг 3: вопросы по прочитанному и подбор книг под тему компании.</p>
-    <p style="margin-top:22px;color:#8b8379;font-size:17px">Паспорт дописывается по ходу потока,
-    ссылка на документ не меняется.</p>
+    <p><b>Практика 1.</b> Проект описан, рабочее место собрано, правила и права агента с причинами,
+    скилл сценария встречи, субагент-ресёрчер, план из 8 шагов.</p>
+    <p><b>Практика 2.</b> Поверхность участника и HR, сквозной сценарий целиком, две итерации
+    с настоящими дефектами.</p>
+    <p><b>Сейчас.</b> Шаг 3: вопросы по прочитанному и подбор книг.</p>
   </div>
 </footer>
 
