@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Паспорт проекта · Команда 365">
+<meta property="og:description" content="Паспорт проекта «Команда 365 · книжный клуб», поток 03 AI.Цех">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Паспорт проекта · Команда 365</title>
+<style>
+  :root {
+    --fon: #0e0e10; --karta: #18181b; --karta2: #1f1f23; --tekst: #f4f4f5; --tusklo: #a1a1aa;
+    --akcent: #d7263d; --zelen: #4ade80; --ramka: #2b2b31;
+    --telo: 18px; --h1: 44px; --h2: 28px; --h3: 20px; --btn-h: 54px;
+    --max: 1100px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fon); color: var(--tekst);
+    font: var(--telo)/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .obolochka { max-width: var(--max); margin: 0 auto; padding: 48px 24px 96px; }
+
+  .shapka { border-bottom: 1px solid var(--ramka); padding-bottom: 32px; margin-bottom: 44px; }
+  .metka {
+    display: inline-block; font-size: 15px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--akcent); margin-bottom: 14px;
+  }
+  h1 { font-size: var(--h1); line-height: 1.12; margin: 0 0 14px; letter-spacing: -.5px; }
+  .podzagolovok { font-size: 21px; color: var(--tusklo); margin: 0 0 22px; max-width: 46em; }
+  .kto { font-size: 17px; color: var(--tusklo); }
+  .kto b { color: var(--tekst); font-weight: 600; }
+
+  h2 {
+    font-size: var(--h2); margin: 56px 0 8px; letter-spacing: -.3px;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  h2 .nomer {
+    font-size: 15px; font-weight: 700; color: var(--akcent); background: rgba(215,38,61,.14);
+    border: 1px solid rgba(215,38,61,.35); border-radius: 99px; padding: 5px 13px; letter-spacing: .06em;
+  }
+  h2 .zhdyot {
+    font-size: 15px; font-weight: 600; color: var(--tusklo); background: var(--karta2);
+    border: 1px solid var(--ramka); border-radius: 99px; padding: 5px 13px;
+  }
+  .razdel-opisanie { color: var(--tusklo); margin: 0 0 26px; max-width: 48em; }
+
+  .polya { display: grid; gap: 14px; }
+  .pole {
+    background: var(--karta); border: 1px solid var(--ramka); border-radius: 16px; padding: 22px 24px;
+  }
+  .pole-imya {
+    font-size: 15px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--tusklo); margin: 0 0 10px;
+  }
+  .pole-telo { margin: 0; }
+  .pole-telo p { margin: 0 0 12px; }
+  .pole-telo p:last-child { margin-bottom: 0; }
+  .pole-telo ul { margin: 0; padding-left: 24px; }
+  .pole-telo li { margin-bottom: 10px; }
+  .pole-telo li:last-child { margin-bottom: 0; }
+  .pole-telo code {
+    background: var(--karta2); border: 1px solid var(--ramka); border-radius: 6px;
+    padding: 2px 7px; font-size: 16px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  a { color: #fff; text-decoration: underline; text-decoration-color: var(--akcent); text-underline-offset: 4px; }
+  a:hover { color: var(--akcent); }
+
+  .shagi { counter-reset: sh; display: grid; gap: 12px; }
+  .shag {
+    display: grid; grid-template-columns: 46px 1fr; gap: 18px; align-items: start;
+    background: var(--karta); border: 1px solid var(--ramka); border-radius: 16px; padding: 18px 22px;
+  }
+  .shag.sdelan { border-color: rgba(74,222,128,.4); }
+  .shag.seychas { border-color: var(--akcent); background: rgba(215,38,61,.08); }
+  .shag-num {
+    width: 46px; height: 46px; border-radius: 12px; background: var(--karta2);
+    display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px;
+    border: 1px solid var(--ramka);
+  }
+  .shag.sdelan .shag-num { color: var(--zelen); }
+  .shag.seychas .shag-num { color: #fff; background: var(--akcent); border-color: var(--akcent); }
+  .shag-tekst { padding-top: 9px; }
+  .shag-status { font-size: 16px; color: var(--tusklo); display: block; margin-top: 4px; }
+
+  .ulika {
+    background: #0b0b0d; border: 1px solid var(--ramka); border-left: 3px solid var(--zelen);
+    border-radius: 12px; padding: 18px 20px; margin: 14px 0 0; overflow-x: auto;
+    font: 15px/1.65 ui-monospace, "SF Mono", Menlo, monospace; color: #d4d4d8; white-space: pre;
+  }
+  .ulika-imya {
+    font-size: 15px; color: var(--zelen); font-weight: 600; margin: 16px 0 0;
+  }
+
+  .ssylki { display: grid; gap: 12px; margin: 0; }
+  .ssylka {
+    display: block; background: var(--karta); border: 1px solid var(--ramka); border-radius: 14px;
+    padding: 18px 22px; text-decoration: none; color: var(--tekst);
+  }
+  .ssylka:hover { border-color: var(--akcent); color: var(--tekst); }
+  .ssylka b { display: block; font-size: var(--h3); margin-bottom: 4px; }
+  .ssylka span { color: var(--tusklo); font-size: 16px; word-break: break-all; }
+
+  .itog {
+    background: var(--karta); border: 1px solid var(--ramka); border-radius: 18px;
+    padding: 26px 28px; margin-top: 20px;
+  }
+  .itog-stroka { display: flex; gap: 14px; align-items: baseline; margin-bottom: 12px; }
+  .itog-stroka:last-child { margin-bottom: 0; }
+  .itog-stroka b { min-width: 11em; color: var(--tusklo); font-weight: 600; font-size: 16px; }
+
+  .obyortka-tabl { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  th, td { text-align: left; padding: 14px 12px; border-bottom: 1px solid var(--ramka); vertical-align: top; }
+  th { color: var(--tusklo); font-size: 16px; font-weight: 600; }
+
+  .podval {
+    margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--ramka);
+    color: var(--tusklo); font-size: 16px;
+  }
+
+  @media (max-width: 680px) {
+    :root { --h1: 30px; --h2: 23px; --telo: 17px; }
+    .obolochka { padding: 28px 16px 64px; }
+    .shag { grid-template-columns: 38px 1fr; gap: 14px; padding: 16px 18px; }
+    .shag-num { width: 38px; height: 38px; font-size: 17px; }
+    .shag-tekst { padding-top: 6px; }
+    .itog-stroka { display: block; }
+    .itog-stroka b { display: block; margin-bottom: 2px; }
+  }
+</style>
+
+</head>
+<body>
+<div class="obolochka">
+
+  <div class="shapka">
+    <span class="metka">Паспорт проекта · AI.Цех, поток 03</span>
+    <h1>Команда 365 · книжный клуб</h1>
+    <p class="podzagolovok">
+      Цифровая платформа годового развития команды. Первый работающий модуль: корпоративный
+      книжный клуб, который идёт без живого модератора. Пилотный клуб называется «Чегевара».
+    </p>
+    <p class="kto"><b>Участник:</b> Мария Варламова · поток 03, сентябрь-ноябрь 2026</p>
+  </div>
+
+  <h2><span class="nomer">Раздел 0</span> Проект</h2>
+  <p class="razdel-opisanie">Пять строк, с которых начинается всё остальное.</p>
+
+  <div class="polya">
+    <div class="pole">
+      <p class="pole-imya">Название</p>
+      <div class="pole-telo">
+        <p>«Команда 365 · книжный клуб». Платформа годового развития команды, первый модуль
+        которой корпоративный книжный клуб. Имя платформы выбирается отдельно, имя клуба команда
+        придумывает сама: пилотный называется «Чегевара».</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Что делает, одной фразой</p>
+      <div class="pole-telo">
+        <p>Ведёт корпоративный книжный клуб вместо живого модератора: предлагает книги,
+        собирает голосование, проводит встречу по таймеру, задаёт вопросы по прочитанному
+        и отдаёт HR отчёт о вовлечённости.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Кто им пользуется, кроме меня</p>
+      <div class="pole-telo">
+        <ul>
+          <li><b>Участник клуба</b> — сотрудник компании-клиента, живёт в телефоне.</li>
+          <li><b>HR компании</b> — владелец клуба, собирает цикл и смотрит дашборд.</li>
+          <li><b>Партнёр</b> — продаёт клуб своим клиентам под своим логотипом.</li>
+          <li><b>Руководитель-амбассадор</b> — записывает приветствие и свою подборку книг.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Какую задачу снимает и сколько времени она отнимает сейчас</p>
+      <div class="pole-telo">
+        <p>Сейчас клуб держится на человеке. На одну встречу уходит около 5 часов: подготовка
+        сценария и вопросов 3 часа, ведение 1,5 часа, сбор итогов и напоминания 0,5 часа.
+        Цикл из 3 встреч — примерно 16 часов на один клуб.</p>
+        <p>Это и есть потолок: вести так десять клубов в десяти компаниях одновременно
+        невозможно, а продавать нужно именно столько. Платформа убирает из этих 16 часов всё,
+        кроме живого разговора участников.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Как я пойму, что он работает</p>
+      <div class="pole-telo">
+        <ul>
+          <li>Первый клуб прошёл цикл целиком на платформе, без ведущего с таймером в руках.</li>
+          <li>До финала цикла дошли не меньше 60% участников.</li>
+          <li>HR получил отчёт и смог показать его руководству.</li>
+          <li>Партнёр повторил запуск на второй компании сам, без моего участия.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="nomer">Раздел 1</span> Каркас</h2>
+  <p class="razdel-opisanie">Блок 2. Рабочее место под проект, собранное так, чтобы дальше ничего не переделывать.</p>
+
+  <div class="polya">
+    <div class="pole">
+      <p class="pole-imya">Рабочее место: что поставил и настроил</p>
+      <div class="pole-telo">
+        <p>VS Code с расширением Claude Code, модель Opus. Папка проекта
+        <code>~/Desktop/Catalyst-BookClub</code>, под ней прототип на Vite + React + TypeScript
+        + Tailwind, макеты, ресёрч и спека.</p>
+        <p>Сверху два своих ограничителя, которые срабатывают сами: проверка интерфейса перед
+        показом любого экрана и чек-лист правок, который переживает переезд в новый чат.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">CLAUDE.md проекта</p>
+      <div class="pole-telo">
+        <p>Файл описывает именно этот продукт, а не курс. Главное в нём — красные линии,
+        которые нельзя нарушить ни одной правкой:</p>
+        <ul>
+          <li>Данные сотрудников клиентов живут только на сервере в России. Для этого продукта
+          зарубежный хостинг не используется ни для фронта, ни для базы.</li>
+          <li>Книги не храним: в каталоге карточка и ссылки «где читать легально».
+          Саммари чужой книги — переработка, её нельзя публиковать.</li>
+          <li>Нейросеть задаёт вопросы по тексту и никогда не оценивает людей. Оценка сотрудника
+          нейросетью — красная линия продукта.</li>
+          <li>Вопрос не спойлерит дальше глав, до которых человек дочитал.</li>
+          <li>Мульти-тенантность с первого дня: партнёр → компания → клуб → цикл.</li>
+        </ul>
+        <p>Там же карта проекта: где прототип, где макеты, где спека, где утверждённое,
+        и как я проверяю работу перед показом.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Права в settings.json: что разрешено без спроса и что запрещено</p>
+      <div class="pole-telo">
+        <p><b>Без спроса:</b> читать всё в папке проекта, править прототип, макеты, спеку
+        и ресёрч, собирать и прогонять тесты, запускать проверки интерфейса, поднимать локальный
+        сервер, делать коммит, спрашивать свежую документацию библиотек.</p>
+        <p><b>Запрещено совсем:</b> <code>git push</code> (прототип виден партнёрам сразу после
+        выкладки), развёртывание на зарубежный хостинг (персональные данные), чтение папки
+        секретов и файла доступов, <code>rm -rf</code>, <code>git reset --hard</code>, команды
+        к базе, прямые запросы к Telegram (бот клуба пишет живым людям в компаниях клиента,
+        случайная рассылка необратима).</p>
+        <p><b>Спрашивает каждый раз:</b> выкладка страницы наружу, вход на сервер по ssh,
+        копирование файлов на сервер.</p>
+        <p>Рядом с каждым запретом в файле лежит строка «почему»: через месяц правило без
+        причины снимают первым.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Свой скилл: что делает и какой повторяющийся шаг закрывает</p>
+      <div class="pole-telo">
+        <p><code>vstrecha-kluba</code> — собирает сценарий встречи клуба. На входе книга, главы,
+        число участников и длительность. На выходе два файла: сценарий ведущему и экран встречи
+        с живым таймером по шагам.</p>
+        <p>Это и есть шаг, который повторяется больше всего: встреча проходит у каждого клуба
+        каждый месяц, и раскладка минут каждый раз пересчитывается заново. Скилл считает её
+        кодом, а не выдумывает: пропорции методологии, сумма шагов ровно равна длительности,
+        разбивка на пары и четвёрки, число тем по 7 минут минимум, вопросы по рамкам
+        без пересказа книги.</p>
+        <p class="ulika-imya">Прогон на встрече №1 клуба «Чегевара»:</p>
+        <div class="ulika">$ python3 .claude/skills/vstrecha-kluba/tools/stsenariy.py \
+    --kniga "Кради как художник" --avtor "Остин Клеон" \
+    --glavy "1-5" --uchastnikov 12 --minut 90 --klub "Чегевара" --nomer 1
+
+Встреча №1 клуба «Чегевара», книга «Кради как художник», главы 1-5
+Шагов 5, сумма минут 90 (задано 90)
+Lean Coffee: 7 тем по 7 минут
+Участников 12: 6 пар, затем 3 четвёрок.
+Готово: tmp/vstrecha-1/stsenariy.md
+Готово: tmp/vstrecha-1/index.html</div>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">MCP и CLI: что подключил и зачем они этому проекту</p>
+      <div class="pole-telo">
+        <ul>
+          <li><b>Свой CLI <code>publish-page.py</code></b> — выкладывает макет страницей, которую
+          можно переслать партнёру: добавляет кодировку, запрет индексации и превью для
+          мессенджера. Нужен потому, что варианты стиля и прототип уходят на согласование
+          по ссылке десятки раз, а каждый раз это одни и те же четыре правки в голове страницы.</li>
+          <li><b>Context7</b> — свежая документация библиотек перед правкой кода. Нужен потому,
+          что прототип на Vite и React 19, а знания модели о них отстают на версию: именно так
+          родился баг итерации 1.</li>
+        </ul>
+        <p>Больше ничего не подключал: инструмент без ответа на вопрос «зачем он этому проекту»
+        просто занимает контекст.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Субагент: какую отдельную работу выполняет</p>
+      <div class="pole-telo">
+        <p><code>knizhnyy-resyorcher</code> — собирает карточку книги для каталога: автор, год,
+        объём, время чтения, темы, где читать легально в России, цена, для кого в компании,
+        и чем книга рискованна. Возвращает только карточку, весь поиск оставляет у себя.</p>
+        <p>Вынесен отдельно по двум причинам. Первая: одна книга это десятки страниц выдачи,
+        цен и аннотаций, и этот мусор не должен лежать в основном разговоре. Вторая: у него своя
+        роль со своими запретами — не пересказывать книгу, не придумывать цену, никогда
+        не упоминать пиратские библиотеки.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">План: шаги проекта крупно</p>
+      <div class="pole-telo">
+        <div class="shagi">
+          <div class="shag sdelan"><div class="shag-num">1</div><div class="shag-tekst">
+            Фирменный стиль и имя: выбранное направление становится темой платформы.
+            <span class="shag-status">сделано: 13 направлений, плакаты клуба, 10 вариантов имени</span>
+          </div></div>
+          <div class="shag sdelan"><div class="shag-num">2</div><div class="shag-tekst">
+            Видимая часть: кликабельный прототип участника и HR, сквозной сценарий цикла.
+            <span class="shag-status">сделано: прототип живой, ссылка ниже</span>
+          </div></div>
+          <div class="shag seychas"><div class="shag-num">3</div><div class="shag-tekst">
+            Думающая часть: вопросы по прочитанному, подбор книг под тему компании, разбор итогов встречи.
+            <span class="shag-status">здесь я сейчас</span>
+          </div></div>
+          <div class="shag"><div class="shag-num">4</div><div class="shag-tekst">
+            Боевой каркас: база, вход через Telegram, мульти-тенантность, таймер встречи по вебсокету.
+          </div></div>
+          <div class="shag"><div class="shag-num">5</div><div class="shag-tekst">
+            Сервер в России: развёртывание и автоподъём после перезагрузки.
+          </div></div>
+          <div class="shag"><div class="shag-num">6</div><div class="shag-tekst">
+            Пилот: один живой клуб на уже выбранной книге, три встречи, отчёт HR.
+          </div></div>
+          <div class="shag"><div class="shag-num">7</div><div class="shag-tekst">
+            Второй цикл: каталог, питч-неделя, голосование.
+          </div></div>
+          <div class="shag"><div class="shag-num">8</div><div class="shag-tekst">
+            Упаковка на продажу: витрина, цена, логотип партнёра из настроек.
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">С какого шага начинаю</p>
+      <div class="pole-telo">
+        <p>Шаги 1 и 2 уже закрыты: стиль выбран, прототип живой. Сейчас идёт шаг 3, думающая
+        часть. Порядок такой потому, что у проекта есть внешний срок: первый живой клуб через
+        три недели, и к нему нужны именно вопросы по прочитанному, а не каталог.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="nomer">Раздел 2</span> Видимая часть</h2>
+  <p class="razdel-opisanie">Блок 3. Одна поверхность, через которую один сценарий проходится целиком.</p>
+
+  <div class="polya">
+    <div class="pole">
+      <p class="pole-imya">Через что с проектом работают</p>
+      <div class="pole-telo">
+        <p>Участник — телефон: приложение открывается по ссылке приглашения, без установки
+        и без пароля. HR — тот же адрес в браузере, но другой кабинет: мастер сборки цикла
+        и дашборд клуба.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Сквозной сценарий, который проходится целиком</p>
+      <div class="pole-telo">
+        <p><b>Участник, от приглашения до значка:</b></p>
+        <ul>
+          <li>Открывает ссылку приглашения и попадает в клуб в два касания.</li>
+          <li>Видит книгу цикла, приветствие руководителя и подборку топа.</li>
+          <li>Отмечает прогресс чтения.</li>
+          <li>Отвечает на вопрос по прочитанным главам.</li>
+          <li>Приходит на встречу: шаги идут по таймеру сами.</li>
+          <li>Фиксирует своё действие до следующей встречи.</li>
+          <li>Получает монеты и значок, видит себя в рейтинге клуба.</li>
+        </ul>
+        <p><b>HR, от пустого клуба до запуска:</b> собирает цикл в мастере (тема, книга,
+        даты встреч), добавляет участников, запускает, дальше смотрит дашборд: кто дошёл,
+        кто читает, какие действия взяли в работу.</p>
+        <p>Три бренда переключаются на лету: один и тот же экран показывает клуб «Чегевара»
+        и две другие темы, потому что платформа продаётся партнёрам под их логотипом.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Итерация 1: что не получилось и как чинил</p>
+      <div class="pole-telo">
+        <p>Экраны участника при переходе прокручивались не туда: контент оказывался
+        на середине, а не в начале. Причём на моей сборке всё было нормально, ломалось
+        в свежем браузере.</p>
+        <p>Корень: автоматическая прокрутка срабатывала в эффекте React до того, как новый
+        экран успевал встать на место, а поведение этого момента в новой версии браузера
+        изменилось. Починил не этот экран, а переход вообще: прокрутка стала частью перехода,
+        а не отдельного эффекта. Класс ошибки записал в общий трекер, чтобы в следующем проекте
+        не искать заново.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Итерация 2: что не получилось и как чинил</p>
+      <div class="pole-telo">
+        <p>Отдельный проверяющий агент разобрал готовый прототип и нашёл две группы дефектов.</p>
+        <p>Первая: монеты начислялись за повторное нажатие, то есть их можно было накрутить,
+        а значки были прописаны вручную и расходились с реальным состоянием участника. Переделал
+        так, что и монеты, и значки считаются из состояния, а не дописываются при клике.</p>
+        <p>Вторая: на телефонах 390×664 и 360×640 нижние кнопки уезжали за край экрана, а это
+        самые частые экраны у сотрудников. Проверку на этих размерах добавил в прогон, чтобы
+        дефект не вернулся.</p>
+      </div>
+    </div>
+
+    <div class="pole">
+      <p class="pole-imya">Стек</p>
+      <div class="pole-telo">
+        <p>Прототип: Vite, React 19, TypeScript, Tailwind, тесты на Vitest, сквозной прогон
+        участника и HR. Боевая версия поедет на Next.js с базой Postgres и вебсокетом для
+        таймера встречи, на сервере в России.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2><span class="nomer">Раздел 3</span> Думающая часть <span class="zhdyot">блок 4, заполняется позже</span></h2>
+  <h2><span class="nomer">Раздел 4</span> Жизнь на сервере <span class="zhdyot">блок 5, заполняется позже</span></h2>
+  <h2><span class="nomer">Раздел 5</span> Прод и защита <span class="zhdyot">блок 8, заполняется позже</span></h2>
+
+  <h2>Что можно открыть и потрогать</h2>
+  <div class="ssylki">
+    <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/app/">
+      <b>Прототип: участник и HR</b>
+      <span>maria177777773.github.io/knizhnyy-klub/app/</span>
+    </a>
+    <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/">
+      <b>Направления фирменного стиля</b>
+      <span>maria177777773.github.io/knizhnyy-klub/</span>
+    </a>
+    <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/nazvaniya/">
+      <b>Варианты имени платформы</b>
+      <span>maria177777773.github.io/knizhnyy-klub/nazvaniya/</span>
+    </a>
+  </div>
+
+  <h2>Коротко по двум практикам</h2>
+  <div class="itog">
+    <div class="itog-stroka"><b>Практика 1</b><span>проект выбран и описан, рабочее место собрано,
+      CLAUDE.md под продукт, права с причинами, скилл сценария встречи работает, свой CLI
+      и Context7 под конкретные задачи, субагент-ресёрчер, план из 8 шагов</span></div>
+    <div class="itog-stroka"><b>Практика 2</b><span>поверхность участника и HR, сквозной сценарий
+      от приглашения до значка проходится целиком, две итерации с настоящими дефектами и их корнем</span></div>
+    <div class="itog-stroka"><b>Где я сейчас</b><span>шаг 3, думающая часть: вопросы по
+      прочитанному и подбор книг</span></div>
+  </div>
+
+  <p class="podval">
+    Паспорт дописывается по ходу потока: разделы 3, 4 и 5 добавятся после блоков 4, 5 и 8.
+    Ссылка на документ не меняется.
+  </p>
+
+</div>
+
+</body>
+</html>
