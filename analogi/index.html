@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Есть ли у клуба аналоги">
+<meta property="og:description" content="Ресёрч 75+ игроков: есть ли аналоги корпоративного книжного клуба-платформы">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Есть ли у клуба аналоги</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap">
+<style>
+/* Лейаут: исследовательская записка. Ответ первым, дальше матрица функций (игроки × наши функции),
+   ближайшие конкуренты, уроки рынка, источники. Единственный громкий акцент: лаймовая строка нашего клуба. */
+:root{
+  --paper:#F6F7F9; --card:#FFFFFF; --ink:#151922; --muted:#586072; --line:#DEE2E9; --chip:#ECEEF2;
+  --yes:#127A52; --yes-bg:#DDF3E8; --part:#8A5A00; --part-bg:#FBEFD4; --no:#8A92A3; --no-bg:transparent;
+  --lime:#D4FF3A; --lime-ink:#141414; --link:#2442D6;
+  --f-display:'Literata', Georgia, 'Times New Roman', serif;
+  --f-body:'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono:'Golos Text', system-ui, sans-serif; /* цифры и метки тем же шрифтом: два семейства на странице */
+  --fs-s:14px; --fs-m:17px; --fs-l:20px; --fs-xl:28px; --fs-h1m:32px; --fs-xxl:44px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#11141A; --card:#181C24; --ink:#E8EBF1; --muted:#A3AABA; --line:#2A303C; --chip:#222834;
+    --yes:#5FD3A2; --yes-bg:#123528; --part:#F0C25C; --part-bg:#3A2D10; --no:#6E7687;
+    --lime:#D4FF3A; --lime-ink:#141414; --link:#8FA4FF; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11141A; --card:#181C24; --ink:#E8EBF1; --muted:#A3AABA; --line:#2A303C; --chip:#222834;
+  --yes:#5FD3A2; --yes-bg:#123528; --part:#F0C25C; --part-bg:#3A2D10; --no:#6E7687;
+  --lime:#D4FF3A; --lime-ink:#141414; --link:#8FA4FF; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.55 var(--f-body);padding:0 20px}
+.wrap{max-width:1180px;margin:0 auto;padding-block:48px 72px;display:grid;gap:56px}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.15}
+p{margin:0}
+a{color:var(--link);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--link);outline-offset:2px;border-radius:2px}
+.eyebrow{font:500 var(--fs-s)/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.prose{max-width:68ch;display:grid;gap:14px}
+
+/* ответ */
+.answer{display:grid;gap:20px}
+.answer h1{font:700 var(--fs-xxl)/1.08 var(--f-display);letter-spacing:-.01em}
+.verdict{display:grid;gap:12px;max-width:72ch;font-size:var(--fs-l);line-height:1.5}
+.verdict b{font-weight:700}
+.pitch{border-left:4px solid var(--ink);padding:6px 0 6px 18px;font:600 var(--fs-l)/1.45 var(--f-body);max-width:66ch}
+
+/* матрица */
+.sec{display:grid;gap:18px}
+.sec h2{font:700 var(--fs-xl)/1.2 var(--f-display)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;color:var(--muted);font-size:var(--fs-s)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:1040px;font-size:var(--fs-s)}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle}
+thead th{font-weight:600;color:var(--muted);line-height:1.25;vertical-align:bottom;background:var(--card);position:sticky;top:0}
+th.who,td.who{text-align:left;padding-left:16px;min-width:220px}
+td.who b{display:block;font-weight:600;font-size:var(--fs-m);color:var(--ink)}
+td.who small{color:var(--muted);font-size:var(--fs-s)}
+tr.group td{background:var(--chip);text-align:left;padding-left:16px;font:500 var(--fs-s)/1.3 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.c{display:inline-grid;place-items:center;min-width:52px;height:28px;padding:0 8px;border-radius:999px;font-weight:600}
+.c.y{background:var(--yes-bg);color:var(--yes)}
+.c.p{background:var(--part-bg);color:var(--part)}
+.c.n{color:var(--no)}
+tr.us td{background:var(--lime);color:var(--lime-ink);border-bottom-color:var(--lime-ink)}
+tr.us td.who b{color:var(--lime-ink)}
+tr.us td.who small{color:var(--lime-ink);opacity:.8}
+tr.us .c.y{background:var(--lime-ink);color:var(--lime)}
+td.price{font:500 var(--fs-s)/1.35 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted);text-align:left;min-width:130px;max-width:150px}
+tr.us td.price{color:var(--lime-ink)}
+
+/* конкуренты */
+.rivals{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.rival{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:10px;align-content:start}
+.rival header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.rival h3{font:700 var(--fs-l)/1.25 var(--f-body)}
+.rival .where{font:500 var(--fs-s) var(--f-mono);color:var(--muted)}
+.rival dl{margin:0;display:grid;gap:8px}
+.rival dt{font:500 var(--fs-s)/1.3 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.rival dd{margin:0}
+
+/* уникальное / уроки */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.two ul,.lessons{margin:0;padding-left:20px;display:grid;gap:10px}
+.two h3{font:700 var(--fs-l)/1.3 var(--f-body);margin-bottom:12px}
+.lessons li b{font-weight:600}
+.sources{columns:2;column-gap:32px;font-size:var(--fs-s);color:var(--muted);margin:0;padding-left:20px}
+.sources li{break-inside:avoid;margin-bottom:6px}
+.foot{font-size:var(--fs-s);color:var(--muted);border-top:1px solid var(--line);padding-top:20px}
+@media (max-width:760px){
+  body{padding:0 16px}
+  .wrap{padding-block:32px 56px;gap:44px}
+  .answer h1{font-size:var(--fs-h1m)}
+  .verdict,.pitch{font-size:var(--fs-m)}
+  .two{grid-template-columns:1fr}
+  .sources{columns:1}
+}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <section class="answer">
+    <span class="eyebrow">Ресёрч 7 октября 2026 · Россия, СНГ и мир · 75+ игроков</span>
+    <h1>Есть ли у клуба аналоги</h1>
+    <div class="verdict">
+      <p><b>Прямого аналога нет ни в России, ни в мире.</b> Никто не продаёт компаниям клуб, который сам ведёт весь путь: шорт-лист и голосование, встречу по сценарию, вопросы ИИ по книге, действия после встречи и отчёт для HR.</p>
+      <p><b>Но «аналогов нет» в продажах говорить нельзя.</b> Почти каждая наша функция по отдельности у кого-то уже есть. HR сразу ответит: «у нас клуб уже в подписке Альпины». А «первыми в мире с ИИ-ведущим» мы тоже не будем: PageTurner.ai заявил то же в 2025 году, хотя и остался в закрытой бете.</p>
+    </div>
+    <p class="pitch">Как говорить: библиотеки дают книги, сервисы дают ведущего, мы даём клуб, который идёт сам, от голосования до отчёта HR. Плюс финальный ивент цикла, которого нет ни у кого.</p>
+  </section>
+
+  <section class="sec" aria-labelledby="m">
+    <h2 id="m">Кто что умеет</h2>
+    <div class="legend">
+      <span><i class="c y">да</i> подтверждено страницей</span>
+      <span><i class="c p">част.</i> похожее, но не то же</span>
+      <span><i class="c n">нет</i> не нашли на открытых страницах</span>
+    </div>
+    <div class="scroll" tabindex="0" aria-label="Таблица функций, листается вбок">
+      <table>
+        <thead>
+          <tr>
+            <th class="who" scope="col">Игрок</th>
+            <th scope="col">Клуб продаётся компании</th>
+            <th scope="col">Цикл и шорт-лист</th>
+            <th scope="col">Питчи и голосование</th>
+            <th scope="col">Встреча по сценарию с таймером</th>
+            <th scope="col">ИИ задаёт вопросы по книге</th>
+            <th scope="col">Монеты, значки, мерч</th>
+            <th scope="col">Действия после встречи</th>
+            <th scope="col">Отчёт для HR</th>
+            <th scope="col">Мессенджер</th>
+            <th scope="col">Цена</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="r">
+    <h2 id="r">Пять ближайших конкурентов</h2>
+    <div class="rivals">
+      <article class="rival">
+        <header><h3>Альпина Диджитал</h3><span class="where">Россия · 350+ клиентов</span></header>
+        <dl>
+          <dt>Что есть</dt><dd>Библиотека 5 000+ книг, HR-кабинет, баллы и лидерборды, ИИ-маршрут обучения, книжные клубы раз в 3 месяца со спикерами. От 61 ₽ за сотрудника в месяц.</dd>
+          <dt>Чего нет</dt><dd>Клуб как строка в подписке: нет шорт-листа, голосования, сценария встречи, ИИ-вопросов, явки и действий в отчёте.</dd>
+          <dt>Чем опасна</dt><dd>Добавит голосование и сценарий и закроет нашу щель у своих клиентов. Выгоднее идти к ней партнёром, чем в лоб.</dd>
+        </dl>
+        <a href="https://ad.alpinadigital.io/">ad.alpinadigital.io</a>
+      </article>
+      <article class="rival">
+        <header><h3>Smart Reading</h3><span class="where">Россия · клуб для компаний</span></header>
+        <dl>
+          <dt>Что есть</dt><dd>Клуб и марафоны с фасилитатором, группа до 15 человек, награды книгами, в кейсах дочитывают 47-61%.</dd>
+          <dt>Чего нет</dt><dd>Платформы клуба: сценария, голосования, ИИ и HR-отчёта по клубу. Масштаб упирается в людей: 100 участникам нужны 7 ведущих.</dd>
+          <dt>Чем опасна</dt><dd>Бренд: HR, который ищет «книжный клуб», первым находит их.</dd>
+        </dl>
+        <a href="https://smartreading.ru/b2b/book-club">smartreading.ru/b2b/book-club</a>
+      </article>
+      <article class="rival">
+        <header><h3>Inhound</h3><span class="where">Россия · клубы в Telegram</span></header>
+        <dl>
+          <dt>Что есть</dt><dd>Клуб под ключ на 1-3 месяца целиком в Telegram, эксперт отвечает в чате, «никаких кураторов». Кейс на 200 участников.</dd>
+          <dt>Чего нет</dt><dd>Живой встречи, голосования, ИИ, монет, действий и отчёта для HR.</dd>
+          <dt>Чем опасна</dt><dd>Та же идея «клуб не держится на ведущем», уже с продажами компаниям.</dd>
+        </dl>
+        <a href="https://inhound.club/b2b">inhound.club/b2b</a>
+      </article>
+      <article class="rival">
+        <header><h3>PageTurner.ai</h3><span class="where">Мир · закрытая бета</span></header>
+        <dl>
+          <dt>Что есть</dt><dd>ИИ-ведущий обсуждения задаёт вопросы, пересказы глав в Slack и Teams, аналитика для компании. План цены: $199 в месяц за 50 читателей.</dd>
+          <dt>Чего нет</dt><dd>Клиентов, цикла, голосования, сценария встречи и игровой механики. Основатели на сайте не названы.</dd>
+          <dt>Чем опасна</dt><dd>Ближе всех по ИИ. Значит, «ИИ задаёт вопросы» не наше исключительное, отличаемся связкой.</dd>
+        </dl>
+        <a href="https://page-turner.ai/">page-turner.ai</a>
+      </article>
+      <article class="rival">
+        <header><h3>getAbstract</h3><span class="where">Мир · треть Fortune 500</span></header>
+        <dl>
+          <dt>Что есть</dt><dd>«Встреча в коробке» из трёх шагов: подготовка, обсуждение, договорённость о действиях. ИИ-агент Flow внутри Teams. $229 за человека в год.</dd>
+          <dt>Чего нет</dt><dd>Обсуждают пересказ, а не книгу, встречу ведёт человек, ИИ только отвечает на вопросы.</dd>
+          <dt>Что взять</dt><dd>Финал встречи «о чём договорились» и упаковку сценария в один экран.</dd>
+        </dl>
+        <a href="https://support.getabstract.com/en/knowledge/how-meeting-in-a-box-works">getabstract.com</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec two" aria-label="Что уникально и что уже есть">
+    <div>
+      <h3>Не нашли ни у кого</h3>
+      <ul>
+        <li>Встреча 90 минут по сценарию с таймером (1-2-4-All), которую ведёт сама платформа, с куратором по желанию.</li>
+        <li>Питчи коллег перед голосованием как шаг продукта.</li>
+        <li>ИИ, который сам задаёт вопросы по прочитанному в корпоративном клубе с циклом (у PageTurner похожее заявлено, но без клуба вокруг).</li>
+        <li>Одна цепочка: голосование, встреча, действия с владельцем, отчёт HR с явкой и оценками.</li>
+        <li>Песо за главы с магазином мерча внутри книжного сценария.</li>
+        <li>Видео руководителя к циклу и финальный офлайн-ивент Каталиста.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Уже есть у других</h3>
+      <ul>
+        <li>Компания покупает клуб: Smart Reading, Литрес и MyBook, 12book, Inhound, PBC Guru.</li>
+        <li>Цикл 3 месяца и 3 книги: 12book, сезоны METRO.</li>
+        <li>Голосование за книгу: Bookclubs, StoryGraph, бот Ботаним, внутренний клуб МТС.</li>
+        <li>Монеты и магазин: Альпина, BetterBookClub, HR-платформы.</li>
+        <li>Действия после встречи: 12book, getAbstract, Teams Facilitator.</li>
+        <li>Таймер встречи вообще: Teams Facilitator с лицензией Copilot.</li>
+        <li>Клуб в Telegram: Inhound, Bookfit, BcluB.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="l">
+    <h2 id="l">Уроки рынка</h2>
+    <ol class="lessons prose">
+      <li><b>Главная боль: люди не дочитывают.</b> Бразильский TAG свернул клуб для компаний именно поэтому: «HR не платит за абстрактное». Наши песо за главы, вызовы недели и цикл в 3 книги бьют ровно в это.</li>
+      <li><b>ИИ спрашивает, а не оценивает.</b> Fable в январе 2025 удалил весь ИИ после оскорбительных шуток ИИ-итогов года о читателях.</li>
+      <li><b>Клубы закрываются.</b> Amazon Book Clubs закрыт 1 марта 2026, Literati закрыл клубы для взрослых, Slack-бот booktalk прожил около полутора лет. Одного мессенджера мало, нужна своя основа и живая встреча.</li>
+      <li><b>Гарантия PBC Guru:</b> не набрался минимум участников, программа не стартует и клиент не платит. Хорошее условие для пилотов.</li>
+      <li><b>Вход без подготовки работает.</b> Японский flier (1 300+ компаний) с апреля 2026 проводит встречи, где 10 минут все вместе читают пересказ. Можно взять как «встречу для не успевших».</li>
+    </ol>
+  </section>
+
+  <section class="sec" aria-labelledby="s">
+    <h2 id="s">Источники</h2>
+    <ol class="sources">
+      <li><a href="https://ad.alpinadigital.io/">Альпина Диджитал</a>, <a href="https://alpinadigital.ru/library/">библиотека</a></li>
+      <li><a href="https://smartreading.ru/b2b/book-club">Smart Reading, клуб для компаний</a></li>
+      <li><a href="https://www.litres.ru/cms/13499/">Литрес, книжные клубы</a>, <a href="https://mybook.ru/b2b/">MyBook для бизнеса</a></li>
+      <li><a href="https://www.12book.club/corporate">12book.club</a></li>
+      <li><a href="https://inhound.club/b2b">Inhound для компаний</a></li>
+      <li><a href="https://bclub.dev/">BcluB</a>, <a href="https://habr.com/ru/articles/930548/">Хабр о BcluB</a></li>
+      <li><a href="https://sprint.iidf.ru/startups/bookfit-ru/">Bookfit на странице ФРИИ</a></li>
+      <li><a href="https://page-turner.ai/">PageTurner.ai</a></li>
+      <li><a href="https://support.getabstract.com/en/knowledge/how-meeting-in-a-box-works">getAbstract, Meeting in a Box</a></li>
+      <li><a href="https://www.leadershipiq.ai/pricing">Leadership IQ, цены</a></li>
+      <li><a href="https://www.pbc.guru/">PBC Guru</a></li>
+      <li><a href="https://www.bookclubs.com/for-business">Bookclubs for Business</a></li>
+      <li><a href="https://betterbookclub.com/pricing">BetterBookClub, цены</a></li>
+      <li><a href="https://www.dreamnews.jp/press/0000346258">flier, релиз 08.04.2026</a></li>
+      <li><a href="https://support.microsoft.com/en-us/teams/copilot/facilitator-in-microsoft-teams-meetings">Microsoft Teams Facilitator</a></li>
+      <li><a href="https://www.projetodraft.com/a-tag-quer-acelerar-a-sua-carreira-com-curadoria-e-um-novo-clube-de-assinatura/">TAG о B2B</a></li>
+      <li><a href="https://www.thestar.com.my/tech/tech-news/2025/01/06/fable-a-book-app-makes-changes-after-offensive-ai-messages">Fable убирает ИИ</a></li>
+      <li><a href="https://goodereader.com/blog/kindle/amazon-book-club-is-shutting-down-in-march">Закрытие Amazon Book Clubs</a></li>
+    </ol>
+    <p class="foot">Все страницы открыты 7 октября 2026. В полном ресёрче 30+ игроков России и СНГ и 45+ в мире, с ценами и датами страниц. Закрытые демо и платформы за формами публично не видны, поэтому вывод верен для открытых источников.</p>
+  </section>
+</main>
+
+<script>
+(function(){
+  // строки матрицы: y = да, p = частично, n = не нашли. Порядок столбцов как в шапке таблицы.
+  var G = [
+    ['Наш клуб', [
+      ['Чегевара, книжный клуб Каталиста', 'в прототипе, все функции', 'yyyyyyyyy', 'в расчёте', true]
+    ]],
+    ['Россия и СНГ', [
+      ['Альпина Диджитал', 'библиотека с HR-кабинетом', 'pnnnpynpn', 'от 61 ₽ / чел. / мес'],
+      ['Smart Reading', 'клуб с фасилитатором', 'ypnnnpnpp', 'по запросу'],
+      ['Литрес и MyBook', 'библиотека + клуб как услуга', 'ynpnnpppn', 'MyBook от 150 000 ₽ / год'],
+      ['12book.club', 'клуб для топ-команды с ведущим', 'yynpnnypn', 'по запросу'],
+      ['Inhound', 'клуб в Telegram с экспертом', 'ypnpnnnny', 'по цене 1-2 лекций'],
+      ['BcluB', 'B2C-платформа совместного чтения', 'nyppnynnp', 'не опубликована'],
+      ['Bookfit', 'книжные спринты и бот с ИИ', 'ppnnpppny', 'не опубликована']
+    ]],
+    ['Мир', [
+      ['PageTurner.ai', 'ИИ-ведущий, закрытая бета', 'ynnnynpyy', 'план $199 / мес за 50'],
+      ['getAbstract', 'саммари и «встреча в коробке»', 'ynnppnppp', '$229 / чел. / год'],
+      ['Leadership IQ', 'микроуроки из книг и клубы', 'ypnnpnpyy', '$189 / чел. / год'],
+      ['PBC Guru', 'клубы под ключ, форум', 'yppnnnnpn', 'по размеру группы'],
+      ['Bookclubs for Business', 'органайзер клубов', 'ynpnnnnpn', '$60-228 / клуб / год'],
+      ['BetterBookClub', 'баллы за чтение', 'ynnnnypyn', '$2 / чел. / мес'],
+      ['flier business', 'саммари и встречи-чтения, Япония', 'ynnpnnpyn', 'не опубликована'],
+      ['Teams Facilitator', 'ИИ-ведущий любой встречи', 'pnnpnnyny', 'лицензия Copilot']
+    ]]
+  ];
+  var LBL = { y: ['y', 'да'], p: ['p', 'част.'], n: ['n', 'нет'] };
+  var tb = document.getElementById('rows'), html = '';
+  G.forEach(function(g){
+    html += '<tr class="group"><td colspan="11">' + g[0] + '</td></tr>';
+    g[1].forEach(function(r){
+      html += '<tr' + (r[4] ? ' class="us"' : '') + '><td class="who"><b>' + r[0] + '</b><small>' + r[1] + '</small></td>';
+      r[2].split('').forEach(function(k){ var l = LBL[k]; html += '<td><span class="c ' + l[0] + '">' + l[1] + '</span></td>'; });
+      html += '<td class="price">' + r[3] + '</td></tr>';
+    });
+  });
+  tb.innerHTML = html;
+})();
+</script>
+
+</body>
+</html>

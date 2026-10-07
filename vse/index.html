@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Книжный клуб Чегевара: все материалы">
+<meta property="og:description" content="Все материалы книжного клуба «Чегевара» одной страницей">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Книжный клуб Чегевара: все материалы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@700&display=swap">
+<style>
+/* Оглавление проекта: одна колонка карточек-ссылок, лаймовая полоса только у шапки (мир клуба). */
+:root{
+  --paper:#F7F6F0; --card:#FFFFFF; --ink:#111111; --muted:#55554E; --line:#DCDCD2; --lime:#D4FF3A; --lime-ink:#111111;
+  --f-display:Oswald, 'Arial Narrow', system-ui, sans-serif;
+  --f-body:'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fs-s:14px; --fs-m:18px; --fs-l:22px; --fs-h1m:32px; --fs-xl:44px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --paper:#121210; --card:#1B1B18; --ink:#F1F0E8; --muted:#B4B3A9; --line:#2E2E29; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --paper:#121210; --card:#1B1B18; --ink:#F1F0E8; --muted:#B4B3A9; --line:#2E2E29; color-scheme:dark; }
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.55 var(--f-body);padding:0 20px}
+.top{margin:0 -20px;background:var(--lime);color:var(--lime-ink);padding:48px 20px 40px}
+.top-in,.wrap{max-width:900px;margin:0 auto}
+.top-in{display:grid;gap:12px}
+h1{margin:0;font:700 var(--fs-xl)/1.05 var(--f-display);text-transform:uppercase;text-wrap:balance}
+.top p{max-width:60ch;font-weight:500}
+.wrap{padding-block:40px 72px;display:grid;gap:14px}
+.item{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.item:hover{border-color:var(--ink)}
+.item:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.n{grid-row:1/3;font:600 var(--fs-s)/1.6 var(--f-body);color:var(--muted);font-variant-numeric:tabular-nums}
+.item b{font-size:var(--fs-l);font-weight:600;line-height:1.3}
+.item span.d{color:var(--muted)}
+.item span.u{grid-column:2;font-size:var(--fs-s);color:var(--muted);word-break:break-all}
+.note{color:var(--muted);font-size:var(--fs-s);margin-top:12px}
+@media (max-width:480px){ body{padding:0 16px} .top{margin:0 -16px;padding:36px 16px 32px} h1{font-size:var(--fs-h1m)} }
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <h1>Книжный клуб «Чегевара»</h1>
+    <p>Все материалы проекта на одной странице. Каждой ссылкой можно поделиться, страницы открываются без входа.</p>
+  </div>
+</header>
+<main class="wrap">
+  <a class="item" href="../pochemu-che/"><span class="n">1/7</span><b>Почему клуб называется Чегевара</b><span class="d">Факты о Че как о читателе, фото, банк фраз, Че в приложении</span><span class="u">maria177777773.github.io/knizhnyy-klub/pochemu-che/</span></a>
+  <a class="item" href="../app/?brand=che&amp;mode=member&amp;tab=home"><span class="n">2/7</span><b>Кликабельный прототип</b><span class="d">Участник и HR, Че-гид, вызов недели, 24 плаката в шапке</span><span class="u">maria177777773.github.io/knizhnyy-klub/app/</span></a>
+  <a class="item" href="../pochemu-che/#p"><span class="n">3/7</span><b>24 плаката клуба</b><span class="d">П1 «Читай как Чегевара» и шутки в его раскладке</span><span class="u">maria177777773.github.io/knizhnyy-klub/pochemu-che/</span></a>
+  <a class="item" href="../"><span class="n">4/7</span><b>13 вариантов визуала</b><span class="d">Плакат, ачивка, мерч и экран голосования в каждом варианте</span><span class="u">maria177777773.github.io/knizhnyy-klub/</span></a>
+  <a class="item" href="../nazvaniya/"><span class="n">5/7</span><b>10 вариантов названия</b><span class="d">Идеи Людмилы: Переплёт, На полях, Одиссея, Камелот и другие</span><span class="u">maria177777773.github.io/knizhnyy-klub/nazvaniya/</span></a>
+  <a class="item" href="../che/"><span class="n">6/7</span><b>Трафареты Че</b><span class="d">8 плакатов с трафаретным портретом в своих палитрах</span><span class="u">maria177777773.github.io/knizhnyy-klub/che/</span></a>
+  <a class="item" href="../analogi/"><span class="n">7/7</span><b>Есть ли у клуба аналоги</b><span class="d">Ресёрч 75+ игроков в России и мире, таблица функций</span><span class="u">maria177777773.github.io/knizhnyy-klub/analogi/</span></a>
+  <p class="note">Опрос для фокус-группы идёт в Telegram: 5 вопросов про название и фразы, голоса из всех чатов сходятся в один итог.</p>
+</main>
+
+</body>
+</html>
