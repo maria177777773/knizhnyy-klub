@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Прокнижный клуб · паспорт проекта">
-<meta property="og:description" content="Паспорт проекта «Прокнижный клуб», клуб «Книжный Клуб ЧЕ», поток 03 AI.Цех">
+<meta property="og:title" content="Набор в книжный клуб · паспорт проекта">
+<meta property="og:description" content="Паспорт проекта «Набор в книжный клуб», клуб ЧЕ, поток 03 AI.Цех">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Прокнижный клуб · паспорт проекта</title>
+<title>Набор в книжный клуб · паспорт проекта</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
@@ -165,7 +165,8 @@
   .plakat-karta span { display: block; margin: 0 6px 6px; font-size: 17px; color: var(--ink3); }
 
   /* ── гид ── */
-  .gid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .gid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .gid-para { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .gid-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 24px; padding: 14px;
     display: flex; flex-direction: column; }
   .gid-karta p { min-height: 54px; }
@@ -201,7 +202,7 @@
   @media (max-width: 760px) {
     :root { --telo: 18px; --sekciya: 72px; }
     .shirina { padding: 0 18px; }
-    .setka.dva, .setka.tri, .cifry, .telefony, .plakaty, .ssylki, .gid { grid-template-columns: 1fr; }
+    .setka.dva, .setka.tri, .cifry, .telefony, .plakaty, .ssylki, .gid, .gid-para { grid-template-columns: 1fr; }
     .karta { padding: 24px 22px; }
     .telefon-okno, .gid-karta .okno { height: auto; }
     .telefon-okno::after, .gid-karta .okno::after { display: none; }
@@ -220,14 +221,14 @@
     <div class="oblozhka-setka">
       <div class="oblozhka-tekst">
         <p class="nadzagolovok">Паспорт проекта · AI.Цех, поток 03</p>
-        <h1>Прокнижный клуб<small>клуб «Книжный Клуб ЧЕ»</small></h1>
+        <h1>Набор в книжный клуб</h1>
         <div class="oblozhka-stroki">
           <div><b>Участник</b><span>Мария Варламова</span></div>
           <div><b>Поток</b><span>сентябрь-ноябрь 2026</span></div>
           <div><b>Практики</b><span>1 и 2 закрыты</span></div>
         </div>
       </div>
-      <img class="plakat" src="img/plakaty/p17.webp" width="1000" height="425" fetchpriority="high" alt="Плакат клуба: «Вызов принят»">
+      <img class="plakat" src="img/plakaty/p6.webp" width="1000" height="425" fetchpriority="high" alt="Плакат клуба: «Кто не читает, тот не ест пиццу на встрече клуба»">
     </div>
   </div>
 </header>
@@ -238,6 +239,53 @@
   </div>
 </div>
 
+<section id="pochemu" style="padding-top:88px">
+  <div class="shirina">
+    <div class="zagolovok-sekcii"><h2>Почему клуб назван ЧЕ</h2></div>
+    <p class="pod-zagolovkom">У клуба есть хранитель. Он встречает человека на первом входе
+    и сам объясняет, при чём тут он.</p>
+
+    <div class="setka dva" style="align-items:start">
+      <div class="karta aktsent">
+        <p class="imya">¡Hola, compañero!</p>
+        <p>«Привет, товарищ! Я Че, хранитель клуба.</p>
+        <p>Почему клуб назван в мою честь? Я читал всю жизнь. Из-за астмы мама учила меня читать
+        дома, потом я брал книги в горы и в джунгли и записывал каждую прочитанную.</p>
+        <p>Буду подсказывать, что где, и платить песо за главы.»</p>
+        <p style="color:#cfc8bd;font-size:17px;margin-top:18px">Текст живёт в приложении: это первое,
+        что видит сотрудник, когда открывает клуб по ссылке приглашения. Дальше Че подсказывает
+        по экранам и ведёт счёт прочитанного.</p>
+      </div>
+      <div class="gid-para">
+        <div class="gid-karta">
+          <div class="okno"><img src="img/gid/a-greeting.webp" width="780" height="1688" fetchpriority="high" alt="Приветствие Че на первом входе"></div>
+          <p>Первый вход в клуб</p>
+        </div>
+        <div class="gid-karta">
+          <div class="okno"><img src="img/gid/a-about-2.webp" width="780" height="1688" decoding="async" alt="Че рассказывает про книги в походах"></div>
+          <p>Факты: книги в горах и джунглях</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Че подсказывает по ходу</h3>
+    <div class="gid">
+      <div class="gid-karta">
+        <div class="okno"><img src="img/gid/a-about-0.webp" width="780" height="1688" decoding="async" alt="Че рассказывает о себе"></div>
+        <p>Обо мне: список прочитанного</p>
+      </div>
+      <div class="gid-karta">
+        <div class="okno"><img src="img/gid/390-2-tip.webp" width="780" height="1688" decoding="async" alt="Подсказка Че по экрану"></div>
+        <p>Подсказка по экрану</p>
+      </div>
+      <div class="gid-karta">
+        <div class="okno"><img src="img/gid/390-3-reto.webp" width="780" height="1688" decoding="async" alt="Задание недели от Че"></div>
+        <p>Задание недели и песо за главы</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="r0">
   <div class="shirina">
     <div class="zagolovok-sekcii"><span class="nomer-sekcii">0</span><h2>Проект</h2></div>
@@ -246,9 +294,9 @@
     <div class="setka dva">
       <div class="karta">
         <p class="imya">Название</p>
-        <p>«Прокнижный клуб». Платформа корпоративных книжных клубов: продаётся компаниям,
+        <p>«Набор в книжный клуб». Платформа корпоративных книжных клубов: продаётся компаниям,
         внутри каждой компании живёт свой клуб со своим именем и своим характером.</p>
-        <p>Наш первый клуб называется «Книжный Клуб ЧЕ»: герой, голос и весь визуал построены
+        <p>Наш первый клуб называется «книжный клуб ЧЕ»: герой, голос и весь визуал построены
         вокруг Че как вечного читателя.</p>
       </div>
       <div class="karta aktsent">
@@ -281,7 +329,7 @@
     </div>
 
     <figure class="shirokiy" style="margin-top:20px">
-      <img src="img/plakaty/p20.webp" width="1000" height="425" decoding="async" alt="Плакат клуба: «Будьте реалистами, читайте невозможное»">
+      <img src="img/plakaty/p2.webp" width="1000" height="425" decoding="async" alt="Плакат клуба: «Вождь всё сказал. Иди и читай»">
       <figcaption>Клуб продаётся не методичкой, а характером: голос Че превращает корпоративное
       чтение в игру, в которую хочется вернуться.</figcaption>
     </figure>
@@ -467,92 +515,50 @@ Lean Coffee: 7 тем по 7 минут
   </div>
 </section>
 
-<section id="gid">
-  <div class="shirina">
-    <div class="zagolovok-sekcii"><span class="nomer-sekcii">3</span><h2>Че внутри приложения</h2></div>
-    <p class="pod-zagolovkom">У клуба есть хранитель. Он встречает на первом входе, объясняет,
-    почему клуб назван в его честь, подсказывает по экранам и бросает вызов недели.
-    На вызов отвечают по-испански: «¡Desafío aceptado!»</p>
 
-    <div class="gid">
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/a-greeting.webp" width="780" height="1688" decoding="async" alt="Приветствие Че на первом входе"></div>
-        <p>Первый вход: «Я Че, хранитель клуба»</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/a-about-0.webp" width="780" height="1688" decoding="async" alt="Че рассказывает о себе"></div>
-        <p>Обо мне: почему клуб назван так</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/a-about-2.webp" width="780" height="1688" decoding="async" alt="Че рассказывает о чтении в походах"></div>
-        <p>Факты: книги в горах и джунглях</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/390-2-tip.webp" width="780" height="1688" decoding="async" alt="Подсказка Че по экрану"></div>
-        <p>Подсказка по экрану</p>
-      </div>
-      <div class="gid-karta">
-        <div class="okno"><img src="img/gid/390-3-reto.webp" width="780" height="1688" decoding="async" alt="Вызов недели от Че"></div>
-        <p>Вызов недели и ответ на него</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="plakaty">
   <div class="shirina">
-    <div class="zagolovok-sekcii"><span class="nomer-sekcii">4</span><h2>Голос клуба</h2></div>
+    <div class="zagolovok-sekcii"><span class="nomer-sekcii">3</span><h2>Голос клуба</h2></div>
     <p class="pod-zagolovkom">Плакаты живут внутри приложения: шапка, приглашение, афиша встречи,
     экран голосования, награды. Это не украшение, а то, ради чего сотрудник открывает клуб
     во второй раз. Нарисованы кодом, поэтому новый плакат стоит минуту, а не вечер в редакторе.</p>
 
     <div class="plakaty">
       <div class="plakat-karta">
-        <img src="img/plakaty/p1.webp" width="1000" height="425" decoding="async" alt="Плакат «Читай как Чегевара»">
-        <div class="podpis"><p>Читай как Чегевара</p><span>Берет по желанию. Книга обязательно.</span></div>
-      </div>
-      <div class="plakat-karta">
-        <img src="img/plakaty/p3.webp" width="1000" height="425" decoding="async" alt="Плакат «Вива ла книга»">
+        <img src="img/plakaty/p3.webp" width="760" height="323" decoding="async" alt="Плакат «Вива ла книга» на жёлтом фоне">
         <div class="podpis"><p>Вива ла книга</p><span>Шапка клуба, листается как лента</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p7.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла глава, сьемпре»">
-        <div class="podpis"><p>Аста ла глава, сьемпре</p><span>Прощание с главой по-кубински</span></div>
+        <img src="img/plakaty/p7.webp" width="760" height="323" decoding="async" alt="Плакат «Аста ла глава, сьемпре» на розовом фоне">
+        <div class="podpis"><p>Аста ла глава, сьемпре</p><span>До последней главы, всегда</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p10.webp" width="1000" height="425" decoding="async" alt="Плакат «Вся власть читателям»">
-        <div class="podpis"><p>Вся власть читателям</p><span>Лозунг для экрана голосования</span></div>
+        <img src="img/plakaty/p2.webp" width="760" height="323" decoding="async" alt="Плакат «Вождь всё сказал» на чёрном фоне">
+        <div class="podpis"><p>Вождь всё сказал</p><span>Главу не отметил, значит не читал</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p11.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла виста, скука»">
-        <div class="podpis"><p>Аста ла виста, скука</p><span>Про то, чем клуб не является</span></div>
+        <img src="img/plakaty/p1.webp" width="760" height="323" decoding="async" alt="Плакат «Читай как Чегевара»">
+        <div class="podpis"><p>Читай как Чегевара</p><span>Берет по желанию. Книга обязательно.</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p15.webp" width="1000" height="425" decoding="async" alt="Плакат «Вождь верит в тебя»">
-        <div class="podpis"><p>Вождь верит в тебя</p><span>Напоминание отстающим без укора</span></div>
-      </div>
-      <div class="plakat-karta">
-        <img src="img/plakaty/p17.webp" width="1000" height="425" decoding="async" alt="Плакат «Вызов принят»">
-        <div class="podpis"><p>Вызов принят</p><span>Коронная фраза: ¡Desafío aceptado!</span></div>
-      </div>
-      <div class="plakat-karta">
-        <img src="img/plakaty/p18.webp" width="1000" height="425" decoding="async" alt="Плакат «Книга на 400 страниц? Вызов принят»">
-        <div class="podpis"><p>Книга на 400 страниц?</p><span>Вызов недели для тех, кто боится объёма</span></div>
-      </div>
-      <div class="plakat-karta">
-        <img src="img/plakaty/p21.webp" width="1000" height="425" decoding="async" alt="Плакат «Че читаем?»">
+        <img src="img/plakaty/p21.webp" width="760" height="323" decoding="async" alt="Плакат «Ну че, читаем?»">
         <div class="podpis"><p>Ну че, читаем?</p><span>Вопрос, с которого начинается цикл</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p22.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла лектура, сьемпре»">
-        <div class="podpis"><p>Аста ла лектура, сьемпре</p><span>Финал цикла</span></div>
+        <img src="img/plakaty/p10.webp" width="760" height="323" decoding="async" alt="Плакат «Вся власть читателям»">
+        <div class="podpis"><p>Вся власть читателям</p><span>Лозунг для экрана голосования</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p23.webp" width="1000" height="425" decoding="async" alt="Плакат «Читатели всех отделов, соединяйтесь»">
+        <img src="img/plakaty/p15.webp" width="760" height="323" decoding="async" alt="Плакат «Вождь верит в тебя»">
+        <div class="podpis"><p>Вождь верит в тебя</p><span>Напоминание отстающим без укора</span></div>
+      </div>
+      <div class="plakat-karta">
+        <img src="img/plakaty/p23.webp" width="760" height="323" decoding="async" alt="Плакат «Читатели всех отделов, соединяйтесь»">
         <div class="podpis"><p>Читатели всех отделов</p><span>Про клуб между отделами компании</span></div>
       </div>
       <div class="plakat-karta">
-        <img src="img/plakaty/p24.webp" width="1000" height="425" decoding="async" alt="Плакат «Книжная герилья»">
+        <img src="img/plakaty/p24.webp" width="760" height="323" decoding="async" alt="Плакат «Книжная герилья»">
         <div class="podpis"><p>Книжная герилья</p><span>Для тех, кто читает в обед тайком</span></div>
       </div>
     </div>
