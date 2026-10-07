@@ -140,7 +140,7 @@ p{margin:0}
 <main class="wrap">
   <section class="intro">
     <h1>10 вариантов названия книжного клуба</h1>
-    <p class="lead">Два имени. <b>Имя продукта</b> для компаний: взрослое и спокойное. <b>Имя клуба внутри</b> команда выбирает сама на первой встрече; в экранах голосования пример: команда назвала свой клуб «Чегевара».</p>
+    <p class="lead">Два имени. <b>Имя продукта</b> для компаний: взрослое и спокойное. <b>Имя клуба внутри</b> команда выбирает сама на первой встрече; в экранах голосования пример: наш первый клуб называется «книжный клуб ЧЕ».</p>
   </section>
 
   <!-- ============ N1 Переплёт ============ -->
@@ -473,7 +473,7 @@ p{margin:0}
 (function(){
   // ---------- применения: значок, шоппер, экран голосования ----------
   // club = имя продукта; inner = имя клуба внутри команды (пример: «Чегевара», фаворит Маши)
-  var INNER = 'Чегевара';
+  var INNER = 'ЧЕ';
   var CORM = "'Cormorant Garamond', Georgia, serif", PLAY = "'Playfair Display', Georgia, serif", UNB = "Unbounded, 'Arial Black', sans-serif",
       LIT = "Literata, Georgia, serif", FORUM = "Forum, Georgia, serif", MONO = "'PT Mono', 'Courier New', monospace";
   var V = {
@@ -544,7 +544,7 @@ p{margin:0}
     var w=c.w, li='';
     BOOKS.forEach(function(b){li+='<li><b>'+b[0]+'</b><em>'+b[2]+'%</em><small>'+b[1]+'</small><i style="--p:'+b[2]+'%"></i></li>';});
     return '<div class="w" data-art="экран бренда" style="--wbg:'+w.bg+';--wfg:'+w.fg+';--wac:'+w.ac+';--wacink:'+w.acink+';--wr:'+w.r+';--wborder:'+w.border+';--wfont:'+w.font+';--wfw:'+w.fw+'">'+
-      '<div class="w-top"><span class="w-club">'+esc(c.club)+'</span><span class="w-tag">клуб «'+INNER+'»</span></div>'+
+      '<div class="w-top"><span class="w-club">'+esc(c.club)+'</span><span class="w-tag">клуб '+INNER+'</span></div>'+
       '<p class="w-q">Какую книгу читаем следующей?</p><ul>'+li+'</ul>'+
       '<div class="w-foot"><span class="w-btn">Отдать голос</span><small>цикл 2 · осталось 2 дня · пример</small></div></div>';
   }
