@@ -31,7 +31,7 @@
   .oblozhka { background: var(--chorny); color: #fff; padding: 0 0 56px; }
   .oblozhka-setka {
     display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
-    min-height: min(84vh, 760px); padding: 48px 0;
+    min-height: min(62vh, 620px); padding: 44px 0;
   }
   .oblozhka .plakat { width: 100%; height: auto; border-radius: 20px; }
   .nadzagolovok {
@@ -158,14 +158,17 @@
   /* ── плакаты ── */
   .plakaty { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .plakat-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 20px;
-    padding: 14px; }
+    padding: 14px; display: flex; flex-direction: column; }
+  .plakat-karta .podpis { margin-top: 12px; min-height: 76px; }
   .plakat-karta img { border-radius: 14px; width: 100%; height: auto; }
   .plakat-karta p { margin: 12px 6px 4px; font-size: 17px; font-weight: 600; }
   .plakat-karta span { display: block; margin: 0 6px 6px; font-size: 17px; color: var(--ink3); }
 
   /* ── гид ── */
   .gid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-  .gid-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 24px; padding: 14px; }
+  .gid-karta { background: var(--karta); border: 2px solid var(--ramka); border-radius: 24px; padding: 14px;
+    display: flex; flex-direction: column; }
+  .gid-karta p { min-height: 54px; }
   .gid-karta .okno { border-radius: 16px; overflow: hidden; border: 1px solid var(--ramka); height: 420px; position: relative; }
   .gid-karta .okno::after {
     content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 70px; pointer-events: none;
@@ -217,7 +220,7 @@
     <div class="oblozhka-setka">
       <div class="oblozhka-tekst">
         <p class="nadzagolovok">Паспорт проекта · AI.Цех, поток 03</p>
-        <h1>Прокнижный клуб<small>клуб называется «Книжный Клуб ЧЕ»</small></h1>
+        <h1>Прокнижный клуб<small>клуб «Книжный Клуб ЧЕ»</small></h1>
         <div class="oblozhka-stroki">
           <div><b>Участник</b><span>Мария Варламова</span></div>
           <div><b>Поток</b><span>сентябрь-ноябрь 2026</span></div>
@@ -506,51 +509,51 @@ Lean Coffee: 7 тем по 7 минут
     <div class="plakaty">
       <div class="plakat-karta">
         <img src="img/plakaty/p1.webp" width="1000" height="425" decoding="async" alt="Плакат «Читай как Чегевара»">
-        <p>Читай как Чегевара</p><span>Берет по желанию. Книга обязательно.</span>
+        <div class="podpis"><p>Читай как Чегевара</p><span>Берет по желанию. Книга обязательно.</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p3.webp" width="1000" height="425" decoding="async" alt="Плакат «Вива ла книга»">
-        <p>Вива ла книга</p><span>Шапка клуба, листается как лента</span>
+        <div class="podpis"><p>Вива ла книга</p><span>Шапка клуба, листается как лента</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p7.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла глава, сьемпре»">
-        <p>Аста ла глава, сьемпре</p><span>Прощание с главой по-кубински</span>
+        <div class="podpis"><p>Аста ла глава, сьемпре</p><span>Прощание с главой по-кубински</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p10.webp" width="1000" height="425" decoding="async" alt="Плакат «Вся власть читателям»">
-        <p>Вся власть читателям</p><span>Лозунг для экрана голосования</span>
+        <div class="podpis"><p>Вся власть читателям</p><span>Лозунг для экрана голосования</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p11.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла виста, скука»">
-        <p>Аста ла виста, скука</p><span>Про то, чем клуб не является</span>
+        <div class="podpis"><p>Аста ла виста, скука</p><span>Про то, чем клуб не является</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p15.webp" width="1000" height="425" decoding="async" alt="Плакат «Вождь верит в тебя»">
-        <p>Вождь верит в тебя</p><span>Напоминание отстающим без укора</span>
+        <div class="podpis"><p>Вождь верит в тебя</p><span>Напоминание отстающим без укора</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p17.webp" width="1000" height="425" decoding="async" alt="Плакат «Вызов принят»">
-        <p>Вызов принят</p><span>Коронная фраза: ¡Desafío aceptado!</span>
+        <div class="podpis"><p>Вызов принят</p><span>Коронная фраза: ¡Desafío aceptado!</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p18.webp" width="1000" height="425" decoding="async" alt="Плакат «Книга на 400 страниц? Вызов принят»">
-        <p>Книга на 400 страниц?</p><span>Вызов недели для тех, кто боится объёма</span>
+        <div class="podpis"><p>Книга на 400 страниц?</p><span>Вызов недели для тех, кто боится объёма</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p21.webp" width="1000" height="425" decoding="async" alt="Плакат «Че читаем?»">
-        <p>Че читаем?</p><span>Вопрос, с которого начинается цикл</span>
+        <div class="podpis"><p>Ну че, читаем?</p><span>Вопрос, с которого начинается цикл</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p22.webp" width="1000" height="425" decoding="async" alt="Плакат «Аста ла лектура, сьемпре»">
-        <p>Аста ла лектура, сьемпре</p><span>Финал цикла</span>
+        <div class="podpis"><p>Аста ла лектура, сьемпре</p><span>Финал цикла</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p23.webp" width="1000" height="425" decoding="async" alt="Плакат «Читатели всех отделов, соединяйтесь»">
-        <p>Читатели всех отделов</p><span>Про клуб между отделами компании</span>
+        <div class="podpis"><p>Читатели всех отделов</p><span>Про клуб между отделами компании</span></div>
       </div>
       <div class="plakat-karta">
         <img src="img/plakaty/p24.webp" width="1000" height="425" decoding="async" alt="Плакат «Книжная герилья»">
-        <p>Книжная герилья</p><span>Для тех, кто читает в обед тайком</span>
+        <div class="podpis"><p>Книжная герилья</p><span>Для тех, кто читает в обед тайком</span></div>
       </div>
     </div>
   </div>
