@@ -31,11 +31,15 @@
 
   /* ── обложка ── */
   .oblozhka { background: var(--chorny); color: #fff; padding: 0 0 56px; }
-  .oblozhka .plakat { width: 100%; height: auto; }
-  .oblozhka-niz { margin-top: -10px; }
+  .oblozhka-setka {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    min-height: min(84vh, 760px); padding: 48px 0;
+  }
+  .oblozhka .plakat { width: 100%; height: auto; border-radius: 20px; }
+  .oblozhka-tekst { padding-right: 12px; }
   .nadzagolovok {
     font: 500 15px/1 var(--display); letter-spacing: .22em; text-transform: uppercase;
-    color: var(--zholty); margin: 44px 0 18px;
+    color: var(--zholty); margin: 0 0 18px;
   }
   h1 {
     font: 700 clamp(56px, 9.5vw, 132px)/0.92 var(--display); text-transform: uppercase;
@@ -44,7 +48,7 @@
   h1 small { display: block; font: 500 clamp(20px, 2.6vw, 34px)/1.2 var(--display);
     letter-spacing: .3em; color: #fff; opacity: .72; margin-top: 14px; text-transform: uppercase; }
   .oblozhka-stroki {
-    display: flex; flex-wrap: wrap; gap: 14px 44px; margin-top: 38px;
+    display: flex; flex-wrap: wrap; gap: 18px 40px; margin-top: 34px;
     padding-top: 28px; border-top: 2px solid rgba(255,255,255,.16);
   }
   .oblozhka-stroki div { min-width: 180px; }
@@ -204,22 +208,28 @@
     .telefon-okno { height: auto; }
     .shag { grid-template-columns: 44px 1fr; row-gap: 8px; padding: 18px 20px; }
     .shag-status { grid-column: 2; }
-    .oblozhka .plakat { max-height: none; }
+    .oblozhka-setka { grid-template-columns: 1fr; gap: 28px; min-height: 0; padding: 28px 0 8px; }
+    .oblozhka-tekst { order: 2; padding-right: 0; }
+    .oblozhka .plakat { order: 1; }
   }
 </style>
 
 </head>
 <body>
 <header class="oblozhka">
-  <img class="plakat" src="img/g18.webp" width="1200" height="675" alt="Плакат клуба «Чегевара»: четыре поп-арт портрета">
-  <div class="shirina oblozhka-niz">
-    <p class="nadzagolovok">Паспорт проекта · AI.Цех, поток 03</p>
-    <h1>Чегевара<small>книжный клуб</small></h1>
-    <div class="oblozhka-stroki">
-      <div><b>Участник</b><span>Мария Варламова</span></div>
-      <div><b>Проект</b><span>Команда 365 · книжный клуб</span></div>
-      <div><b>Поток</b><span>сентябрь-ноябрь 2026</span></div>
-      <div><b>Практики</b><span>1 и 2 закрыты</span></div>
+  <div class="shirina">
+    <div class="oblozhka-setka">
+      <div class="oblozhka-tekst">
+        <p class="nadzagolovok">Паспорт проекта · AI.Цех, поток 03</p>
+        <h1>Чегевара<small>книжный клуб</small></h1>
+        <div class="oblozhka-stroki">
+          <div><b>Участник</b><span>Мария Варламова</span></div>
+          <div><b>Проект</b><span>Команда 365 · книжный клуб</span></div>
+          <div><b>Поток</b><span>сентябрь-ноябрь 2026</span></div>
+          <div><b>Практики</b><span>1 и 2 закрыты</span></div>
+        </div>
+      </div>
+      <img class="plakat" src="img/g18.webp" width="1200" height="675" fetchpriority="high" alt="Плакат клуба «Чегевара»: четыре поп-арт портрета">
     </div>
   </div>
 </header>
