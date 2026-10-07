@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="10 вариантов названия книжного клуба">
+<meta property="og:description" content="Плакат, ачивка, мерч и экран голосования для 10 названий">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>10 вариантов названия книжного клуба</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Forum&family=Golos+Text:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@500&family=Literata:opsz,wght@7..72,400;7..72,700&family=PT+Mono&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Unbounded:wght@700;900&display=swap">
+<style>
+/* Тихая серая витрина вокруг плакатов. Каждый вариант: плакат 16:9 + ачивка, мерч, экран голосования. */
+:root{
+  --paper:#F1F2F4;      /* фон витрины, холодный серый */
+  --card:#FFFFFF;
+  --ink:#15161A;
+  --muted:#5B5F6B;
+  --line:#D9DBE1;
+  --chip:#E6E8EC;
+  --go:#15161A;         /* кнопка «Утверждаю» */
+  --go-ink:#FFFFFF;
+  --f-body:'Golos Text', 'Helvetica Neue', Arial, sans-serif;
+  --f-mono:'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  --fs-s:14px; --fs-m:17px; --fs-l:20px; --fs-xl:28px; --fs-xxl:44px;
+  --btn-h:44px;
+  --wrap:1320px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#111216; --card:#1A1B21; --ink:#ECEDF1; --muted:#A3A7B3; --line:#2C2E36; --chip:#24262D;
+    --go:#ECEDF1; --go-ink:#111216; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111216; --card:#1A1B21; --ink:#ECEDF1; --muted:#A3A7B3; --line:#2C2E36; --chip:#24262D;
+  --go:#ECEDF1; --go-ink:#111216; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-m);line-height:1.5;padding:0 20px}
+.wrap{max-width:var(--wrap);margin:0 auto}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+
+/* ---------- topbar ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line);margin:0 -20px;padding:10px 20px}
+.top .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.top b{font-weight:700;font-size:var(--fs-m);margin-right:6px}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{display:inline-flex;align-items:center;height:36px;padding:0 12px;border-radius:999px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:var(--fs-s);font-weight:500;white-space:nowrap}
+.nav a.on{background:var(--ink);color:var(--paper)}
+.nav a[hidden]{display:none}
+.restore{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.restore button{height:36px;padding:0 12px;border-radius:999px;border:1px dashed var(--muted);background:transparent;color:var(--muted);font:500 var(--fs-s) var(--f-body);cursor:pointer}
+
+/* ---------- intro ---------- */
+.intro{padding-block:48px 24px;display:grid;gap:28px}
+.intro h1{font-size:var(--fs-xxl);font-weight:900;letter-spacing:-.02em}
+.lead{font-size:var(--fs-l);max-width:100ch;color:var(--muted)}
+.lead b{color:var(--ink)}
+
+/* ---------- variant ---------- */
+.v{padding-block:44px;border-top:1px solid var(--line);display:grid;gap:18px;scroll-margin-top:72px}
+.v[hidden]{display:none}
+.vh{display:flex;gap:14px 18px;align-items:center;flex-wrap:wrap}
+.vnum{font:500 var(--fs-m) var(--f-mono);background:var(--chip);border-radius:8px;padding:4px 10px}
+.vh h2{font-size:var(--fs-xl);font-weight:900}
+.vh .concept{flex-basis:100%;order:5;color:var(--muted);font-size:var(--fs-m)}
+.acts{margin-left:auto;display:flex;gap:8px}
+.acts button{height:var(--btn-h);border-radius:10px;font:700 var(--fs-m) var(--f-body);cursor:pointer;padding:0 18px}
+.acts .ok{background:var(--go);color:var(--go-ink);border:0}
+.acts .x{width:var(--btn-h);padding:0;background:transparent;border:1px solid var(--line);color:var(--ink);font-size:var(--fs-l);line-height:1}
+.acts button:focus-visible,.nav a:focus-visible,.restore button:focus-visible{outline:3px solid #3B6CFF;outline-offset:2px}
+
+.poster{border-radius:6px;overflow:hidden;line-height:0;box-shadow:0 1px 0 var(--line)}
+.poster svg{width:100%;height:auto;display:block}
+
+.apps{display:grid;grid-template-columns:1fr 1fr 2fr;gap:16px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
+.app>span{font:500 14px var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.app svg{width:100%;height:auto;display:block;aspect-ratio:1/1;max-height:300px;margin:auto}
+
+/* виджет голосования: стиль задают переменные эскиза */
+.w{background:var(--wbg);color:var(--wfg);border:var(--wborder);border-radius:var(--wr);box-shadow:var(--wshadow,none);padding:18px 20px;display:grid;gap:12px;align-content:start;font-family:var(--f-body)}
+.w-top{display:flex;justify-content:space-between;align-items:center;gap:6px 10px;flex-wrap:wrap}
+.w-club{font-family:var(--wfont);font-size:20px;line-height:1.1;font-weight:var(--wfw,700)}
+.w-tag{font:500 14px var(--f-mono);background:var(--wac);color:var(--wacink);padding:4px 8px;border-radius:calc(var(--wr) / 2);white-space:nowrap}
+.w-q{font-size:17px;font-weight:700;line-height:1.25}
+.w ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.w li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center}
+.w li b{font-weight:700;font-size:17px;line-height:1.25}
+.w li small{grid-column:1;font-size:14px;opacity:.75}
+.w li em{grid-row:1/3;grid-column:2;font:500 17px var(--f-mono);font-style:normal}
+.w li i{grid-column:1/-1;height:8px;border-radius:calc(var(--wr) / 3);background:color-mix(in srgb,var(--wfg) 14%,transparent);position:relative;overflow:hidden}
+.w li i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--p);background:var(--wac)}
+.w-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.w-btn{display:inline-flex;align-items:center;height:40px;padding:0 16px;background:var(--wfg);color:var(--wbg);border-radius:var(--wr);font-weight:700;font-size:17px}
+.w-foot small{font-size:14px;opacity:.75}
+
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:12px;font-size:var(--fs-m);max-width:min(560px,calc(100vw - 32px));z-index:30;display:grid;gap:6px}
+.toast input{font:500 var(--fs-m) var(--f-body);padding:8px 10px;border-radius:8px;border:0;width:100%}
+.foot{padding-block:40px 60px;color:var(--muted);font-size:var(--fs-s);border-top:1px solid var(--line)}
+
+@media (max-width:1000px){
+  .apps{grid-template-columns:1fr 1fr}
+  .apps .app.wide{grid-column:1/-1}
+    }
+@media (max-width:560px){
+  :root{--fs-xxl:28px}
+  body{padding:0 16px}
+  .top{margin:0 -16px;padding:8px 16px}
+  .app svg{max-width:300px}
+  /* номера вариантов одной строкой с прокруткой: липкая шапка не съедает четверть экрана */
+  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px;width:calc(100% + 32px)}
+  .nav::-webkit-scrollbar{display:none}
+  .acts{margin-left:0;width:100%}
+  .acts .ok{flex:1}
+}
+@media (prefers-reduced-motion:no-preference){
+  .nav a,.acts button{transition:background .15s,color .15s}
+}
+</style>
+
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <b>Книжный клуб · названия</b>
+    <nav class="nav" id="nav"></nav>
+    <div class="restore" id="restore"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>10 вариантов названия книжного клуба</h1>
+    <p class="lead">Два имени. <b>Имя продукта</b> для компаний: взрослое и спокойное. <b>Имя клуба внутри</b> команда выбирает сама на первой встрече; в экранах голосования пример: команда назвала свой клуб «Чегевара».</p>
+  </section>
+
+  <!-- ============ N1 Переплёт ============ -->
+  <section class="v" id="n1" data-name="Переплёт">
+    <div class="vh">
+      <span class="vnum">N1</span><h2>Переплёт</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N1</button><button class="x" type="button" aria-label="Убрать N1 из сравнения">×</button></div>
+      <p class="concept">концепция: «попасть в один переплёт» всей командой · подход: книга как вещь, тканевая обложка, золотое тиснение, прошитый корешок</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Переплёт: тканевая обложка с золотым тиснением">
+        <defs>
+          <pattern id="cloth1" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 L8 0" stroke="#000" stroke-opacity=".12" stroke-width="2"/></pattern>
+        </defs>
+        <rect width="1600" height="900" fill="#17392C"/>
+        <rect width="1600" height="900" fill="url(#cloth1)"/>
+        <rect width="190" height="900" fill="#0E271E"/>
+        <g fill="#C9A24A">
+          <rect x="0" y="150" width="190" height="10"/><rect x="0" y="330" width="190" height="10"/><rect x="0" y="560" width="190" height="10"/><rect x="0" y="740" width="190" height="10"/>
+        </g>
+        <line x1="214" y1="40" x2="214" y2="860" stroke="#C9A24A" stroke-width="5" stroke-dasharray="22 14" stroke-linecap="round"/>
+        <rect x="290" y="78" width="1240" height="744" fill="none" stroke="#C9A24A" stroke-width="4"/>
+        <rect x="308" y="96" width="1204" height="708" fill="none" stroke="#C9A24A" stroke-width="1.5"/>
+        <g fill="#C9A24A">
+          <path d="M290 64 l14 14 l-14 14 l-14 -14z"/><path d="M1530 64 l14 14 l-14 14 l-14 -14z"/><path d="M290 808 l14 14 l-14 14 l-14 -14z"/><path d="M1530 808 l14 14 l-14 14 l-14 -14z"/>
+        </g>
+        <g transform="translate(910 230)" fill="none" stroke="#D8B45A" stroke-width="6" stroke-linejoin="round">
+          <circle r="74"/>
+          <path d="M-44 -22 Q-22 -34 0 -22 Q22 -34 44 -22 V30 Q22 18 0 30 Q-22 18 -44 30 Z"/>
+          <path d="M0 -22 V30"/>
+        </g>
+        <text class="fit" data-max="1120" x="910" y="500" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="190" letter-spacing="22" fill="#D8B45A">ПЕРЕПЛЁТ</text>
+        <line x1="640" y1="550" x2="1180" y2="550" stroke="#C9A24A" stroke-width="2"/>
+        <circle cx="910" cy="550" r="7" fill="#C9A24A"/>
+        <text x="910" y="625" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="600" font-size="56" fill="#EADBA8">книжный клуб для команд</text>
+        <text x="910" y="752" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="600" font-size="44" letter-spacing="3" fill="#C9A24A">Вся команда в одном переплёте</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n1"></div>
+  </section>
+
+  <!-- ============ N2 На полях ============ -->
+  <section class="v" id="n2" data-name="На полях">
+    <div class="vh">
+      <span class="vnum">N2</span><h2>На полях</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N2</button><button class="x" type="button" aria-label="Убрать N2 из сравнения">×</button></div>
+      <p class="concept">концепция: главное происходит в заметках вокруг текста · подход: страница книги с пометками красным и синим карандашом, маркер, стрелки</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат На полях: страница книги с рукописными заметками на полях">
+        <rect width="1600" height="900" fill="#F6F1E7"/>
+        <line x1="1010" y1="60" x2="1010" y2="840" stroke="#E2D8C6" stroke-width="3"/>
+        <text x="100" y="220" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="168" fill="#1C1C1C">На полях</text>
+        <path d="M104 258 C300 236 560 272 790 246" fill="none" stroke="#D6342C" stroke-width="9" stroke-linecap="round"/>
+        <g id="lines2"></g>
+        <text x="1060" y="196" font-family="Caveat, 'Comic Sans MS', cursive" font-weight="700" font-size="60" fill="#D6342C">а у нас так же!</text>
+        <path d="M1050 214 C990 250 930 300 900 352" fill="none" stroke="#D6342C" stroke-width="5" stroke-linecap="round"/>
+        <path d="M896 330 L900 356 L922 344" fill="none" stroke="#D6342C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="1060" y="470" font-family="Caveat, 'Comic Sans MS', cursive" font-weight="700" font-size="56" fill="#2350C8">обсудить в четверг</text>
+        <path d="M1060 486 C1180 500 1300 480 1420 492" fill="none" stroke="#2350C8" stroke-width="4" stroke-linecap="round"/>
+        <text x="1060" y="620" font-family="Caveat, 'Comic Sans MS', cursive" font-weight="700" font-size="56" fill="#D6342C">попробовать</text>
+        <text x="1060" y="680" font-family="Caveat, 'Comic Sans MS', cursive" font-weight="700" font-size="56" fill="#D6342C">в отделе продаж</text>
+        <text x="1440" y="652" font-family="Caveat, 'Comic Sans MS', cursive" font-weight="700" font-size="96" fill="#D6342C">!</text>
+        <text x="100" y="842" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="36" fill="#1C1C1C">Самое важное пишется на полях</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n2"></div>
+  </section>
+
+  <!-- ============ N3 Слово за слово ============ -->
+  <section class="v" id="n3" data-name="Слово за слово">
+    <div class="vh">
+      <span class="vnum">N3</span><h2>Слово за слово</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N3</button><button class="x" type="button" aria-label="Убрать N3 из сравнения">×</button></div>
+      <p class="concept">концепция: разговор, который цепляется и продолжается после встречи · подход: реплики пинг-понгом, два цвета, крупная гротесковая типографика</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Слово за слово: реплики разговора по очереди">
+        <rect width="1600" height="900" fill="#14213D"/>
+        <rect x="90" y="90" width="660" height="196" rx="98" fill="#FFF4E6"/>
+        <text class="fit" data-max="560" x="420" y="230" text-anchor="middle" font-family="Unbounded, 'Arial Black', sans-serif" font-weight="900" font-size="128" fill="#14213D">СЛОВО</text>
+        <rect x="790" y="250" width="330" height="196" rx="98" fill="#FF6B4A"/>
+        <text x="955" y="390" text-anchor="middle" font-family="Unbounded, 'Arial Black', sans-serif" font-weight="900" font-size="128" fill="#FFF4E6">ЗА</text>
+        <rect x="370" y="410" width="660" height="196" rx="98" fill="#FFF4E6"/>
+        <text class="fit" data-max="560" x="700" y="550" text-anchor="middle" font-family="Unbounded, 'Arial Black', sans-serif" font-weight="900" font-size="128" fill="#14213D">СЛОВО</text>
+        <g font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="34">
+          <rect x="1160" y="96" width="350" height="76" rx="38" fill="none" stroke="#FFF4E6" stroke-width="3"/>
+          <text class="fit" data-max="310" x="1335" y="146" text-anchor="middle" fill="#FFF4E6">а если у нас так?</text>
+          <rect x="1110" y="520" width="400" height="76" rx="38" fill="#FF6B4A"/>
+          <text class="fit" data-max="350" x="1310" y="570" text-anchor="middle" fill="#14213D">давай в понедельник</text>
+          <rect x="1080" y="640" width="160" height="76" rx="38" fill="none" stroke="#FFF4E6" stroke-width="3"/>
+          <text x="1160" y="690" text-anchor="middle" fill="#FFF4E6">я за!</text>
+        </g>
+        <text x="90" y="760" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="40" fill="#FFF4E6">Разговор, который продолжается</text>
+        <text x="90" y="814" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="40" fill="#FF6B4A">после встречи</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n3"></div>
+  </section>
+
+  <!-- ============ N4 Читка ============ -->
+  <section class="v" id="n4" data-name="Читка">
+    <div class="vh">
+      <span class="vnum">N4</span><h2>Читка</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N4</button><button class="x" type="button" aria-label="Убрать N4 из сравнения">×</button></div>
+      <p class="concept">концепция: театральная читка, совместное чтение как событие, ближе всего к ивент-профилю · подход: занавес, луч прожектора, страница пьесы машинописью</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Читка: сцена, прожектор и страница пьесы">
+        <rect width="1600" height="900" fill="#1A0A0D"/>
+        <g id="curtain4"></g>
+        <polygon points="1110,0 1210,0 1440,830 820,830" fill="#FFF4D6" opacity=".12"/>
+        <ellipse cx="1130" cy="830" rx="310" ry="46" fill="#FFF4D6" opacity=".18"/>
+        <g transform="rotate(4 1160 520)">
+          <rect x="950" y="270" width="420" height="520" fill="#FBF7EE"/>
+          <g font-family="'PT Mono', 'Courier New', monospace" font-size="27" fill="#1A1A1A">
+            <text x="1160" y="336" text-anchor="middle" font-weight="700" font-size="34">ЧИТКА</text>
+            <text x="1160" y="376" text-anchor="middle">Действие первое</text>
+            <text x="980" y="448">Переговорная.</text>
+            <text x="980" y="486">Входит команда.</text>
+            <text x="980" y="560">КОМАНДА.</text>
+            <text x="980" y="598">А что, если</text>
+            <text x="980" y="636">попробовать иначе?</text>
+            <text x="980" y="710">(пауза)</text>
+          </g>
+        </g>
+        <text x="200" y="360" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="200" fill="#F2C14E">Читка</text>
+        <text x="210" y="440" font-family="'PT Mono', 'Courier New', monospace" font-size="38" fill="#FFF4E6">книжный клуб для команд</text>
+        <text x="210" y="494" font-family="'PT Mono', 'Courier New', monospace" font-size="38" fill="#F2C14E">сезон 1 · действие первое</text>
+        <text x="210" y="740" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="36" fill="#FFF4E6">Читаем вместе. Спорим по ролям.</text>
+        <text x="210" y="790" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="36" fill="#FFF4E6">Играем всей командой.</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n4"></div>
+  </section>
+
+  <!-- ============ N5 Разворот ============ -->
+  <section class="v" id="n5" data-name="Разворот">
+    <div class="vh">
+      <span class="vnum">N5</span><h2>Разворот</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N5</button><button class="x" type="button" aria-label="Убрать N5 из сравнения">×</button></div>
+      <p class="concept">концепция: книжный разворот и смена взгляда · подход: страница пополам, одно слово вверх ногами и прямо, стрелка поворота на корешке</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Разворот: слово написано на двух страницах, на одной перевёрнуто">
+        <rect width="800" height="900" fill="#1E3BFF"/>
+        <rect x="800" width="800" height="900" fill="#FFD23F"/>
+        <text class="fit" data-max="660" x="400" y="300" text-anchor="middle" transform="rotate(180 400 270)" font-family="Unbounded, 'Arial Black', sans-serif" font-weight="900" font-size="104" fill="#FFD23F">РАЗВОРОТ</text>
+        <text class="fit" data-max="660" x="1200" y="630" text-anchor="middle" font-family="Unbounded, 'Arial Black', sans-serif" font-weight="900" font-size="104" fill="#1E3BFF">РАЗВОРОТ</text>
+        <line x1="800" y1="0" x2="800" y2="900" stroke="#111" stroke-width="6"/>
+        <g transform="translate(800 450)">
+          <circle r="104" fill="#111"/>
+          <path d="M-56 -26 A62 62 0 1 1 -40 46" fill="none" stroke="#FFF" stroke-width="16" stroke-linecap="round"/>
+          <path d="M-82 -44 L-56 -2 L-26 -40 Z" fill="#FFF"/>
+        </g>
+        <text x="60" y="830" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="36" fill="#FFD23F">книжный клуб для команд</text>
+        <text x="860" y="830" font-family="'Golos Text', Arial, sans-serif" font-weight="700" font-size="40" fill="#111">Та же книга. Другой взгляд.</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n5"></div>
+  </section>
+
+  <!-- ============ N6 Глава ============ -->
+  <section class="v" id="n6" data-name="Глава">
+    <div class="vh">
+      <span class="vnum">N6</span><h2>Глава</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N6</button><button class="x" type="button" aria-label="Убрать N6 из сравнения">×</button></div>
+      <p class="concept">концепция: подписка в самом имени, встреча = глава, квартал = книга, год = том · подход: строгая книжная типографика, римская цифра, шкала года из 12 глав</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Глава: римская цифра один и шкала года из двенадцати глав">
+        <rect width="1600" height="900" fill="#FBFAF7"/>
+        <text x="800" y="170" text-anchor="middle" font-family="Literata, Georgia, serif" font-weight="700" font-size="120" letter-spacing="36" fill="#111">ГЛАВА</text>
+        <text x="800" y="540" text-anchor="middle" font-family="Literata, Georgia, serif" font-weight="400" font-size="400" fill="#C8211B">I</text>
+        <line x1="560" y1="590" x2="1040" y2="590" stroke="#111" stroke-width="2"/>
+        <text x="800" y="652" text-anchor="middle" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="38" fill="#111">встреча = глава · квартал = книга · год = том</text>
+        <g id="ticks6"></g>
+      </svg>
+    </div>
+    <div class="apps" data-v="n6"></div>
+  </section>
+
+  <!-- ============ N7 Одиссея ============ -->
+  <section class="v" id="n7" data-name="Одиссея">
+    <div class="vh">
+      <span class="vnum">N7</span><h2>Одиссея</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N7</button><button class="x" type="button" aria-label="Убрать N7 из сравнения">×</button></div>
+      <p class="concept">концепция: герой и мудрец в одном лице, «читаем, чтобы действовать»; ведущий Ментор, цикл = плавание, цель = Итака, группа = экипаж · подход: чернофигурная греческая роспись, меандр</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Одиссея: корабль плывёт к острову Итака, греческая роспись">
+        <defs>
+          <pattern id="meander7" width="80" height="70" patternUnits="userSpaceOnUse">
+            <rect width="80" height="70" fill="#1A1410"/>
+            <path d="M0 56 H80 M68 56 V14 H22 V42 H48 V28" fill="none" stroke="#C8622A" stroke-width="8"/>
+          </pattern>
+        </defs>
+        <rect width="1600" height="900" fill="#C8622A"/>
+        <rect width="1600" height="70" fill="url(#meander7)"/>
+        <rect y="830" width="1600" height="70" fill="url(#meander7)"/>
+        <text x="800" y="230" text-anchor="middle" font-family="Forum, Georgia, serif" font-size="176" letter-spacing="24" fill="#1A1410">ОДИССЕЯ</text>
+        <text x="800" y="306" text-anchor="middle" font-family="Forum, Georgia, serif" font-size="54" letter-spacing="4" fill="#F3E3C3">Читаем, чтобы действовать</text>
+        <g fill="#1A1410">
+          <path d="M1130 690 C1190 560 1260 520 1330 540 C1400 556 1440 620 1480 690 Z"/>
+          <g fill="#F3E3C3"><rect x="1250" y="548" width="100" height="10"/><rect x="1258" y="560" width="10" height="54"/><rect x="1282" y="560" width="10" height="54"/><rect x="1306" y="560" width="10" height="54"/><rect x="1330" y="560" width="10" height="54"/><path d="M1246 548 L1300 520 L1354 548 Z"/></g>
+          <text x="1305" y="670" text-anchor="middle" font-family="Forum, Georgia, serif" font-size="40" letter-spacing="6" fill="#F3E3C3">ИТАКА</text>
+          <path d="M260 610 Q290 690 400 690 H690 Q770 690 820 600 L790 612 Q740 652 680 652 H410 Q330 652 296 600 Z"/>
+          <rect x="534" y="380" width="10" height="250"/>
+          <path d="M430 410 H650 L630 590 H450 Z" fill="#F3E3C3" stroke="#1A1410" stroke-width="8"/>
+          <path d="M470 470 H612 M462 530 H620" stroke="#1A1410" stroke-width="10"/>
+          <path d="M812 600 Q850 560 836 530" fill="none" stroke="#1A1410" stroke-width="10"/>
+          <g stroke="#1A1410" stroke-width="7" stroke-linecap="round"><path d="M430 690 L400 740"/><path d="M490 690 L460 740"/><path d="M550 690 L520 740"/><path d="M610 690 L580 740"/><path d="M670 690 L640 740"/></g>
+        </g>
+        <g fill="none" stroke="#1A1410" stroke-width="7" stroke-linecap="round">
+          <path d="M120 760 q40 -26 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+        </g>
+        <text x="800" y="812" text-anchor="middle" font-family="Forum, Georgia, serif" font-size="36" letter-spacing="3" fill="#F3E3C3">экипаж · плавание · Ментор · Итака</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n7"></div>
+  </section>
+
+  <!-- ============ N8 Наутилус ============ -->
+  <section class="v" id="n8" data-name="Наутилус">
+    <div class="vh">
+      <span class="vnum">N8</span><h2>Наутилус</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N8</button><button class="x" type="button" aria-label="Убрать N8 из сравнения">×</button></div>
+      <p class="concept">концепция: капитан Немо, учёный и человек действия, и библиотека на борту; команда = экипаж · подход: глубоководная латунь, иллюминатор, за стеклом книжные полки</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Наутилус: в иллюминаторе подводной лодки видна библиотека">
+        <defs><clipPath id="port8"><circle cx="1150" cy="450" r="282"/></clipPath></defs>
+        <rect width="1600" height="900" fill="#0B1E33"/>
+        <g clip-path="url(#port8)">
+          <rect x="860" y="160" width="580" height="580" fill="#3A2416"/>
+          <g id="shelf8"></g>
+        </g>
+        <circle cx="1150" cy="450" r="304" fill="none" stroke="#C9A24A" stroke-width="44"/>
+        <circle cx="1150" cy="450" r="282" fill="none" stroke="#8C6A24" stroke-width="6"/>
+        <g id="rivets8" fill="#E9D58E"></g>
+        <g fill="none" stroke="#E9DCC0" stroke-opacity=".5" stroke-width="4">
+          <circle cx="800" cy="160" r="14"/><circle cx="822" cy="104" r="9"/><circle cx="800" cy="62" r="6"/><circle cx="700" cy="640" r="11"/><circle cx="680" cy="590" r="6"/>
+        </g>
+        <text x="90" y="300" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="120" fill="#E9DCC0">НАУТИЛУС</text>
+        <text x="94" y="366" font-family="'Golos Text', Arial, sans-serif" font-weight="500" font-size="36" fill="#E9DCC0">книжный клуб для команд</text>
+        <text x="90" y="480" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="60" fill="#C9A24A">20 000 страниц</text>
+        <text x="90" y="550" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="60" fill="#C9A24A">под водой</text>
+        <g transform="translate(200 760)">
+          <path d="M-110 0 A110 110 0 0 1 110 0" fill="none" stroke="#C9A24A" stroke-width="10"/>
+          <g stroke="#C9A24A" stroke-width="5"><path d="M-96 0 h20"/><path d="M96 0 h-20"/><path d="M0 -96 v20"/><path d="M-68 -68 l14 14"/><path d="M68 -68 l-14 14"/></g>
+          <path d="M0 0 L58 -66" stroke="#E9DCC0" stroke-width="8" stroke-linecap="round"/>
+          <circle r="12" fill="#C9A24A"/>
+        </g>
+        <text x="340" y="770" font-family="'PT Mono', 'Courier New', monospace" font-size="32" fill="#E9DCC0">глубина: 3 книги за квартал</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n8"></div>
+  </section>
+
+  <!-- ============ N9 Камелот ============ -->
+  <section class="v" id="n9" data-name="Камелот">
+    <div class="vh">
+      <span class="vnum">N9</span><h2>Камелот</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N9</button><button class="x" type="button" aria-label="Убрать N9 из сравнения">×</button></div>
+      <p class="concept">концепция: Артур действует, Мерлин думает, круглый стол это наш формат, все равны и говорят по очереди · подход: геральдика, вид сверху на круглый стол на 12 мест</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Камелот: круглый стол на двенадцать мест, вид сверху">
+        <rect width="1600" height="900" fill="#1B2A6B"/>
+        <path d="M120 0 V180 L170 140 L220 180 V0 Z" fill="#B3202A"/>
+        <path d="M250 0 V140 L300 100 L350 140 V0 Z" fill="#E2B13C"/>
+        <g id="seats9"></g>
+        <circle cx="1150" cy="460" r="260" fill="#7A4A22" stroke="#E2B13C" stroke-width="10"/>
+        <circle cx="1150" cy="460" r="200" fill="none" stroke="#E2B13C" stroke-opacity=".5" stroke-width="3"/>
+        <g transform="translate(1150 460)" fill="#F4EAD2" stroke="#1B2A6B" stroke-width="5" stroke-linejoin="round">
+          <path d="M-110 -50 Q-55 -78 0 -50 Q55 -78 110 -50 V60 Q55 32 0 60 Q-55 32 -110 60 Z"/>
+          <path d="M0 -50 V60" fill="none"/>
+        </g>
+        <text x="90" y="400" font-family="Forum, Georgia, serif" font-size="150" letter-spacing="10" fill="#E2B13C">КАМЕЛОТ</text>
+        <text x="94" y="462" font-family="Forum, Georgia, serif" font-size="40" letter-spacing="3" fill="#F4EAD2">книжный клуб для команд</text>
+        <text x="90" y="600" font-family="Forum, Georgia, serif" font-size="56" fill="#F4EAD2">За круглым столом</text>
+        <text x="90" y="666" font-family="Forum, Georgia, serif" font-size="56" fill="#F4EAD2">все равны</text>
+        <text x="90" y="800" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="34" fill="#E2B13C">Говорим по кругу. Решаем вместе.</text>
+      </svg>
+    </div>
+    <div class="apps" data-v="n9"></div>
+  </section>
+
+  <!-- ============ N10 Чехов ============ -->
+  <section class="v" id="n10" data-name="Чехов">
+    <div class="vh">
+      <span class="vnum">N10</span><h2>Чехов</h2>
+      <div class="acts"><button class="ok" type="button">Утверждаю N10</button><button class="x" type="button" aria-label="Убрать N10 из сравнения">×</button></div>
+      <p class="concept">концепция: фамилия, ставшая нарицательной; «краткость сестра таланта» как ценность для занятых руководителей · подход: минимализм, пенсне одной линией, вишни из «Вишнёвого сада»</p>
+    </div>
+    <div class="poster">
+      <svg data-art="плакат" viewBox="0 0 1600 900" role="img" aria-label="Плакат Чехов: пенсне и вишни, краткость сестра таланта">
+        <rect width="1600" height="900" fill="#F5F2EA"/>
+        <rect x="40" y="40" width="1520" height="820" fill="none" stroke="#111" stroke-width="3"/>
+        <text x="120" y="330" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-size="230" fill="#111">ЧЕХОВ</text>
+        <text x="126" y="410" font-family="'Golos Text', Arial, sans-serif" font-weight="500" font-size="38" fill="#111">книжный клуб для команд</text>
+        <text x="120" y="580" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="72" fill="#B5172E">Краткость</text>
+        <text x="120" y="664" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="72" fill="#B5172E">сестра таланта</text>
+        <text x="122" y="790" font-family="'Golos Text', Arial, sans-serif" font-weight="600" font-size="34" fill="#111">15 минут чтения в день. Одна встреча в месяц.</text>
+        <g fill="none" stroke="#111" stroke-width="12" stroke-linecap="round">
+          <ellipse cx="1130" cy="450" rx="116" ry="98"/>
+          <ellipse cx="1400" cy="450" rx="116" ry="98"/>
+          <path d="M1242 426 Q1265 390 1288 426"/>
+          <path d="M1508 500 C1540 590 1510 700 1420 750 C1340 795 1260 770 1220 806" stroke-width="5"/>
+        </g>
+        <g transform="translate(50 30)">
+          <path d="M1120 640 C1130 600 1150 580 1180 566 M1180 566 C1196 600 1210 620 1240 640" fill="none" stroke="#3E5B2A" stroke-width="7" stroke-linecap="round"/>
+          <path d="M1180 566 C1200 540 1240 536 1262 550 C1236 566 1206 570 1180 566 Z" fill="#4A6B35"/>
+          <circle cx="1116" cy="672" r="34" fill="#B5172E"/>
+          <circle cx="1244" cy="672" r="34" fill="#B5172E"/>
+          <circle cx="1104" cy="660" r="9" fill="#FFF" opacity=".55"/>
+          <circle cx="1232" cy="660" r="9" fill="#FFF" opacity=".55"/>
+        </g>
+      </svg>
+    </div>
+    <div class="apps" data-v="n10"></div>
+  </section>
+
+  <footer class="foot">Эскизы, 7 октября 2026. Названия предложила Людмила. Цифры голосов в экранах пример.</footer>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+  // ---------- применения: значок, шоппер, экран голосования ----------
+  // club = имя продукта; inner = имя клуба внутри команды (пример: «Чегевара», фаворит Маши)
+  var INNER = 'Чегевара';
+  var CORM = "'Cormorant Garamond', Georgia, serif", PLAY = "'Playfair Display', Georgia, serif", UNB = "Unbounded, 'Arial Black', sans-serif",
+      LIT = "Literata, Georgia, serif", FORUM = "Forum, Georgia, serif", MONO = "'PT Mono', 'Courier New', monospace";
+  var V = {
+    n1:{club:'Переплёт', init:'П', disp:CORM, dw:700, rt:'ПРОЧИТАНО 3 КНИГИ · ОДИН ПЕРЕПЛЁТ · ЦИКЛ 1 ·',
+        ring:'#C9A24A', core:'#17392C', initC:'#D8B45A', ringText:'#17392C',
+        tote:'#17392C', toteInk:'#D8B45A', q:['Когда','в товарищах','согласья нет…'], qs:38, au:'И. Крылов',
+        w:{bg:'#17392C',fg:'#EADBA8',ac:'#C9A24A',acink:'#17392C',r:'4px',border:'3px solid #C9A24A',font:CORM,fw:700}},
+    n2:{club:'На полях', init:'НП', disp:PLAY, dw:900, rt:'12 ЗАМЕТОК НА ПОЛЯХ · ЦИКЛ 1 · ПЕРВАЯ КНИГА ·',
+        ring:'#D6342C', core:'#F6F1E7', initC:'#1C1C1C', ringText:'#F6F1E7',
+        tote:'#F6F1E7', toteInk:'#1C1C1C', q:['Чтение','вот лучшее','учение'], qs:40, au:'А. Пушкин',
+        w:{bg:'#F6F1E7',fg:'#1C1C1C',ac:'#D6342C',acink:'#FFFFFF',r:'8px',border:'2px solid #1C1C1C',font:PLAY,fw:900}},
+    n3:{club:'Слово за слово', init:'СЛ', disp:UNB, dw:900, rt:'10 РЕПЛИК НА ВСТРЕЧЕ · ЦИКЛ 1 · СЛОВО ЗА СЛОВО ·',
+        ring:'#FF6B4A', core:'#14213D', initC:'#FFF4E6', ringText:'#14213D',
+        tote:'#FF6B4A', toteInk:'#14213D', q:['Как слово','наше','отзовётся'], qs:34, au:'Ф. Тютчев',
+        w:{bg:'#14213D',fg:'#FFF4E6',ac:'#FF6B4A',acink:'#14213D',r:'28px',border:'0',font:UNB,fw:900}},
+    n4:{club:'Читка', init:'АКТ I', disp:PLAY, dw:900, rt:'СЕЗОН 1 · ДЕЙСТВИЕ ТРЕТЬЕ · РОЛЬ ПРОЧИТАНА ·',
+        ring:'#F2C14E', core:'#7A0F1A', initC:'#F2C14E', ringText:'#1A0A0D',
+        tote:'#7A0F1A', toteInk:'#F2C14E', q:['К нам едет','ревизор'], qs:40, au:'Н. Гоголь',
+        w:{bg:'#1A0A0D',fg:'#FFF4E6',ac:'#F2C14E',acink:'#1A0A0D',r:'2px',border:'3px solid #F2C14E',font:MONO,fw:700}},
+    n5:{club:'Разворот', init:'Р', disp:UNB, dw:900, rt:'ТРИ РАЗВОРОТА · ЦИКЛ 1 · НОВЫЙ ВЗГЛЯД · ЦИКЛ 1 ·',
+        ring:'#FFD23F', core:'#1E3BFF', initC:'#FFD23F', ringText:'#1E3BFF',
+        tote:'#1E3BFF', toteInk:'#FFD23F', q:['Смотри','в корень!'], qs:40, au:'Козьма Прутков',
+        w:{bg:'#FFD23F',fg:'#111111',ac:'#1E3BFF',acink:'#FFFFFF',r:'0px',border:'4px solid #111',font:UNB,fw:900}},
+    n6:{club:'Глава', init:'I', disp:LIT, dw:700, rt:'ГЛАВА 3 · КНИГА 1 · ТОМ 2027 · ГЛАВА 3 · КНИГА 1 ·',
+        ring:'#111111', core:'#FBFAF7', initC:'#C8211B', ringText:'#FBFAF7',
+        tote:'#FBFAF7', toteInk:'#111111', q:['Глава','первая'], qs:46, au:'А. Пушкин',
+        w:{bg:'#FBFAF7',fg:'#111111',ac:'#C8211B',acink:'#FFFFFF',r:'0px',border:'2px solid #111',font:LIT,fw:700}},
+    n7:{club:'Одиссея', init:'ОД', disp:FORUM, dw:400, rt:'ПЛАВАНИЕ 1 · ЭКИПАЖ · КУРС НА ИТАКУ · ПЛАВАНИЕ 1 ·',
+        ring:'#1A1410', core:'#C8622A', initC:'#1A1410', ringText:'#C8622A',
+        tote:'#1A1410', toteInk:'#C8622A', q:['Курс','на Итаку'], qs:46, au:'книжный клуб',
+        w:{bg:'#F3E3C3',fg:'#1A1410',ac:'#C8622A',acink:'#1A1410',r:'0px',border:'4px solid #1A1410',font:FORUM,fw:400}},
+    n8:{club:'Наутилус', init:'Н', disp:PLAY, dw:900, rt:'ПОГРУЖЕНИЕ 1 · ГЛУБИНА 3 КНИГИ · ЭКИПАЖ ·',
+        ring:'#C9A24A', core:'#0B1E33', initC:'#E9DCC0', ringText:'#0B1E33',
+        tote:'#0B1E33', toteInk:'#C9A24A', q:['Подвижный','в подвижной','среде'], qs:36, au:'девиз капитана Немо',
+        w:{bg:'#0B1E33',fg:'#E9DCC0',ac:'#C9A24A',acink:'#0B1E33',r:'14px',border:'3px solid #C9A24A',font:PLAY,fw:900}},
+    n9:{club:'Камелот', init:'К', disp:FORUM, dw:400, rt:'РЫЦАРЬ КРУГЛОГО СТОЛА · ЦИКЛ 1 · 3 КНИГИ ·',
+        ring:'#E2B13C', core:'#1B2A6B', initC:'#E2B13C', ringText:'#1B2A6B',
+        tote:'#B3202A', toteInk:'#F4EAD2', q:['Все равны','за круглым','столом'], qs:38, au:'книжный клуб',
+        w:{bg:'#1B2A6B',fg:'#F4EAD2',ac:'#E2B13C',acink:'#1B2A6B',r:'6px',border:'3px solid #E2B13C',font:FORUM,fw:400}},
+    n10:{club:'Чехов', init:'Ч', disp:PLAY, dw:900, rt:'КОРОТКО И ПО ДЕЛУ · 3 КНИГИ · ЦИКЛ 1 ·',
+        ring:'#111111', core:'#F5F2EA', initC:'#B5172E', ringText:'#F5F2EA',
+        tote:'#F5F2EA', toteInk:'#111111', q:['Краткость','сестра','таланта'], qs:40, au:'А. Чехов',
+        w:{bg:'#F5F2EA',fg:'#111111',ac:'#B5172E',acink:'#FFFFFF',r:'0px',border:'3px solid #111',font:PLAY,fw:900}}
+  };
+  var BOOKS=[['«Пять пороков команды»','Патрик Ленсиони',46],['«От хорошего к великому»','Джим Коллинз',32],['«Думай медленно… решай быстро»','Даниэль Канеман',22]];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+  function badge(id,c){
+    var fs = c.init.length>1 ? 92 : 120;
+    return '<svg data-art="ачивка" viewBox="0 0 300 300" role="img" aria-label="Значок-ачивка">'+
+      '<defs><path id="ring-'+id+'" d="M150,150 m-108,0 a108,108 0 1,1 216,0 a108,108 0 1,1 -216,0"/></defs>'+
+      '<circle cx="150" cy="150" r="140" fill="'+c.ring+'"/>'+
+      '<circle cx="150" cy="150" r="88" fill="'+c.core+'"/>'+
+      '<text class="ring" font-family="'+esc(c.disp)+'" font-weight="'+c.dw+'" font-size="21" fill="'+c.ringText+'" letter-spacing="1"><textPath href="#ring-'+id+'" textLength="670" lengthAdjust="spacing">'+esc(c.rt)+'</textPath></text>'+
+      '<text class="fit" data-max="150" x="150" y="150" text-anchor="middle" dominant-baseline="central" font-family="'+esc(c.disp)+'" font-weight="'+c.dw+'" font-size="'+fs+'" fill="'+c.initC+'">'+esc(c.init)+'</text>'+
+    '</svg>';
+  }
+  function tote(c){
+    var lh=c.qs*1.12, n=c.q.length, y0=200-(n-1)*lh/2+c.qs*0.1, t='';
+    for(var i=0;i<n;i++){t+='<text class="fit" data-max="164" x="150" y="'+(y0+i*lh)+'" text-anchor="middle" font-family="'+esc(c.disp)+'" font-weight="'+c.dw+'" font-size="'+c.qs+'" fill="'+c.toteInk+'">'+esc(c.q[i])+'</text>';}
+    return '<svg data-art="мерч" viewBox="0 0 300 300" role="img" aria-label="Шоппер с цитатой">'+
+      '<path d="M108 98 C108 40, 192 40, 192 98" fill="none" stroke="'+c.tote+'" stroke-width="14" stroke-linecap="round"/>'+
+      '<path d="M108 98 C108 40, 192 40, 192 98" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="14" stroke-linecap="round"/>'+
+      '<rect x="56" y="92" width="188" height="200" rx="6" fill="'+c.tote+'" style="stroke:var(--muted);stroke-opacity:.45" stroke-width="2"/>'+ t +
+      '<text class="fit" data-max="170" x="150" y="276" text-anchor="middle" font-family="\'Golos Text\', Arial, sans-serif" font-weight="500" font-size="16" fill="'+c.toteInk+'">'+esc(c.au)+'</text>'+
+    '</svg>';
+  }
+  function widget(c){
+    var w=c.w, li='';
+    BOOKS.forEach(function(b){li+='<li><b>'+b[0]+'</b><em>'+b[2]+'%</em><small>'+b[1]+'</small><i style="--p:'+b[2]+'%"></i></li>';});
+    return '<div class="w" data-art="экран бренда" style="--wbg:'+w.bg+';--wfg:'+w.fg+';--wac:'+w.ac+';--wacink:'+w.acink+';--wr:'+w.r+';--wborder:'+w.border+';--wfont:'+w.font+';--wfw:'+w.fw+'">'+
+      '<div class="w-top"><span class="w-club">'+esc(c.club)+'</span><span class="w-tag">клуб «'+INNER+'»</span></div>'+
+      '<p class="w-q">Какую книгу читаем следующей?</p><ul>'+li+'</ul>'+
+      '<div class="w-foot"><span class="w-btn">Отдать голос</span><small>цикл 2 · осталось 2 дня · пример</small></div></div>';
+  }
+  document.querySelectorAll('.apps').forEach(function(box){
+    var id=box.dataset.v, c=V[id];
+    box.innerHTML='<div class="app"><span>Ачивка</span>'+badge(id,c)+'</div>'+
+                  '<div class="app"><span>Мерч</span>'+tote(c)+'</div>'+
+                  '<div class="app wide"><span>Экран голосования</span>'+widget(c)+'</div>';
+  });
+
+  // детерминированный «случай», чтобы рисунок не менялся от перезагрузки
+  var seed=7;function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+  function el(id,html){var g=document.getElementById(id);if(g)g.innerHTML=html}
+
+  // ---------- N2: строки текста книги, маркер, обведённое слово ----------
+  (function(){
+    var o='<rect x="96" y="338" width="808" height="24" fill="#FFE14D" opacity=".85"/>',y=318;
+    for(var i=0;i<13;i++){
+      var last=(i===5||i===12), w=last?300+rnd()*200:760+rnd()*80;
+      if(i===1)w=800;
+      o+='<rect x="100" y="'+(y+i*36+18)+'" width="'+w.toFixed(0)+'" height="14" rx="7" fill="#CFC6B6"/>';
+      if(i===5)y+=18;
+    }
+    o+='<ellipse cx="480" cy="'+(318+8*36+18+18+7)+'" rx="96" ry="26" fill="none" stroke="#2350C8" stroke-width="5"/>';
+    el('lines2',o);
+  })();
+
+  // ---------- N4: занавес и ламбрекен ----------
+  (function(){
+    var o='';
+    for(var x=0;x<170;x+=34){o+='<rect x="'+x+'" y="0" width="34" height="900" fill="'+((x/34)%2?'#8E1422':'#7A0F1A')+'"/>';}
+    for(var x2=1430;x2<1600;x2+=34){o+='<rect x="'+x2+'" y="0" width="34" height="900" fill="'+(((x2-1430)/34)%2?'#8E1422':'#7A0F1A')+'"/>';}
+    o+='<rect x="0" y="0" width="1600" height="66" fill="#5C0A13"/>';
+    for(var c=0;c<=1600;c+=80){o+='<circle cx="'+c+'" cy="66" r="40" fill="#5C0A13"/>';}
+    el('curtain4',o);
+  })();
+
+  // ---------- N6: год = том, 4 книги по 3 главы ----------
+  (function(){
+    var o='',x0=310,tw=56,gap=16,gg=60,y=718;
+    for(var b=0;b<4;b++){
+      var gx=x0+b*(3*tw+2*gap+gg);
+      for(var k=0;k<3;k++){var x=gx+k*(tw+gap),first=(b===0&&k===0);
+        o+='<rect x="'+x+'" y="'+y+'" width="'+tw+'" height="56" fill="'+(first?'#C8211B':'none')+'" stroke="'+(first?'#C8211B':'#111')+'" stroke-width="3"/>';}
+      o+='<text x="'+(gx+(3*tw+2*gap)/2)+'" y="814" text-anchor="middle" font-family="\'Golos Text\', Arial, sans-serif" font-weight="500" font-size="28" fill="#111">книга '+(b+1)+'</text>';
+    }
+    o+='<text x="1310" y="756" font-family="\'Golos Text\', Arial, sans-serif" font-weight="700" font-size="30" fill="#111">том 2027</text>';
+    el('ticks6',o);
+  })();
+
+  // ---------- N8: полки с книгами и заклёпки ----------
+  (function(){
+    var pal=['#2F5D62','#A0522D','#E9DCC0','#6B8F71','#C9A24A','#8C2F39','#3E4A89','#D9B48F'],o='';
+    [250,390,530,670].forEach(function(sy){
+      var x=860;
+      while(x<1440){var w=18+Math.round(rnd()*24),h=70+Math.round(rnd()*48),c=pal[Math.floor(rnd()*pal.length)];
+        o+='<rect x="'+x+'" y="'+(sy-h)+'" width="'+w+'" height="'+h+'" fill="'+c+'"/>';
+        if(w>28)o+='<rect x="'+(x+4)+'" y="'+(sy-h+14)+'" width="'+(w-8)+'" height="4" fill="#0B1E33" opacity=".35"/>';
+        x+=w+2;}
+      o+='<rect x="860" y="'+sy+'" width="580" height="14" fill="#6B4423"/>';
+    });
+    el('shelf8',o);
+    var r='';for(var i=0;i<16;i++){var a=i*Math.PI/8;r+='<circle cx="'+(1150+304*Math.cos(a)).toFixed(1)+'" cy="'+(450+304*Math.sin(a)).toFixed(1)+'" r="8"/>';}
+    el('rivets8',r);
+  })();
+
+  // ---------- N9: 12 мест вокруг круглого стола ----------
+  (function(){
+    var o='';
+    for(var i=0;i<12;i++){var a=i*30,rad=a*Math.PI/180,x=1150+300*Math.cos(rad),y=460+300*Math.sin(rad);
+      o+='<rect x="-34" y="-26" width="68" height="52" rx="12" fill="#B3202A" stroke="#E2B13C" stroke-width="4" transform="translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+(a+90)+')"/>';}
+    el('seats9',o);
+  })();
+
+  // ---------- навигация, скрытие, утверждение ----------
+  var secs=[].slice.call(document.querySelectorAll('section.v'));
+  var nav=document.getElementById('nav'), restore=document.getElementById('restore'), KEY='bookclub-names-hidden';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+  function save(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+  secs.forEach(function(s){
+    var a=document.createElement('a');a.href='#'+s.id;a.textContent=s.querySelector('.vnum').textContent+' '+s.querySelector('h2').textContent;a.dataset.id=s.id;nav.appendChild(a);
+  });
+  function render(){
+    var hid=load();restore.innerHTML='';
+    secs.forEach(function(s){
+      var h=hid.indexOf(s.id)>-1;s.hidden=h;nav.querySelector('[data-id="'+s.id+'"]').hidden=h;
+      if(h){var b=document.createElement('button');b.type='button';b.textContent='Вернуть '+s.id.toUpperCase();b.onclick=function(){save(load().filter(function(x){return x!==s.id}));render();};restore.appendChild(b);}
+    });
+  }
+  secs.forEach(function(s){
+    s.querySelector('.x').addEventListener('click',function(){var h=load();if(h.indexOf(s.id)<0)h.push(s.id);save(h);render();});
+    s.querySelector('.ok').addEventListener('click',function(){
+      var phrase='Утверждаю '+s.id.toUpperCase()+': '+s.dataset.name;
+      var t=document.getElementById('toast');
+      function show(ok){t.innerHTML=ok?'Скопировано, вставь в чат: <b>'+esc(phrase)+'</b>':'Скопируй и вставь в чат:<input id="phrase" readonly value="'+esc(phrase)+'">';t.hidden=false;var i=document.getElementById('phrase');if(i){i.focus();i.select();}clearTimeout(t._h);t._h=setTimeout(function(){t.hidden=true},ok?3500:9000);}
+      try{navigator.clipboard.writeText(phrase).then(function(){show(true)},function(){show(false)});}catch(e){show(false)}
+    });
+  });
+  render();
+  // текст не вылезает: ужимаю по реальной ширине после загрузки шрифтов
+  // надпись по кольцу ачивки: если в естественную длину не влезает в 650 из 670, уменьшаю кегль, а не сжимаю буквы друг в друга
+  function ringFit(){document.querySelectorAll('text.ring').forEach(function(t){var p=t.querySelector('textPath');t.setAttribute('font-size',21);p.removeAttribute('textLength');var w=t.getComputedTextLength();if(w>650)t.setAttribute('font-size',(21*650/w).toFixed(1));p.setAttribute('textLength',670);});}
+  function fit(){ringFit();document.querySelectorAll('text.fit').forEach(function(t){var max=+t.dataset.max,fs=+(t.dataset.fs||t.getAttribute('font-size')||parseFloat(getComputedStyle(t).fontSize));t.dataset.fs=fs;t.setAttribute('font-size',fs);var w=t.getComputedTextLength();if(w>max)t.setAttribute('font-size',(fs*max/w).toFixed(1));});}
+  fit();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){nav.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.dataset.id===e.target.id)});}})},{rootMargin:'-40% 0px -55% 0px'});
+    secs.forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+
+</body>
+</html>

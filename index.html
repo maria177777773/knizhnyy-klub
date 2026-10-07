@@ -79,13 +79,13 @@ p{margin:0}
 .poster svg{width:100%;height:auto;display:block}
 
 .apps{display:grid;grid-template-columns:1fr 1fr 2fr;gap:16px}
-.app{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-rows:auto 1fr;gap:8px;min-width:0}
+.app{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-rows:auto 1fr;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
 .app>span{font:500 14px var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .app svg{width:100%;height:auto;display:block;aspect-ratio:1/1;max-height:300px;margin:auto}
 
 /* виджет голосования: стиль задают переменные эскиза */
 .w{background:var(--wbg);color:var(--wfg);border:var(--wborder);border-radius:var(--wr);box-shadow:var(--wshadow,none);padding:18px 20px;display:grid;gap:12px;align-content:start;font-family:var(--f-body)}
-.w-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.w-top{display:flex;justify-content:space-between;align-items:center;gap:6px 10px;flex-wrap:wrap}
 .w-club{font-family:var(--wfont);font-size:20px;line-height:1.1;font-weight:var(--wfw,700)}
 .w-tag{font:500 14px var(--f-mono);background:var(--wac);color:var(--wacink);padding:4px 8px;border-radius:calc(var(--wr) / 2);white-space:nowrap}
 .w-q{font-size:17px;font-weight:700;line-height:1.25}
@@ -112,7 +112,10 @@ p{margin:0}
 @media (max-width:560px){
   body{padding:0 16px}
   .top{margin:0 -16px;padding:8px 16px}
-  .apps,  .app svg{max-width:300px}
+  .app svg{max-width:300px}
+  /* номера вариантов одной строкой с прокруткой: липкая шапка не съедает четверть экрана */
+  .nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px;width:calc(100% + 32px)}
+  .nav::-webkit-scrollbar{display:none}
   .acts{margin-left:0;width:100%}
   .acts .ok{flex:1}
 }
@@ -120,10 +123,9 @@ p{margin:0}
   .nav a,.acts button{transition:background .15s,color .15s}
 }
 </style>
+
 </head>
 <body>
-
-
 <header class="top">
   <div class="wrap">
     <b>Книжный клуб · визуал</b>
