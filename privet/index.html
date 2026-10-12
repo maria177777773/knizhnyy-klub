@@ -25,7 +25,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.5 
 .face{width:112px;height:112px;border-radius:50%;border:4px solid #111;overflow:hidden;background:var(--lime)}
 .face svg{width:100%;height:100%;display:block}
 .kicker{font:600 var(--fs-s)/1.3 var(--f-b);text-transform:uppercase;letter-spacing:.06em}
-h1{margin:4px 0 0;font:700 var(--fs-h1)/1 var(--f-d);text-transform:uppercase}
+h1{margin:0;font:700 var(--fs-h1)/1 var(--f-d);text-transform:uppercase}
 .lead{margin:0;font-weight:500}
 .play{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:64px;border:3px solid #111;border-radius:14px;background:#111;color:var(--lime);font:700 var(--fs-xl)/1 var(--f-d);text-transform:uppercase;cursor:pointer}
 .play svg{width:30px;height:30px;flex:none}
@@ -34,15 +34,19 @@ main{max-width:720px;margin:0 auto;padding-block:24px 64px;display:grid;gap:20px
 ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:4px;transition:border-color .2s,transform .2s}
 li .es{font:600 var(--fs-l)/1.3 var(--f-b)}
-li .ru{color:var(--muted)}
+li .ru{color:var(--ink);font-weight:500}
 li.on{border:3px solid var(--ink);transform:translateX(4px)}
 li.on .es{color:var(--ink)}
 .gift{background:var(--card);border:3px dashed var(--ink);border-radius:14px;padding:16px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center}
 .gift svg{width:56px;height:56px}
+.gtxt{margin:4px 0 0;font-size:var(--fs-m)}
 .gift b{font:700 var(--fs-l)/1.2 var(--f-d);text-transform:uppercase}
 .cta{display:flex;align-items:center;justify-content:center;min-height:64px;border-radius:14px;background:var(--red);color:#fff;border:3px solid #111;font:700 var(--fs-xl)/1 var(--f-d);text-transform:uppercase;text-decoration:none}
-.note{color:var(--muted);font-size:var(--fs-s)}
-@media (min-width:640px){body{padding:0 24px}.hero{margin:0 -24px;padding:40px 24px 32px}.face{width:140px;height:140px}}
+.note{color:var(--muted);font-size:var(--fs-m)}
+/* кнопка «Вступить» всегда под рукой: до неё 3 экрана фраз (критик 13.10) */
+.dock{position:sticky;bottom:0;margin:0 -16px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line)}
+.dock .cta{max-width:720px;margin:0 auto}
+@media (min-width:640px){body{padding:0 24px}.dock{margin:0 -24px;padding-inline:24px}.hero{margin:0 -24px;padding:40px 24px 32px}.face{width:140px;height:140px}}
 @media (max-width:380px){h1{font-size:var(--fs-h1m)}.face{width:92px;height:92px}}
 @media (prefers-reduced-motion:reduce){li{transition:none}li.on{transform:none}}
 </style>
@@ -54,26 +58,27 @@ li.on .es{color:var(--ink)}
 </head>
 <body>
 <header class="hero"><div class="in">
+  <span class="kicker">книжный клуб ЧЕ</span>
   <div class="head">
     <div class="face" aria-hidden="true"><svg viewBox="230 40 780 780"><rect x="230" y="40" width="780" height="780" fill="#d4ff3a"/><circle cx="660" cy="470" r="300" fill="#ff2e88"/><use href="#cheK" width="1092" height="1400" style="--mid:#111;--ink:#111;--hi:#d4ff3a"/></svg></div>
-    <div><span class="kicker">книжный клуб ЧЕ</span><h1>¡Hola, compañero!</h1></div>
+    <h1 lang="es">¡Hola, compañero!</h1>
   </div>
   <p class="lead">Че расскажет про клуб по-испански, перевод под каждой фразой. Включи звук.</p>
   <button type="button" class="play" id="play" aria-label="Послушать приветствие Че"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg><span id="play-t">Послушать Че</span></button>
 </div></header>
 <main>
-  <ol id="lines"><li data-i="0" data-src="audio/p01.mp3"><span class="es" lang="es">¡Hola, compañero! Soy el Che.</span><span class="ru">Привет, товарищ! Я Че.</span></li><li data-i="1" data-src="audio/p02.mp3"><span class="es" lang="es">¡Abrimos un club de lectura aquí, en tu oficina!</span><span class="ru">Мы открываем книжный клуб прямо у тебя в офисе!</span></li><li data-i="2" data-src="audio/p03.mp3"><span class="es" lang="es">Una vez al mes leemos un libro que sirve para el trabajo.</span><span class="ru">Раз в месяц читаем книгу, которая пригодится в работе.</span></li><li data-i="3" data-src="audio/p04.mp3"><span class="es" lang="es">Después nos reunimos con el equipo y discutimos las ideas.</span><span class="ru">Потом встречаемся командой и обсуждаем идеи.</span></li><li data-i="4" data-src="audio/p05.mp3"><span class="es" lang="es">¡Por cada capítulo ganas pesos del club!</span><span class="ru">За каждую главу получаешь песо клуба!</span></li><li data-i="5" data-src="audio/p06.mp3"><span class="es" lang="es">Los pesos se cambian por camisetas, cintas y libros.</span><span class="ru">Песо меняются на футболки, ленты и книги.</span></li><li data-i="6" data-src="audio/p07.mp3"><span class="es" lang="es">¡Y al entrar, te regalamos un caramelo!</span><span class="ru">А при вступлении дарим леденец!</span></li><li data-i="7" data-src="audio/p08.mp3"><span class="es" lang="es">Yo estaré contigo en la aplicación. Te daré consejos y un desafío cada semana.</span><span class="ru">Я буду с тобой в приложении: подскажу и каждую неделю брошу вызов.</span></li><li data-i="8" data-src="audio/p09.mp3"><span class="es" lang="es">¿Aceptas el desafío?</span><span class="ru">Принимаешь вызов?</span></li><li data-i="9" data-src="audio/p10.mp3"><span class="es" lang="es">¡Entonces únete al club! ¡Hasta la victoria siempre!</span><span class="ru">Тогда вступай в клуб! До победы, всегда!</span></li></ol>
+  <ol id="lines"><li data-i="0" data-src="audio/p01.mp3"><span class="es" lang="es">¡Hola, compañero! Soy el Che.</span><span class="ru">Привет, товарищ! Я Че.</span></li><li data-i="1" data-src="audio/p02.mp3"><span class="es" lang="es">¡Abrimos un club de lectura aquí, en tu oficina!</span><span class="ru">Мы открываем книжный клуб прямо у тебя в офисе!</span></li><li data-i="2" data-src="audio/p03.mp3"><span class="es" lang="es">Una vez al mes leemos un libro que sirve para el trabajo.</span><span class="ru">Раз в месяц читаем книгу, которая пригодится в работе.</span></li><li data-i="3" data-src="audio/p04.mp3"><span class="es" lang="es">Después nos reunimos con el equipo y discutimos las ideas.</span><span class="ru">Потом встречаемся командой и обсуждаем идеи.</span></li><li data-i="4" data-src="audio/p05.mp3"><span class="es" lang="es">¡Por cada capítulo ganas pesos del club!</span><span class="ru">За каждую главу получаешь песо клуба!</span></li><li data-i="5" data-src="audio/p06.mp3"><span class="es" lang="es">Los pesos se cambian por camisetas, insignias y libros.</span><span class="ru">Песо меняются на футболки, значки и книги.</span></li><li data-i="6" data-src="audio/p07.mp3"><span class="es" lang="es">¡Y al unirte, te regalamos un caramelo!</span><span class="ru">А за вступление дарим леденец!</span></li><li data-i="7" data-src="audio/p08.mp3"><span class="es" lang="es">Yo estaré contigo en la aplicación. Te daré consejos y un desafío cada semana.</span><span class="ru">Я буду с тобой в приложении: подскажу и каждую неделю брошу вызов.</span></li><li data-i="8" data-src="audio/p09.mp3"><span class="es" lang="es">¿Aceptas el desafío?</span><span class="ru">Принимаешь вызов?</span></li><li data-i="9" data-src="audio/p10.mp3"><span class="es" lang="es">¡Entonces únete al club! ¡Hasta la victoria siempre!</span><span class="ru">Тогда вступай в клуб! До победы, всегда!</span></li></ol>
   <div class="gift"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="29" y="34" width="6" height="28" rx="3" fill="#fff" stroke="#111" stroke-width="2"/><polygon points="32,4 39,24 60,24 43,36 49,57 32,45 15,57 21,36 4,24 25,24" fill="#ff2a1a" stroke="#111" stroke-width="3" stroke-linejoin="round"/></svg>
-    <div><b>Леденец в подарок</b><p class="note" style="margin:4px 0 0">Запишись и покажи экран HR: леденец-звезда твой.</p></div></div>
-  <a class="cta" href="../app/?brand=che&amp;mode=member&amp;tab=join">Вступить в клуб</a>
-  <p class="note">Голос Че нейросетевой, по-испански, без русской озвучки. Книга в месяц, встреча с командой, песо за главы и мерч клуба.</p>
+    <div><b>Леденец в подарок</b><p class="gtxt">Запишись и покажи экран HR: леденец-звезда твой.</p></div></div>
+  <p class="note">Голос Че нейросетевой, по-испански, без русской озвучки. Книга в месяц, встречи с командой, песо за главы.</p>
+  <div class="dock"><a class="cta" id="join" href="../app/?brand=che&amp;mode=member&amp;tab=join">Вступить в клуб</a></div>
 </main>
 <audio id="a" preload="auto"></audio>
 <script>
 const a=document.getElementById('a'),btn=document.getElementById('play'),bt=document.getElementById('play-t'),items=[...document.querySelectorAll('#lines li')];
 let cur=-1,on=false;
 function mark(i){items.forEach((li,k)=>li.classList.toggle('on',k===i));if(i>=0)items[i].scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
-function go(i){if(i>=items.length){stop();bt.textContent='Послушать ещё раз';return}cur=i;mark(i);a.src=items[i].dataset.src;a.play().catch(()=>stop())}
+function go(i){if(i>=items.length){stop();bt.textContent='Послушать ещё раз';document.getElementById('join').focus({preventScroll:true});document.querySelector('.gift').scrollIntoView({block:'center',behavior:'smooth'});return}cur=i;mark(i);a.src=items[i].dataset.src;a.play().catch(()=>stop())}
 function stop(){on=false;a.pause();mark(-1);bt.textContent='Послушать Че'}
 a.onended=()=>{if(on)setTimeout(()=>go(cur+1),250)};
 btn.onclick=()=>{if(on){stop();return}on=true;bt.textContent='Пауза';go(cur>=0&&cur<items.length-1?cur:0)};
