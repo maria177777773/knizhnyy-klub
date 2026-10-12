@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Голос Че: 8 проб">
+<meta property="og:description" content="Восемь проб хриплого испанского голоса Че">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Голос Че: 8 проб</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@700&display=swap">
+<style>
+:root{
+  --paper:#F7F6F0; --card:#FFFFFF; --ink:#111111; --muted:#55554E; --line:#DCDCD2; --lime:#D4FF3A; --red:#C8211B; --on-red:#fff;
+  --f-display:Oswald,'Arial Narrow',system-ui,sans-serif; --f-body:'Golos Text',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --fs-s:14px; --fs-m:18px; --fs-l:22px; --fs-h1:44px; --fs-h1m:32px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --paper:#121210; --card:#1B1B18; --ink:#F1F0E8; --muted:#B4B3A9; --line:#2E2E29; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --paper:#121210; --card:#1B1B18; --ink:#F1F0E8; --muted:#B4B3A9; --line:#2E2E29; color-scheme:dark; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.55 var(--f-body);padding:0 20px}
+.top{margin:0 -20px;background:var(--lime);color:#111;padding:48px 20px 40px}
+.in,.wrap{max-width:1100px;margin:0 auto}
+h1{margin:0 0 12px;font:700 var(--fs-h1)/1.05 var(--f-display);text-transform:uppercase;text-wrap:balance}
+.top p{margin:0;max-width:64ch;font-weight:500}
+.wrap{padding-block:40px 72px;display:grid;gap:32px}
+.sec{display:grid;gap:14px}
+h2{margin:0;font:700 var(--fs-l)/1.2 var(--f-display);text-transform:uppercase}
+.sub{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:10px;align-content:start}
+.card b{font-size:var(--fs-l);font-weight:600}
+.card span{color:var(--muted);font-size:var(--fs-m)}
+button{font:600 var(--fs-m)/1 var(--f-body);min-height:48px;padding:0 18px;border-radius:10px;border:2px solid #111;background:var(--red);color:var(--on-red);cursor:pointer}
+button.pick{background:transparent;color:var(--ink);border-color:var(--line)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+button[aria-pressed="true"]{background:#111;color:var(--lime)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.note{color:var(--muted);font-size:var(--fs-s)}
+.out{min-height:1.6em;font-weight:600}
+@media (max-width:480px){ body{padding:0 16px} .top{margin:0 -16px;padding:36px 16px 32px} h1{font-size:var(--fs-h1m)} }
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <h1>Голос Че: 8 проб</h1>
+  <p>Одна фраза «¡Vamos, una página más!» («Погнали, ещё страницу!») в восьми вариантах. Нажми на каждый, выбери, как Че должен звучать в приложении.</p>
+</div></header>
+<main class="wrap">
+  <section class="sec">
+    <h2>Томас, аргентинец</h2>
+    <p class="sub">Че родился в Аргентине, так что это его настоящий акцент.</p>
+    <div class="grid" id="g1"></div>
+  </section>
+  <section class="sec">
+    <h2>Мануэль, кубинец</h2>
+    <p class="sub">Голос Кубы, где Че был министром. Тембр чуть светлее.</p>
+    <div class="grid" id="g2"></div>
+  </section>
+  <p class="note">Голоса нейросетевые, не записи людей. Хрипотцу добавляет обработка: чем выше ступень, тем грубее и ближе к сигарному басу. Если хочешь живого актёра, формат уже готов, дорожки просто заменим.</p>
+  <p class="out" id="out" role="status" aria-live="polite"></p>
+</main>
+<script>
+const V=[['tomas','Томас','g1'],['manuel','Мануэль','g2']];
+const G=[['soft','Мягкая хрипотца','слегка осипший, тёплый'],['raspy','Хриплый','заметная хрипотца, как после ночи у костра'],['rough','Очень грубый','максимум гравия, на любителя'],['clean','Чистый','без обработки, для сравнения']];
+let cur=null,curBtn=null;
+for(const [v,vn,gid] of V){
+  const host=document.getElementById(gid);
+  for(const [g,gn,gd] of G){
+    const id=`${v}-${g}`;
+    const c=document.createElement('div');c.className='card';
+    c.innerHTML=`<b>${gn}</b><span>${gd}</span>`;
+    const row=document.createElement('div');row.className='row';
+    const p=document.createElement('button');p.type='button';p.textContent='Послушать';p.setAttribute('aria-pressed','false');
+    const k=document.createElement('button');k.type='button';k.className='pick';k.textContent='Выбираю';
+    p.onclick=()=>{
+      if(cur){cur.pause();curBtn.setAttribute('aria-pressed','false');curBtn.textContent='Послушать'}
+      if(curBtn===p){cur=null;curBtn=null;return}
+      const a=new Audio(`audio/${id}.mp3`);cur=a;curBtn=p;p.setAttribute('aria-pressed','true');p.textContent='Играет…';
+      a.onended=()=>{p.setAttribute('aria-pressed','false');p.textContent='Послушать';cur=null;curBtn=null};
+      a.play().catch(()=>{p.textContent='Не играет, нажми ещё раз'});
+    };
+    k.onclick=async()=>{const t=`Выбираю голос Че: ${vn}, ${gn}`;try{await navigator.clipboard.writeText(t)}catch(e){}document.getElementById('out').textContent=`Скопировано: «${t}». Вставь в чат.`};
+    row.append(p,k);c.append(row);host.append(c);
+  }
+}
+</script>
+
+</body>
+</html>
