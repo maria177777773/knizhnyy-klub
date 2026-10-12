@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Голос Че: 8 проб">
-<meta property="og:description" content="Восемь проб хриплого испанского голоса Че">
+<meta property="og:title" content="Голос Че: 20 проб">
+<meta property="og:description" content="Двадцать проб низкого хриплого испанского голоса Че">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Голос Че: 8 проб</title>
+<title>Голос Че: 20 проб</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@700&display=swap">
@@ -48,17 +48,22 @@ button[aria-pressed="true"]{background:#111;color:var(--lime)}
 </head>
 <body>
 <header class="top"><div class="in">
-  <h1>Голос Че: 8 проб</h1>
-  <p>Одна фраза «¡Vamos, una página más!» («Погнали, ещё страницу!») в восьми вариантах. Нажми на каждый, выбери, как Че должен звучать в приложении.</p>
+  <h1>Голос Че: 20 проб</h1>
+  <p>Сначала 12 новых: низкие, энергичные, с хрипотцой, как у командира на трибуне. Фраза «¡Vamos, una página más! ¡Esto sí es leer!» («Погнали, ещё страницу! Вот это чтение!»). Ниже первые 8 проб, помедленнее. Нажми «Выбираю», и фраза скопируется, вставь её в чат.</p>
 </div></header>
 <main class="wrap">
   <section class="sec">
-    <h2>Томас, аргентинец</h2>
+    <h2>Новые: низкие и энергичные</h2>
+    <p class="sub">Командир: плотный бас, уверенный темп. Трибун: быстрее и громче, хрипотца, как перед толпой. Бас: самый низкий, грудной, почти рык.</p>
+    <div class="grid" id="g0"></div>
+  </section>
+  <section class="sec">
+    <h2>Первые пробы: Томас, аргентинец</h2>
     <p class="sub">Че родился в Аргентине, так что это его настоящий акцент.</p>
     <div class="grid" id="g1"></div>
   </section>
   <section class="sec">
-    <h2>Мануэль, кубинец</h2>
+    <h2>Первые пробы: Мануэль, кубинец</h2>
     <p class="sub">Голос Кубы, где Че был министром. Тембр чуть светлее.</p>
     <div class="grid" id="g2"></div>
   </section>
@@ -89,6 +94,26 @@ for(const [v,vn,gid] of V){
     row.append(p,k);c.append(row);host.append(c);
   }
 }
+
+const NV={tomas:'Томас, Аргентина',manuel:'Мануэль, Куба',jorge:'Хорхе, Мексика',alvaro:'Альваро, Испания'};
+const NP=[['komandir','Командир','плотный бас, уверенный темп'],['tribun','Трибун','быстрый, громкий, с хрипотцой'],['bas','Бас','самый низкий, грудной, почти рык']];
+{const host=document.getElementById('g0');
+ for(const [p,pn,pd] of NP)for(const v of Object.keys(NV)){
+  const id=`${v}-${p}`;const c=document.createElement('div');c.className='card';
+  c.innerHTML=`<b>${pn}: ${NV[v]}</b><span>${pd}</span>`;
+  const row=document.createElement('div');row.className='row';
+  const b=document.createElement('button');b.type='button';b.textContent='Послушать';b.setAttribute('aria-pressed','false');
+  const k=document.createElement('button');k.type='button';k.className='pick';k.textContent='Выбираю';
+  b.onclick=()=>{
+   if(cur){cur.pause();curBtn.setAttribute('aria-pressed','false');curBtn.textContent='Послушать'}
+   if(curBtn===b){cur=null;curBtn=null;return}
+   const a=new Audio(`audio2/${id}.mp3`);cur=a;curBtn=b;b.setAttribute('aria-pressed','true');b.textContent='Играет…';
+   a.onended=()=>{b.setAttribute('aria-pressed','false');b.textContent='Послушать';cur=null;curBtn=null};
+   a.play().catch(()=>{b.textContent='Не играет, нажми ещё раз'});
+  };
+  k.onclick=async()=>{const t=`Выбираю голос Че: ${pn}, ${NV[v]}`;try{await navigator.clipboard.writeText(t)}catch(e){}document.getElementById('out').textContent=`Скопировано: «${t}». Вставь в чат.`};
+  row.append(b,k);c.append(row);host.append(c);
+ }}
 </script>
 
 </body>
