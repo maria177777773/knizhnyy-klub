@@ -34,6 +34,7 @@ video{display:block;width:100%;height:auto;aspect-ratio:1/1;border:4px solid var
 .about li{padding:14px 16px;border:3px solid var(--ink);border-radius:14px;background:#fff}
 .about b{display:block;margin-bottom:4px;font:700 var(--fs-l)/1.2 var(--f-d);text-transform:uppercase}
 .note{margin:0}
+.credit{font-size:var(--fs-s);opacity:.8}
 @media (min-width:900px){
   h1{font-size:var(--fs-h1-d)}.lead,.note{font-size:var(--fs-l)}
   .vars{grid-template-columns:1fr 1fr;gap:40px}
@@ -45,7 +46,7 @@ video{display:block;width:100%;height:auto;aspect-ratio:1/1;border:4px solid var
 <body>
 <main class="wrap">
   <h1>Привет от Че</h1>
-  <p class="lead">Два варианта ролика: Че стоит на месте и говорит, меняются фон и предметы. Выбери, какой ставим на QR.</p>
+  <p class="lead">Два варианта ролика под España cañí: Че на месте, меняются фон, предметы и текст. Выбери, какой ставим на QR.</p>
   <div class="vars">
     <figure>
       <video src="che-privet-a.mp4" poster="poster-a.jpg" controls playsinline preload="metadata"></video>
@@ -69,6 +70,7 @@ video{display:block;width:100%;height:auto;aspect-ratio:1/1;border:4px solid var
       <li><b>Что даёт участие</b>За прочитанные книги ты получаешь песо, валюту клуба, и обмениваешь их на мерч.</li>
     </ul>
   </div>
+  <p class="note credit">Музыка: пасодобль «España cañí» (Паскуаль Маркина), запись из архива Fundación Joaquín Díaz, Wikimedia Commons, CC BY-SA 3.0. Голос Че синтезирован.</p>
 </main>
 <script>
 // выбор варианта: кнопка нажата, текст для Маши в буфере
