@@ -5,48 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Видео Че: книжный клуб ЧЕ">
-<meta property="og:description" content="Видео-приветствие Че">
+<meta property="og:description" content="Видео-приветствие Че: два варианта">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Видео Че: книжный клуб ЧЕ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Oswald:wght@700&display=swap">
 <style>
-/* Видео-приветствие Че (QR с плакатов). Ролик: mockups/che-video/build.py + render.mjs; звук tools/che-voice/speech.py (без музыки) */
-:root{--paper:#ffe600;--ink:#111;--red:#c8211b;--f-d:Oswald,'Arial Narrow',system-ui,sans-serif;--f-b:'Golos Text',system-ui,-apple-system,'Segoe UI',sans-serif;--fs-s:16px;--fs-m:18px;--fs-l:22px;--fs-h1:36px;--fs-h1-d:56px}
+/* Видео-приветствие Че, два варианта раскладки (Маша 14.10: «Че всё время в одном месте: по центру или сбоку»).
+   Ролики: mockups/che-video/build.py + render.mjs a|b; звук tools/che-voice/speech.py (без музыки) */
+:root{--paper:#ffe600;--ink:#111;--red:#c8211b;--f-d:Oswald,'Arial Narrow',system-ui,sans-serif;--f-b:'Golos Text',system-ui,-apple-system,'Segoe UI',sans-serif;
+--fs-s:16px;--fs-m:18px;--fs-l:22px;--fs-h1:36px;--fs-h1-d:56px;--btn-h:56px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-m)/1.5 var(--f-b)}
-.wrap{max-width:640px;margin:0 auto;padding:20px 16px calc(24px + env(safe-area-inset-bottom,0px));display:grid;gap:16px}
+.wrap{max-width:1400px;margin:0 auto;padding:20px 16px calc(24px + env(safe-area-inset-bottom,0px));display:grid;gap:20px}
 h1{margin:0;font:700 var(--fs-h1)/1.05 var(--f-d);text-transform:uppercase}
-.lead{margin:0;font-size:var(--fs-m)}
+.lead{margin:0}
+.vars{display:grid;gap:24px}
+figure{margin:0;display:grid;gap:12px}
+figcaption{font:700 var(--fs-l)/1.2 var(--f-d);text-transform:uppercase}
+figcaption span{display:block;font:500 var(--fs-s)/1.4 var(--f-b);text-transform:none}
 video{display:block;width:100%;height:auto;aspect-ratio:1/1;border:4px solid var(--ink);border-radius:16px;background:var(--ink)}
-.cta{display:flex;align-items:center;justify-content:center;min-height:56px;border-radius:14px;background:var(--red);color:#fff;border:3px solid var(--ink);font:700 var(--fs-l)/1 var(--f-d);text-transform:uppercase;text-decoration:none}
-.cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.note{margin:0;font-size:var(--fs-s)}
-.side{display:grid;gap:16px;align-content:start}
-.about{display:grid;gap:12px;margin:8px 0 0;padding:0;list-style:none}
+.pick,.cta{display:flex;align-items:center;justify-content:center;min-height:var(--btn-h);border-radius:14px;border:3px solid var(--ink);font:700 var(--fs-l)/1 var(--f-d);text-transform:uppercase;text-decoration:none;cursor:pointer}
+.pick{background:#fff;color:var(--ink)}
+.pick[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.cta{background:var(--red);color:#fff}
+.pick:focus-visible,.cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.about{display:grid;gap:12px;margin:0;padding:0;list-style:none}
 .about li{padding:14px 16px;border:3px solid var(--ink);border-radius:14px;background:#fff}
-.about b{display:block;font:700 var(--fs-l)/1.2 var(--f-d);text-transform:uppercase}
-@media (min-width:900px){.wrap{max-width:1400px;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);grid-template-rows:auto 1fr;gap:24px 40px;align-items:start;padding-block:40px}
-  .wrap>video{grid-row:1/span 2;grid-column:1}h1{font-size:var(--fs-h1-d)}.lead,.note{font-size:var(--fs-l)}}
+.about b{display:block;margin-bottom:4px;font:700 var(--fs-l)/1.2 var(--f-d);text-transform:uppercase}
+.note{margin:0}
+@media (min-width:900px){
+  h1{font-size:var(--fs-h1-d)}.lead,.note{font-size:var(--fs-l)}
+  .vars{grid-template-columns:1fr 1fr;gap:40px}
+  .about{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:40px;align-items:start}
+}
 </style>
 </head>
 <body>
 <main class="wrap">
-  <div class="side">
   <h1>Привет от Че</h1>
-  <p class="lead">Включи звук: Че расскажет про книжный клуб и позовёт тебя вступить.</p>
+  <p class="lead">Два варианта ролика: Че стоит на месте и говорит, меняются фон и предметы. Выбери, какой ставим на QR.</p>
+  <div class="vars">
+    <figure>
+      <video src="che-privet-a.mp4" poster="poster-a.jpg" controls playsinline preload="metadata"></video>
+      <figcaption>Вариант А<span>Че по центру, предметы по бокам</span></figcaption>
+      <button type="button" class="pick" data-v="А">Выбираю А</button>
+    </figure>
+    <figure>
+      <video src="che-privet-b.mp4" poster="poster-b.jpg" controls playsinline preload="metadata"></video>
+      <figcaption>Вариант Б<span>Че слева, предметы справа</span></figcaption>
+      <button type="button" class="pick" data-v="Б">Выбираю Б</button>
+    </figure>
   </div>
-  <video src="che-privet.mp4" poster="poster.jpg" controls playsinline preload="metadata" width="1080" height="1080"></video>
-  <div class="side">
-  <a class="cta" href="../app/?brand=che&amp;mode=member&amp;tab=join">Вступить в клуб</a>
-  <p class="note">За вступление подарок: леденец Dulce Victoria, «сладкая победа».</p>
-  <ul class="about">
-    <li><b>Бесплатно</b>Читаем книги о бизнесе, которые помогают в работе.</li>
-    <li><b>Команда от 4 до 8 коллег</b>Раз в месяц одна книга и час разговора в офисе. Че ведёт встречу в приложении.</li>
-    <li><b>Что получаешь</b>Песо за главы, призы и мерч. А главное, становишься умнее и эффективнее.</li>
-  </ul>
+  <div class="bottom">
+    <div style="display:grid;gap:12px">
+      <a class="cta" href="../app/?brand=che&amp;mode=member&amp;tab=join">Вступить в клуб</a>
+      <p class="note">Кстати, за вступление ты получаешь наш фирменный леденец Dulce Victoria. Сладкая победа!</p>
+    </div>
+    <ul class="about">
+      <li><b>Зачем этот клуб</b>Участие бесплатное. Читаем книги о бизнесе, которые помогают в работе.</li>
+      <li><b>Как устроен клуб</b>Собираемся командой от 4 до 8 коллег. Читаем по одной книге в месяц, обсуждаем, учимся, развиваемся.</li>
+      <li><b>Что даёт участие</b>За прочитанные книги ты получаешь песо, валюту клуба, и обмениваешь их на мерч.</li>
+    </ul>
   </div>
 </main>
+<script>
+// выбор варианта: кнопка нажата, текст для Маши в буфере
+for (const b of document.querySelectorAll('.pick')) b.onclick = () => {
+  for (const o of document.querySelectorAll('.pick')) o.setAttribute('aria-pressed', o === b)
+  b.textContent = `Выбран ${b.dataset.v}`
+  try { navigator.clipboard.writeText(`Утверждаю видео, вариант ${b.dataset.v}`) } catch (e) {}
+}
+</script>
 
 </body>
 </html>
