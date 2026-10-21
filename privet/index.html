@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Привет от Че: книжный клуб ЧЕ">
-<meta property="og:description" content="Че по-испански приветствует и рассказывает про книжный клуб">
+<meta property="og:description" content="Привет от Че: книжный клуб ЧЕ">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Привет от Че: книжный клуб ЧЕ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +46,8 @@ li.on .es{color:var(--ink)}
 /* кнопка «Вступить» всегда под рукой: до неё 3 экрана фраз (критик 13.10) */
 .dock{position:sticky;bottom:0;margin:0 -16px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line)}
 .dock .cta{max-width:720px;margin:0 auto}
+.join2{width:100%;max-width:720px;margin:0 auto;display:grid;gap:8px}.join2 .jl{text-align:center;font-weight:600;font-size:var(--fs-m,18px)}.join2 .jg{display:grid;grid-template-columns:1fr 1fr;gap:8px}.join2 .jg .cta{max-width:none;width:100%;margin:0;border-color:#111;padding:0 8px}
+
 @media (min-width:640px){body{padding:0 24px}.dock{margin:0 -24px;padding-inline:24px}.hero{margin:0 -24px;padding:40px 24px 32px}.face{width:140px;height:140px}}
 @media (max-width:380px){h1{font-size:var(--fs-h1m)}.face{width:92px;height:92px}}
 @media (prefers-reduced-motion:reduce){li{transition:none}li.on{transform:none}}
@@ -71,7 +73,8 @@ li.on .es{color:var(--ink)}
   <div class="gift"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="29" y="34" width="6" height="28" rx="3" fill="#fff" stroke="#111" stroke-width="2"/><polygon points="32,4 39,24 60,24 43,36 49,57 32,45 15,57 21,36 4,24 25,24" fill="#ff2a1a" stroke="#111" stroke-width="3" stroke-linejoin="round"/></svg>
     <div><b>Леденец в подарок</b><p class="gtxt">Запишись и покажи экран HR: леденец-звезда твой.</p></div></div>
   <p class="note">Голос Че нейросетевой, по-испански, без русской озвучки. Книга в месяц, встречи с командой, песо за главы.</p>
-  <div class="dock"><a class="cta" id="join" href="../app/?brand=che&amp;mode=member&amp;tab=join">Вступить в клуб</a></div>
+  <!-- вход в настоящий клуб: бот и приглашение группы (21.10, две группы по 10 человек) -->
+  <div class="dock"><div class="join2"><span class="jl">Вступить в клуб</span><div class="jg"><a class="cta" id="join" href="https://t.me/club_che_bot?start=d1102f70a167">Группа 1</a><a class="cta" href="https://t.me/club_che_bot?start=ecfb173eb078">Группа 2</a></div></div></div>
 </main>
 <audio id="a" preload="auto"></audio>
 <script>
