@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Клуб Че проще">
+<meta property="og:description" content="6 вариантов упрощения Клуба Че">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Клуб Че проще</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--surface:#fff;--s2:#ece4d6;--line:#ddd3c3;--ink:#141414;--ink2:#3a3530;--ink3:#6b6258;--red:#c8211b;--yel:#ffd400;--lime:#d4ff3a;--blue:#00c2ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.5 'Golos Text',system-ui,sans-serif}
+.wrap{max-width:1400px;margin:0 auto;padding:0 20px 120px}
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.top b{font:700 20px Oswald,sans-serif;text-transform:uppercase;margin-right:8px}
+.top a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:16px;background:#fff}
+.top a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.top .restore{margin-left:auto;font-size:16px;color:var(--ink3)}
+h1{font:700 44px/1.1 Oswald,sans-serif;text-transform:uppercase;margin:48px 0 12px}
+h2{font:700 30px/1.15 Oswald,sans-serif;text-transform:uppercase;margin:0 0 16px}
+.lead{font-size:20px;color:var(--ink2);max-width:60rem;margin:0}
+section.blk{margin-top:72px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h3{margin:0 0 8px;font-size:20px}
+.big{font:700 40px Oswald,sans-serif}
+.muted{color:var(--ink3);font-size:16px}
+.bad{color:var(--red);font-weight:600}
+.path{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:18px}
+.path span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px}
+.path i{font-style:normal;color:var(--ink3)}
+.vars{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:40px 32px}
+.var{display:grid;gap:14px;align-content:start}
+.var[hidden]{display:none}
+.vhead{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.vhead h3{margin:0;font:700 24px Oswald,sans-serif;text-transform:uppercase}
+.x{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:22px;cursor:pointer}
+.concept{font-size:16px;color:var(--ink3);margin:0}
+/* телефон */
+.phone{width:340px;max-width:100%;height:680px;border:3px solid var(--ink);border-radius:36px;background:var(--bg);overflow:hidden;display:grid;grid-template-rows:auto 1fr auto;justify-self:center;font-size:15px}
+.ph-top{display:flex;justify-content:space-between;align-items:center;padding:16px 16px 10px;background:#fff;border-bottom:1px solid var(--line)}
+.ph-top b{font:700 20px Oswald,sans-serif}
+.peso{background:var(--yel);border-radius:999px;padding:6px 12px;font-weight:700;font-size:13px}
+.ph-body{overflow:hidden;padding:14px;display:grid;gap:12px;align-content:start}
+.ph-nav{display:grid;border-top:1px solid var(--line);background:#fff}
+.ph-nav div{height:58px;display:grid;place-items:center;font-size:13px;color:var(--ink3)}
+.ph-nav div.on{color:var(--red);font-weight:700}
+.pc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;display:grid;gap:8px}
+.cover{width:72px;height:100px;border-radius:8px;background:var(--blue);display:grid;place-items:end start;padding:6px;color:#fff;font:700 11px/1.1 Oswald,sans-serif;text-transform:uppercase;border:2px solid var(--ink)}
+.cover.lg{width:120px;height:168px;font-size:15px;padding:10px}
+.row{display:flex;gap:12px;align-items:center}
+.t{font-weight:700;font-size:16px;line-height:1.25}
+.s{font-size:13px;color:var(--ink3)}
+.bar{height:8px;border-radius:999px;background:var(--s2);overflow:hidden}.bar i{display:block;height:100%;width:9%;background:var(--red)}
+.btn{height:44px;border-radius:10px;display:grid;place-items:center;font-weight:600;font-size:15px;background:var(--red);color:#fff}
+.btn.o{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn.xl{height:72px;font-size:18px;border-radius:14px}
+.che{display:flex;gap:10px;align-items:flex-start}
+.che .face{width:44px;height:44px;border-radius:999px;background:var(--lime);border:2px solid var(--ink);flex:none;display:grid;place-items:center;font:700 13px Oswald}
+.bubble{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:8px 10px;font-size:14px}
+.shelf{display:flex;gap:8px}
+.shelf .cover{width:64px;height:90px;font-size:9px}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.dot{width:24px;height:24px;border-radius:999px;background:var(--s2);display:grid;place-items:center;font-size:12px;flex:none}
+.dot.ok{background:var(--red);color:#fff}
+.score{font-size:16px}
+.score b{font-family:Oswald,sans-serif;font-size:22px}
+.pros,.cons{margin:4px 0;padding-left:20px;font-size:16px}
+.ok-btn{min-height:52px;border:0;border-radius:12px;background:var(--ink);color:#fff;font:600 17px 'Golos Text',sans-serif;cursor:pointer;padding:0 18px}
+.rec{display:inline-block;background:var(--red);color:#fff;border-radius:999px;padding:2px 12px;font-size:14px;font-weight:600;margin-left:8px;vertical-align:middle}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:14px 20px;border-radius:12px;font-size:16px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+@media (max-width:600px){h1{font-size:34px}.vars{grid-template-columns:1fr}}
+</style>
+
+<nav class="top" aria-label="Разделы">
+  <b>Клуб Че проще</b>
+  <a href="#seychas" data-sec>Что сейчас</a>
+  <a href="#put" data-sec>Путь</a>
+  <a href="#varianty" data-sec>Варианты</a>
+  <span class="restore" id="restore" hidden></span>
+</nav>
+
+</head>
+<body>
+<div class="wrap">
+  <h1>Клуб перегружен. Делаем 3 вкладки вместо 5 экранов</h1>
+  <p class="lead">Маша 21.10: «максимум три-пять функций: книга, слушать, читать, текущая книга, ещё книги». Ниже: что сейчас видит участник, какой путь нужен и 6 вариантов главного экрана. Выбери один кнопкой «Утверждаю».</p>
+
+  <section class="blk" id="seychas">
+    <h2>Что сейчас видит участник</h2>
+    <div class="grid3">
+      <div class="card"><h3>Книга</h3><div class="big">10 блоков</div><p class="muted">Лента на <span class="bad">6,9 экрана</span>. Три блока остались от демо: аудиотека с демо-обложкой, «лекция 12 минут», которой нет, дублирующий ползунок «Я дочитал до главы».</p></div>
+      <div class="card"><h3>Главная</h3><div class="big">6 блоков</div><p class="muted">Плакат, книга, встреча, вопросы, One Thing, «Свой клуб». Главное действие «читать» не видно, есть только «Отметить главу».</p></div>
+      <div class="card"><h3>Награды</h3><div class="big">6 блоков</div><p class="muted">Песо, портреты, значки, правила, магазин. Для первой встречи это лишнее.</p></div>
+      <div class="card"><h3>Встреча</h3><div class="big">пусто</div><p class="muted">Пока HR не назначил дату, вкладка пустая.</p></div>
+      <div class="card"><h3>Поверх экранов</h3><div class="big">3 слоя</div><p class="muted">Приветствие на испанском, плавающий Че с подсказками, всплывающие реакции Че на каждое действие.</p></div>
+      <div class="card"><h3>Корень</h3><p>Каждую неделю мы добавляли блок и ни один не убрали. Чинить отдельные карточки бесполезно, нужна новая схема экранов.</p></div>
+    </div>
+  </section>
+
+  <section class="blk" id="put">
+    <h2>Путь участника, который нужен</h2>
+    <div class="path"><span>Открыл клуб</span><i>→</i><span>Вижу свою книгу и главу</span><i>→</i><span>Читать или слушать</span><i>→</i><span>Вопрос Че к главе, заметка</span><i>→</i><span>Встреча во вторник</span><i>→</i><span>Ещё книги на потом</span></div>
+    <p class="lead" style="margin-top:16px">Всё остальное (песо, значки, магазин, One Thing, сверка, заявка на клуб) уходит внутрь: в «Встречу» или в профиль. Приветствие при первом входе по-русски: «Привет, товарищ!», одним экраном.</p>
+  </section>
+
+  <section class="blk" id="varianty">
+    <h2>6 вариантов главного экрана</h2>
+    <div class="vars" id="vars">
+
+      <article class="var" data-v="1">
+        <div class="vhead"><h3>V1 Одна книга <span class="rec">рекомендую</span></h3><button class="x" aria-label="Убрать V1 из сравнения">×</button></div>
+        <p class="concept">концепция: главная = текущая книга · подход: 3 вкладки «Книга · Встреча · Ещё книги»</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">15 песо</span></div>
+          <div class="ph-body">
+            <div class="pc"><div class="row"><div class="cover">Стратегия голубого океана</div><div><div class="t">Стратегия голубого океана</div><div class="s">Глава 1 из 11</div></div></div><div class="bar"><i></i></div><div class="btns"><div class="btn">Читать</div><div class="btn o">Слушать</div></div></div>
+            <div class="pc"><div class="s">Вопрос Че к главе 1</div><div style="font-size:15px">Чем алый океан отличается от голубого?</div><div class="btn o">Ответить</div></div>
+            <div class="pc"><div class="s">Встреча</div><div class="t">Вторник, 27 октября, 19:00</div></div>
+          </div>
+          <div class="ph-nav" style="grid-template-columns:repeat(3,1fr)"><div class="on">Книга</div><div>Встреча</div><div>Ещё книги</div></div>
+        </div>
+        <div class="score">Оценка: <b>9/10</b>. Ровно Машин список, путь виден с первого экрана.</div>
+        <ul class="pros"><li>Плюсы: одна главная задача на экране, закон Хика; «Читать» и «Слушать» сразу под книгой.</li><li>Три вкладки вместо пяти, ничего не теряем: всё остальное внутри.</li></ul>
+        <ul class="cons"><li>Минусы: песо и значки менее заметны, мотивация чуть тише.</li></ul>
+        <button class="ok-btn" data-ok="V1 Одна книга">Утверждаю V1</button>
+      </article>
+
+      <article class="var" data-v="2">
+        <div class="vhead"><h3>V2 Две кнопки</h3><button class="x" aria-label="Убрать V2 из сравнения">×</button></div>
+        <p class="concept">концепция: экран-пульт · подход: только «Читать» и «Слушать», остальное в меню</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">Меню</span></div>
+          <div class="ph-body">
+            <div style="display:grid;justify-items:center;gap:8px;padding-top:8px"><div class="cover lg">Стратегия голубого океана</div><div class="t" style="text-align:center">Стратегия голубого океана</div><div class="s">Глава 1 из 11</div></div>
+            <div class="btn xl">Читать главу 1</div><div class="btn xl o">Слушать главу 1</div>
+          </div>
+          <div style="height:0"></div>
+        </div>
+        <div class="score">Оценка: <b>7/10</b>. Проще не бывает, но встреча и вопросы спрятаны.</div>
+        <ul class="pros"><li>Плюсы: нулевая нагрузка, крупные цели (закон Фиттса).</li><li>Понятно с первой секунды.</li></ul>
+        <ul class="cons"><li>Минусы: встречу и вопросы Че никто не найдёт в меню, а ради них клуб.</li></ul>
+        <button class="ok-btn" data-ok="V2 Две кнопки">Утверждаю V2</button>
+      </article>
+
+      <article class="var" data-v="3">
+        <div class="vhead"><h3>V3 Лента глав</h3><button class="x" aria-label="Убрать V3 из сравнения">×</button></div>
+        <p class="concept">концепция: книга как оглавление · подход: главы списком, тап открывает читать / слушать / вопросы</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">15 песо</span></div>
+          <div class="ph-body">
+            <div class="row"><div class="cover">Стратегия</div><div><div class="t">Стратегия голубого океана</div><div class="s">1 из 11 глав</div></div></div>
+            <div class="pc" style="gap:0"><div class="ch"><span class="row"><span class="dot ok">✓</span>Создание голубых океанов</span><span class="s">читать</span></div><div class="ch"><span class="row"><span class="dot">2</span>Аналитические инструменты</span><span class="s">сейчас</span></div><div class="ch"><span class="row"><span class="dot">3</span>Реконструкция границ рынка</span><span class="s">закрыта</span></div><div class="ch" style="border:0"><span class="row"><span class="dot">4</span>Фокус на общей картине</span><span class="s">закрыта</span></div></div>
+          </div>
+          <div class="ph-nav" style="grid-template-columns:repeat(3,1fr)"><div class="on">Книга</div><div>Встреча</div><div>Ещё книги</div></div>
+        </div>
+        <div class="score">Оценка: <b>7/10</b>. Хорошо для тех, кто читает по порядку.</div>
+        <ul class="pros"><li>Плюсы: виден прогресс всей книги (эффект цели).</li><li>Одна механика для всех глав.</li></ul>
+        <ul class="cons"><li>Минусы: «Читать» на шаг дальше, встреча не на главной.</li></ul>
+        <button class="ok-btn" data-ok="V3 Лента глав">Утверждаю V3</button>
+      </article>
+
+      <article class="var" data-v="4">
+        <div class="vhead"><h3>V4 Слово организатора</h3><button class="x" aria-label="Убрать V4 из сравнения">×</button></div>
+        <p class="concept">концепция: клуб как канал · подход: сверху твоё сообщение недели, ниже книга и встреча</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">15 песо</span></div>
+          <div class="ph-body">
+            <div class="pc" style="background:var(--lime);border-color:var(--ink)"><div class="s" style="color:var(--ink)">Маша</div><div style="font-size:15px">Привет! На этой неделе читаем главы 1 и 2. Во вторник обсуждаем, приходи с одной идеей.</div></div>
+            <div class="pc"><div class="row"><div class="cover">Стратегия</div><div><div class="t">Стратегия голубого океана</div><div class="s">Глава 1 из 11</div></div></div><div class="btns"><div class="btn">Читать</div><div class="btn o">Слушать</div></div></div>
+            <div class="pc"><div class="s">Встреча</div><div class="t">Вторник, 27 октября, 19:00</div></div>
+          </div>
+          <div class="ph-nav" style="grid-template-columns:repeat(3,1fr)"><div class="on">Книга</div><div>Встреча</div><div>Ещё книги</div></div>
+        </div>
+        <div class="score">Оценка: <b>8/10</b>. Живой голос организатора держит вовлечённость.</div>
+        <ul class="pros"><li>Плюсы: твоё приветствие всегда наверху; задача недели понятна.</li><li>Тот же простой путь, что в V1.</li></ul>
+        <ul class="cons"><li>Минусы: если не обновлять сообщение, оно устаревает и мозолит глаза.</li></ul>
+        <button class="ok-btn" data-ok="V4 Слово организатора">Утверждаю V4</button>
+      </article>
+
+      <article class="var" data-v="5">
+        <div class="vhead"><h3>V5 Полка</h3><button class="x" aria-label="Убрать V5 из сравнения">×</button></div>
+        <p class="concept">концепция: книжная полка · подход: без вкладок, текущая книга крупно, ниже полка «Ещё книги»</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">15 песо</span></div>
+          <div class="ph-body">
+            <div class="s">Сейчас читаем</div>
+            <div class="row" style="align-items:flex-start"><div class="cover lg">Стратегия голубого океана</div><div style="display:grid;gap:8px"><div class="t">Стратегия голубого океана</div><div class="s">Глава 1 из 11 · встреча во вторник</div><div class="btn">Читать</div><div class="btn o">Слушать</div></div></div>
+            <div class="s" style="margin-top:6px">Ещё книги клуба</div>
+            <div class="shelf"><div class="cover" style="background:#ff2e88">Пять пороков</div><div class="cover" style="background:#ffe600;color:#141414">От хорошего к великому</div><div class="cover" style="background:#7b3cff">Атомные привычки</div><div class="cover" style="background:#1e7a46">Радикальная откровенность</div></div>
+          </div>
+          <div style="height:0"></div>
+        </div>
+        <div class="score">Оценка: <b>7/10</b>. Красиво и про книги, но встреча и вопросы теряются.</div>
+        <ul class="pros"><li>Плюсы: один экран без навигации; «ещё книги» сразу видно.</li><li>Похоже на привычную читалку.</li></ul>
+        <ul class="cons"><li>Минусы: методологии Людмилы (вопросы, встреча) не находится места.</li></ul>
+        <button class="ok-btn" data-ok="V5 Полка">Утверждаю V5</button>
+      </article>
+
+      <article class="var" data-v="6">
+        <div class="vhead"><h3>V6 Че ведёт</h3><button class="x" aria-label="Убрать V6 из сравнения">×</button></div>
+        <p class="concept">концепция: один следующий шаг · подход: Че говорит, что делать сейчас, и даёт одну кнопку</p>
+        <div class="phone"><div class="ph-top"><b>ЧЕ</b><span class="peso">15 песо</span></div>
+          <div class="ph-body">
+            <div class="che"><div class="face">ЧЕ</div><div class="bubble">Товарищ, сейчас глава 2. До встречи 6 дней, успеешь.</div></div>
+            <div class="btn xl">Читать главу 2</div>
+            <div class="btn o">Слушать главу 2</div>
+            <div class="pc"><div class="row"><div class="cover">Стратегия</div><div><div class="t">Стратегия голубого океана</div><div class="s">1 из 11 глав</div></div></div><div class="bar"><i></i></div></div>
+          </div>
+          <div class="ph-nav" style="grid-template-columns:repeat(3,1fr)"><div class="on">Книга</div><div>Встреча</div><div>Ещё книги</div></div>
+        </div>
+        <div class="score">Оценка: <b>8/10</b>. Самый ясный путь, но держится на характере Че.</div>
+        <ul class="pros"><li>Плюсы: одна главная кнопка (эффект Фон Ресторф); видно, сколько до встречи.</li><li>Че работает гидом, а не украшением.</li></ul>
+        <ul class="cons"><li>Минусы: тем, кому персонаж не близок, будет многовато Че.</li></ul>
+        <button class="ok-btn" data-ok="V6 Че ведёт">Утверждаю V6</button>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="blk">
+    <h2>Что будет внутри вкладок при любом варианте</h2>
+    <div class="grid3">
+      <div class="card"><h3>Книга</h3><p>Читать главу, слушать, вопросы Че к главе, заметка. Эссе в конце книги. Без демо-аудиотеки и «лекции».</p></div>
+      <div class="card"><h3>Встреча</h3><p>Дата и место, сценарий встречи, One Thing и сверка по методологии Людмилы. Пока даты нет: «Дату скоро назначат».</p></div>
+      <div class="card"><h3>Ещё книги</h3><p>Следующие книги клуба и голосование за следующую. Песо, значки и магазин переезжают в профиль по тапу на «песо».</p></div>
+    </div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var KEY = 'klub-prostoy-hidden'
+  var hidden = []
+  try { hidden = JSON.parse(localStorage.getItem(KEY) || '[]') } catch (e) {}
+  var restore = document.getElementById('restore')
+  function apply() {
+    document.querySelectorAll('.var').forEach(function (v) { v.hidden = hidden.indexOf(v.dataset.v) >= 0 })
+    restore.hidden = !hidden.length
+    restore.innerHTML = hidden.length ? 'Скрыто ' + hidden.length + ': <a href="#" id="back">вернуть все</a>' : ''
+    var b = document.getElementById('back')
+    if (b) b.onclick = function (e) { e.preventDefault(); hidden = []; save(); apply() }
+  }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(hidden)) } catch (e) {} }
+  document.querySelectorAll('.var .x').forEach(function (x) {
+    x.onclick = function () { hidden.push(x.closest('.var').dataset.v); save(); apply() }
+  })
+  var toast = document.getElementById('toast')
+  document.querySelectorAll('[data-ok]').forEach(function (b) {
+    b.onclick = function () {
+      var t = 'Утверждаю ' + b.dataset.ok + ': главный экран Клуба Че'
+      var done = function () { toast.textContent = 'Скопировано: «' + t + '». Вставь в чат'; toast.classList.add('on'); setTimeout(function () { toast.classList.remove('on') }, 2600) }
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, done); else done()
+    }
+  })
+  var links = document.querySelectorAll('[data-sec]')
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id) }) })
+  }, { rootMargin: '-40% 0px -55% 0px' })
+  ;['seychas', 'put', 'varianty'].forEach(function (id) { io.observe(document.getElementById(id)) })
+  apply()
+})()
+</script>
+
+</body>
+</html>
