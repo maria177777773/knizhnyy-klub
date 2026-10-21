@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ИИ-конференции 2026-2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --card:#141414; --line:#2a2a2a; --line2:#3a3a3a;
+  --text:#e5e5e5; --muted:#a3a3a3; --head:#fff; --acc:#00ff96;
+  --f-body:18px; --f-small:16px; --f-h3:20px; --f-h2:28px; --f-h1:clamp(32px,5vw,56px);
+  --btn-h:48px; --btn-f:16px;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:var(--f-body);line-height:1.5}
+.wrap{max-width:1400px;margin:0 auto;padding:48px 32px 96px}
+header h1{font-size:var(--f-h1);font-weight:800;color:var(--head);margin:0 0 16px;line-height:1.1;letter-spacing:-.02em}
+header p{margin:0;color:var(--muted);font-size:var(--f-body);max-width:900px}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.stat{border:1px solid var(--line2);border-radius:12px;padding:12px 18px;font-family:var(--mono);font-size:var(--f-small);color:var(--text);display:flex;align-items:center;gap:10px}
+.stat b{color:var(--acc);font-size:var(--f-h3)}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin:32px -32px 0;padding:16px 32px}
+.group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.group + .group{margin-top:10px}
+.glabel{font-family:var(--mono);font-size:var(--f-small);color:var(--muted);margin-right:6px;min-width:84px}
+.btn{height:var(--btn-h);font-size:var(--btn-f);font-family:var(--sans);font-weight:500;padding:0 20px;border-radius:12px;border:1px solid var(--line2);background:transparent;color:var(--text);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.btn[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#0a0a0a;font-weight:700}
+.btn .n{font-family:var(--mono);font-size:var(--f-small);opacity:.75}
+.month{margin-top:56px}
+.month h2{font-size:var(--f-h2);font-weight:800;color:var(--head);margin:0 0 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.month h2 .cnt{font-family:var(--mono);font-size:var(--f-small);color:var(--muted);font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card.exp{border-style:dashed;border-color:var(--line2)}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-family:var(--mono);font-size:var(--f-small);border-radius:8px;padding:4px 10px;border:1px solid var(--line2);color:var(--muted);line-height:1.4}
+.tag.ok{border-color:var(--acc);color:var(--acc)}
+.date{font-family:var(--mono);font-weight:700;font-size:var(--f-body);color:var(--head)}
+.card.exp .date{color:var(--muted);font-weight:500}
+.card h3{margin:0;font-size:var(--f-h3);font-weight:700;color:var(--head);line-height:1.3}
+.why{margin:0;color:var(--text)}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:var(--f-small)}
+dt{color:var(--muted)}
+dd{margin:0;color:var(--text);overflow-wrap:anywhere}
+.note{font-size:var(--f-small);color:var(--muted);margin:0}
+.src{margin-top:auto;padding-top:8px;font-size:var(--f-small)}
+.src a{color:var(--acc);text-decoration:none;border-bottom:1px solid rgba(0,255,150,.35);overflow-wrap:anywhere}
+.src a:hover{border-bottom-color:var(--acc)}
+.empty{margin-top:56px;color:var(--muted);font-size:var(--f-body)}
+footer{margin-top:72px;color:var(--muted);font-size:var(--f-small);border-top:1px solid var(--line);padding-top:24px}
+@media (max-width:640px){
+  .wrap{padding:28px 16px 64px}
+  .bar{margin:24px -16px 0;padding:12px 16px}
+  .glabel{min-width:0;width:100%}
+  .btn{padding:0 14px;flex:1 1 auto;justify-content:center}
+  .card{padding:20px}
+  .month{margin-top:40px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>ИИ-конференции мира<br>ноябрь 2026 - октябрь 2027</h1>
+  <p>Главные события уровня OpenAI DevDay: международные, российские, европейские и китайские. Даты только из найденных источников. Если дата 2027 года ещё не объявлена, карточка пунктирная, внизу ссылка на прошлый выпуск. Собрано 21.10.2026.</p>
+  <div class="stats">
+    <div class="stat">событий <b>44</b></div>
+    <div class="stat">дата объявлена <b>29</b></div>
+    <div class="stat">ожидаются <b>15</b></div>
+  </div>
+</header>
+
+<div class="bar" role="toolbar" aria-label="Фильтры">
+  <div class="group" id="fRegion"><span class="glabel">Регион</span></div>
+  <div class="group" id="fStatus"><span class="glabel">Дата</span></div>
+</div>
+
+<main id="list"></main>
+
+<footer>Цена «не указана» значит, что на странице источника цены нет. Календарь для внутреннего планирования, перед поездкой даты сверяю на сайте организатора.</footer>
+</div>
+
+<script>
+const EVENTS = [{"m":"2026-11","d":"2-5 ноября 2026","t":"WIC Wuzhen Summit (Всемирная интернет-конференция)","city":"Учжэнь, Китай","org":"World Internet Conference","region":"cn","ok":true,"why":"Китайская повестка по ИИ-агентам, роботам и открытому ИИ, 27 секций","price":"не указана","src":"https://www.chinadaily.com.cn/a/202609/30/WS6abcc9b8e4b06d4aa05610fe.html"},{"m":"2026-11","d":"3, 6 и 10 ноября 2026","t":"OpenAI DevDay Exchange: Лондон, Сан-Паулу, Мехико","city":"Лондон / Сан-Паулу / Мехико","org":"OpenAI","region":"intl","ok":true,"why":"Камерные выездные DevDay: практика с Codex и командой OpenAI, вход по заявке","price":"не указана, вход по одобренной заявке","src":"https://events.openai.com/devdayexchange2026"},{"m":"2026-11","d":"9-12 ноября 2026","t":"Web Summit","city":"Лиссабон, MEO Arena и FIL","org":"Web Summit","region":"intl","ok":true,"why":"Главная техконференция Европы: тренды ИИ, нетворкинг, сценография больших залов","price":"общий билет от ~630 € без НДС, цена растёт ближе к дате","src":"https://websummit.com/web-summit-2026/"},{"m":"2026-11","d":"12 ноября 2026","t":"Baidu World 2026","city":"Пекин, China National Convention Center II","org":"Baidu","region":"cn","ok":true,"why":"Кейноут Робина Ли, ИИ-стек Baidu и ERNIE, 12 секций и ИИ-выставка","price":"не указана, билеты на сайте Baidu","src":"https://pandaily.com/baidu-world-2026-november-12-beijing-next-act-intelligent-organization"},{"m":"2026-11","d":"17-20 ноября 2026","t":"Microsoft Ignite 2026","city":"Сан-Франциско, Moscone + онлайн","org":"Microsoft","region":"intl","ok":true,"why":"Ставка Microsoft на ИИ-агентов для корпораций, кейноут доступен онлайн","price":"полный пропуск $2 325, онлайн-пропуск бесплатный","src":"https://partner.microsoft.com/en-us/blog/article/ignite-2026-overview"},{"m":"2026-11","d":"18-19 ноября 2026","t":"Slush 2026","city":"Хельсинки, Messukeskus","org":"Slush","region":"eu","ok":true,"why":"Стартапы и инвесторы, ИИ-продукты ранней стадии, эталон атмосферного техивента","price":"стартап 395 €, дневной 595 €, инвестор 1 195 € (с НДС)","src":"https://slush.org/"},{"m":"2026-11","d":"26-28 ноября 2026","t":"AI Journey 2026","city":"Москва, ул. Вавилова, 19 + онлайн","org":"Сбер, Альянс в сфере ИИ","region":"ru","ok":true,"why":"Главная ИИ-конференция России: день бизнеса 27 ноября, премия «Лидеры ИИ»","price":"не указана, регистрация на сайте","src":"https://aij.ru/"},{"m":"2026-11","d":"с 30 ноября по 4 декабря 2026","t":"AWS re:Invent 2026","city":"Лас-Вегас","org":"Amazon Web Services","region":"intl","ok":true,"why":"Главная неделя облака и ИИ: 2 200+ сессий, запуски в день анонса","price":"полный пропуск $2 499","src":"https://aws.amazon.com/events/reinvent/faqs/"},{"m":"2026-11","d":"с 30 ноября по 1 декабря 2026","t":"HighLoad++ 2026","city":"Москва, Кампус Сколково + онлайн","org":"Онтико (Конференции Олега Бунина)","region":"ru","ok":true,"why":"Инженерная кухня ИИ в России: инференс, нагрузка, агенты; 2 500+ участников","price":"от 36 500 до 73 000 ₽","src":"https://highload.ru/moscow/2026"},{"m":"2026-12","d":"2 декабря 2026","t":"Conversations, зимний выпуск","city":"Москва, Soluxe Hotel","org":"Just AI","region":"ru","ok":true,"why":"Генеративный ИИ в бизнесе: кейсы российских компаний и продуктов","price":"не указана, скидка 10% до 16 ноября","src":"https://conversations-ai.com/","note":"год на сайте не назван, указан «© 2026» и зимний выпуск"},{"m":"2026-12","d":"6-12 декабря 2026","t":"NeurIPS 2026","city":"Сидней; спутники в Атланте и Париже (9-13 декабря)","org":"NeurIPS Foundation","region":"intl","ok":true,"why":"Главная научная конференция по ИИ, впервые сразу в трёх городах","price":"не указана","src":"https://neurips.cc/Conferences/2026/Dates"},{"m":"2026-12","d":"7-11 декабря 2026","t":"GITEX Global 2026","city":"Дубай, Expo City","org":"Dubai World Trade Centre","region":"intl","ok":true,"why":"Крупнейшая техвыставка Ближнего Востока, впервые в декабре и на новой площадке","price":"не указана","src":"https://www.gitex.com/"},{"m":"2026-12","d":"9-10 декабря 2026","t":"The AI Summit New York","city":"Нью-Йорк, Javits Center","org":"Informa","region":"intl","ok":true,"why":"Прикладной ИИ для бизнеса: 10 сцен, 350+ спикеров","price":"не указана, ранняя регистрация открыта","src":"https://newyork.theaisummit.com/about/faqs/"},{"m":"2027-01","d":"6-9 января 2027","t":"CES 2027","city":"Лас-Вегас","org":"Consumer Technology Association","region":"intl","ok":true,"why":"ИИ в железе: гаджеты, роботы, авто; задаёт тон всему техгоду","price":"не указана, регистрация открыта","src":"https://www.cta.tech/events/ces-2027/"},{"m":"2027-02","d":"17-19 февраля 2027","t":"AI Engineer Europe","city":"Лондон","org":"AI Engineer","region":"eu","ok":true,"why":"Практика ИИ-инженеров от организаторов World's Fair, европейская версия","price":"не указана","src":"https://ai.engineer/worldsfair/2027"},{"m":"2027-03","d":"1-4 марта 2027","t":"MWC Barcelona 2027","city":"Барселона, Fira Gran Via","org":"GSMA","region":"eu","ok":true,"why":"Связь, ИИ и инфраструктура, 100 000+ участников по данным GSMA","price":"не указана","src":"https://www.mwcbarcelona.com/"},{"m":"2027-03","d":"15-18 марта 2027","t":"NVIDIA GTC 2027","city":"Сан-Хосе","org":"NVIDIA","region":"intl","ok":true,"why":"Чипы и ИИ-инфраструктура на год вперёд, по традиции кейноут Дженсена Хуанга","price":"не объявлена, регистрация ещё не открыта","src":"https://www.nvidia.com/gtc/"},{"m":"2027-03","d":"15-21 марта 2027","t":"SXSW 2027","city":"Остин","org":"SXSW","region":"intl","ok":true,"why":"ИИ на стыке с креативом, кино и музыкой; идеи для ивент-форматов","price":"не указана, ранние бейджи в продаже с апреля 2026","src":"https://sxsw.com/2026/south-by-southwest-2027-dates-announced/"},{"m":"2027-04","d":"12-15 апреля 2027","t":"LEAP 2027","city":"Эр-Рияд, Malham","org":"Tahaluf","region":"intl","ok":true,"why":"Гигантская техвыставка с ИИ-форумом DeepFest внутри","price":"общий пропуск бесплатный, VIP $2 800","src":"https://shaer.io/at/leap-2027/","note":"даты по сторонним площадкам со ссылкой на сайт организатора"},{"m":"2027-04","d":"13-15 апреля 2027","t":"Google Cloud Next 2027","city":"Лас-Вегас, Mandalay Bay","org":"Google Cloud","region":"intl","ok":true,"why":"ИИ Google для бизнеса: Gemini в облаке и продуктах","price":"не объявлена","src":"https://conventiongrid.com/shows/google-cloud-next/2027/las-vegas/","note":"даты по сторонним площадкам, «подтверждено организатором»"},{"m":"2027-04","d":"26-30 апреля 2027","t":"ICLR 2027","city":"Сан-Франциско, Moscone","org":"ICLR","region":"intl","ok":true,"why":"Одна из трёх главных научных конференций по ИИ","price":"не указана","src":"https://iclr.cc/"},{"m":"2027-H1","d":"первое полугодие 2027","t":"Geneva AI Summit","city":"Женева","org":"Правительство Швейцарии","region":"eu","ok":false,"why":"Пятый межгосударственный саммит по ИИ: право и права человека","price":"не указана","src":"https://www.swissinfo.ch/eng/swiss-ai/switzerland-to-host-the-next-world-summit-on-ai/90966531","note":"точная дата не объявлена, только «первое полугодие 2027»; прошлый саммит: Нью-Дели, 16-20 февраля 2026"},{"m":"2027-05","d":"ожидается ~май 2027, дата не объявлена","t":"Code with Claude 2027","city":"в 2026: Сан-Франциско, Лондон, Токио","org":"Anthropic","region":"intl","ok":false,"why":"Конференция Anthropic для разработчиков: Claude, агенты, Claude Code","price":"не указана","src":"https://claude.com/blog/code-with-claude-san-francisco-london-tokyo","note":"в 2026: 6 мая Сан-Франциско, 19 мая Лондон, 10 июня Токио"},{"m":"2027-05","d":"ожидается ~май 2027, дата не объявлена","t":"Google I/O 2027","city":"в 2026: Маунтин-Вью, Shoreline + онлайн","org":"Google","region":"intl","ok":false,"why":"Главные анонсы Gemini и Android, кейноут бесплатно онлайн","price":"онлайн бесплатно","src":"https://blog.google/innovation-and-ai/technology/developers-tools/io-2026-save-the-date/","note":"в 2026: 19-20 мая"},{"m":"2027-05","d":"ожидается ~май-июнь 2027, дата не объявлена","t":"Microsoft Build 2027","city":"в 2026: Сан-Франциско, Fort Mason + онлайн","org":"Microsoft","region":"intl","ok":false,"why":"Инструменты Microsoft для ИИ-разработки: Copilot, Azure, агенты","price":"в 2026: очно $1 099, онлайн бесплатно","src":"https://windowsreport.com/microsoft-shares-the-dates-for-its-build-2026-developer-conference/","note":"в 2026: 2-3 июня"},{"m":"2027-05","d":"с 31 мая по 3 июня 2027","t":"ЦИПР-2027","city":"Нижний Новгород, Нижегородская ярмарка","org":"ОМГ, при поддержке Минцифры","region":"ru","ok":true,"why":"Промышленный ИИ и роботы в России, 24 000+ участников в 2026","price":"не указана; выставка 3 июня бесплатно по регистрации","src":"https://rg.ru/2026/09/28/cipr-2027-sostoitsia-s-31-maia-po-3-iiunia-v-nizhnem-novgorode.html"},{"m":"2027-06","d":"ожидается ~июнь 2027, дата не объявлена","t":"Apple WWDC 2027","city":"в 2026: Купертино + онлайн","org":"Apple","region":"intl","ok":false,"why":"ИИ в продуктах Apple и Siri, для всех разработчиков онлайн","price":"онлайн бесплатно","src":"https://www.macrumors.com/2026/03/23/apple-announces-wwdc-2026-dates/","note":"в 2026: 8-12 июня"},{"m":"2027-06","d":"9-10 июня 2027","t":"The AI Summit London","city":"Лондон, Tobacco Dock","org":"Informa, в рамках London Tech Week","region":"eu","ok":true,"why":"Коммерческий ИИ для бизнеса: 300+ спикеров, 5 000+ участников","price":"не указана","src":"https://london.theaisummit.com/"},{"m":"2027-06","d":"16-19 июня 2027","t":"VivaTech 2027","city":"Париж, Porte de Versailles","org":"Publicis и Les Echos","region":"eu","ok":true,"why":"Крупнейший техфорум Франции, последний день открыт для всех","price":"не объявлена, регистрация ещё не открыта","src":"https://parisjetaime.com/eng/event/viva-technology-e198","note":"даты по туристическим и отраслевым площадкам, все совпадают"},{"m":"2027-06","d":"20-25 июня 2027","t":"CVPR 2027","city":"Сиэтл","org":"IEEE и Computer Vision Foundation","region":"intl","ok":true,"why":"Компьютерное зрение и генеративное видео, научный фронт","price":"не указана","src":"https://cvpr.thecvf.com/"},{"m":"2027-06","d":"ожидается ~конец июня 2027, дата не объявлена","t":"Conversations, летний выпуск","city":"в 2026: Санкт-Петербург + онлайн","org":"Just AI","region":"ru","ok":false,"why":"Генеративный ИИ в продуктах и бизнесе, летний выпуск в Петербурге","price":"не указана","src":"https://hightime.media/it-conferences/ai/","note":"в 2026: 25-26 июня"},{"m":"2027-06","d":"с 29 июня по 1 июля 2027","t":"AI Engineer World's Fair 2027","city":"Сан-Франциско, Moscone West","org":"AI Engineer","region":"intl","ok":true,"why":"Самая практичная ИИ-конференция: агенты и кодинг, цель 10 000 инженеров","price":"не объявлена","src":"https://ai.engineer/worldsfair/2027"},{"m":"2027-07","d":"ожидается ~июль 2027, дата не объявлена","t":"ICML 2027","city":"город не объявлен (по трекерам Южная Америка)","org":"ICML","region":"intl","ok":false,"why":"Главная научная конференция по машинному обучению","price":"не указана","src":"https://researchtheta.com/conferences/icml-2027/","note":"в 2026: Сеул"},{"m":"2027-07","d":"ожидается ~июль 2027, дата не объявлена","t":"WAIC 2027 (Всемирная конференция по ИИ)","city":"Шанхай","org":"Правительство Шанхая","region":"cn","ok":false,"why":"Главная ИИ-выставка Китая: роботы, модели, госповестка","price":"не указана","src":"https://eng.sectsco.org/20260719/2462053.html","note":"в 2026: 17-20 июля"},{"m":"2027-09","d":"ожидается ~сентябрь 2027, дата не объявлена","t":"Huawei Connect 2027","city":"Шанхай","org":"Huawei","region":"cn","ok":false,"why":"Чипы Ascend и агентный ИИ Huawei","price":"не указана","src":"https://www.huawei.com/en/events/huaweiconnect","note":"в 2026: 17-19 сентября"},{"m":"2027-09","d":"ожидается ~сентябрь 2027, дата не объявлена","t":"Practical ML Conf 2027","city":"в 2026: Москва + онлайн","org":"Яндекс","region":"ru","ok":false,"why":"Практика ML от Яндекса: агенты, инференс, премия Yandex ML Prize","price":"не указана","src":"https://habr.com/ru/companies/yandex/news/1078106/","note":"в 2026: 19 сентября"},{"m":"2027-09","d":"21-23 сентября 2027","t":"Dreamforce 2027","city":"Сан-Франциско, Moscone","org":"Salesforce","region":"intl","ok":true,"why":"ИИ-агенты в продажах и CRM, масштабное корпоративное шоу","price":"не объявлена, регистрация весной 2027","src":"https://www.salesforce.com/dreamforce/df27-save-the-date/"},{"m":"2027-09","d":"ожидается ~сентябрь 2027, дата не объявлена","t":"Alibaba Apsara Conference 2027","city":"Ханчжоу","org":"Alibaba Cloud","region":"cn","ok":false,"why":"Модели Qwen и облако Alibaba, 140+ секций в 2026","price":"не указана","src":"https://www.alibabacloud.com/en/apsara-conference/2026-about?_p_lc=1","note":"в 2026: 22-24 сентября"},{"m":"2027-09","d":"ожидается ~сентябрь 2027, дата не объявлена","t":"Yandex Scale 2027","city":"в 2026: Москва + онлайн","org":"Yandex Cloud","region":"ru","ok":false,"why":"Облако и ИИ-сервисы Yandex Cloud","price":"в 2026 участие бесплатное","src":"https://scale.yandex.cloud/","note":"в 2026: 24 сентября"},{"m":"2027-09","d":"ожидается ~сентябрь-октябрь 2027, дата не объявлена","t":"ГигаКонф 2027","city":"в 2026: Москва","org":"Сбер","region":"ru","ok":false,"why":"Инженерная конференция Сбера про ИИ в разработке","price":"не указана","src":"https://kod.ru/gigaconf-2026-programma","note":"в 2026: 22-23 сентября и 16 октября; в 2024-2025 проходила в июне"},{"m":"2027-09","d":"ожидается ~сентябрь-октябрь 2027, дата не объявлена","t":"OpenAI DevDay 2027","city":"в 2026: Сан-Франциско, Fort Mason","org":"OpenAI","region":"intl","ok":false,"why":"Главная сцена OpenAI: новые модели и API в день анонса","price":"в 2026: $650 по приглашению","src":"https://openai.com/index/devday-2026/","note":"в 2026: 29 сентября"},{"m":"2027-10","d":"2-8 октября 2027","t":"ICCV 2027","city":"Гонконг, HKCEC","org":"IEEE и Computer Vision Foundation","region":"cn","ok":true,"why":"Топ-конференция по компьютерному зрению, впервые в Гонконге","price":"не указана","src":"https://iccv.thecvf.com/Conferences/2027"},{"m":"2027-10","d":"6-7 октября 2027","t":"World Summit AI","city":"Амстердам (Зандам), Taets Art & Event Park","org":"InspiredMinds","region":"eu","ok":true,"why":"Старейший европейский ИИ-саммит, центр World AI Week","price":"не указана, билеты на сайте","src":"https://worldsummit.ai/"},{"m":"2027-10","d":"ожидается ~октябрь 2027, дата не объявлена","t":"TechCrunch Disrupt 2027","city":"в 2026: Сан-Франциско, Moscone West","org":"TechCrunch","region":"intl","ok":false,"why":"Стартапы и Startup Battlefield, ИИ-компании ранней стадии","price":"не указана","src":"https://techcrunch.com/events/techcrunch-disrupt/","note":"в 2026: 13-15 октября"}];
+const MONTHS = [["2026-11","Ноябрь 2026"],["2026-12","Декабрь 2026"],["2027-01","Январь 2027"],["2027-02","Февраль 2027"],["2027-03","Март 2027"],["2027-04","Апрель 2027"],["2027-H1","Первое полугодие 2027, точная дата не объявлена"],["2027-05","Май 2027"],["2027-06","Июнь 2027"],["2027-07","Июль 2027"],["2027-08","Август 2027"],["2027-09","Сентябрь 2027"],["2027-10","Октябрь 2027"]];
+const REGIONS = {"intl":"Международные","ru":"Россия","eu":"Европа","cn":"Китай"};
+const state = { region: 'all', status: 'all' };
+try { const s = JSON.parse(localStorage.getItem('aik-filter') || 'null'); if (s) Object.assign(state, s); } catch (e) {}
+
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+const match = e => (state.region === 'all' || e.region === state.region) && (state.status === 'all' || (state.status === 'ok') === e.ok);
+
+function buildButtons() {
+  const reg = document.getElementById('fRegion');
+  const opts = [['all', 'Все']].concat(Object.entries(REGIONS));
+  for (const [k, label] of opts) {
+    const b = el('button', 'btn'); b.type = 'button'; b.dataset.k = k;
+    b.append(document.createTextNode(label));
+    const n = el('span', 'n', String(k === 'all' ? EVENTS.length : EVENTS.filter(e => e.region === k).length)); b.append(n);
+    b.onclick = () => { state.region = k; render(); };
+    reg.append(b);
+  }
+  const st = document.getElementById('fStatus');
+  for (const [k, label] of [['all', 'Все'], ['ok', 'Объявлена'], ['exp', 'Ожидается']]) {
+    const b = el('button', 'btn', label); b.type = 'button'; b.dataset.k = k;
+    b.onclick = () => { state.status = k; render(); };
+    st.append(b);
+  }
+}
+
+function card(e) {
+  const c = el('article', 'card' + (e.ok ? '' : ' exp'));
+  const top = el('div', 'top');
+  top.append(el('span', 'tag' + (e.ok ? ' ok' : ''), e.ok ? 'дата объявлена' : 'дата не объявлена'));
+  top.append(el('span', 'tag', REGIONS[e.region]));
+  c.append(top);
+  c.append(el('div', 'date', e.d));
+  c.append(el('h3', '', e.t));
+  c.append(el('p', 'why', e.why));
+  const dl = el('dl');
+  for (const [k, v] of [['Где', e.city], ['Кто', e.org], ['Билет', e.price]]) { dl.append(el('dt', '', k)); dl.append(el('dd', '', v)); }
+  c.append(dl);
+  if (e.note) c.append(el('p', 'note', e.ok ? 'Примечание: ' + e.note : 'Прошлый выпуск: ' + e.note.replace(/^в 2026: /, '2026, ')));
+  const s = el('div', 'src'); const a = el('a', '', 'Источник: ' + new URL(e.src).hostname.replace(/^www\./, ''));
+  a.href = e.src; a.target = '_blank'; a.rel = 'noopener'; s.append(a); c.append(s);
+  return c;
+}
+
+function render() {
+  try { localStorage.setItem('aik-filter', JSON.stringify(state)); } catch (e) {}
+  document.querySelectorAll('#fRegion .btn').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.k === state.region)));
+  document.querySelectorAll('#fStatus .btn').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.k === state.status)));
+  const list = document.getElementById('list'); list.replaceChildren();
+  let shown = 0;
+  for (const [mk, mname] of MONTHS) {
+    const items = EVENTS.filter(e => e.m === mk && match(e));
+    if (!items.length) continue;
+    shown += items.length;
+    const sec = el('section', 'month');
+    const h = el('h2', '', mname); h.append(el('span', 'cnt', items.length + ' ' + plural(items.length)));
+    sec.append(h);
+    const g = el('div', 'grid'); items.forEach(e => g.append(card(e))); sec.append(g);
+    list.append(sec);
+  }
+  if (!shown) list.append(el('p', 'empty', 'По этому фильтру событий нет.'));
+}
+function plural(n) { const a = n % 10, b = n % 100; if (a === 1 && b !== 11) return 'событие'; if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return 'события'; return 'событий'; }
+
+buildButtons();
+render();
+</script>
+</body>
+</html>
