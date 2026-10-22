@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Набор в книжный клуб · паспорт проекта">
-<meta property="og:description" content="Паспорт проекта «Набор в книжный клуб», клуб ЧЕ, поток 03 AI.Цех">
+<meta property="og:description" content="Паспорт проекта: книжный клуб ЧЕ, AI.Цех">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui;background:#f7f7f5}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Набор в книжный клуб · паспорт проекта</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -218,6 +218,16 @@
     .oblozhka-tekst { order: 2; }
     .oblozhka .plakat { order: 1; }
   }
+  /* плакаты для офиса (22.10): вертикальные A3, сетка 4 колонки, подпись и ссылка на PDF */
+  .ofis-gruppa { font: 700 24px/1.2 var(--display); text-transform: uppercase; margin: 40px 0 18px; }
+  .ofis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .ofis-karta { display: block; background: var(--karta); border: 2px solid var(--ramka); border-radius: 20px; padding: 12px; color: var(--ink); text-decoration: none; }
+  .ofis-karta:hover { border-color: var(--krasny); }
+  .ofis-karta img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 12px; }
+  .ofis-karta p { margin: 12px 4px 4px; font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .ofis-karta span { display: block; margin: 0 4px 4px; font-size: 15px; color: var(--ink3); }
+  @media (max-width: 1000px) { .ofis { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 720px) { .ofis { grid-template-columns: repeat(2, 1fr); gap: 12px; } .ofis-karta p { font-size: 15px; } }
 </style>
 
 </head>
@@ -456,8 +466,8 @@ Lean Coffee: 7 тем по 7 минут
 
     <div class="puzyri" style="margin-top:48px">
       <div class="puzyr">Открыл ссылку, уже в клубе</div>
-      <div class="puzyr zholty">Отметил главу — накапало 5 песо</div>
-      <div class="puzyr krasny">Пропустил встречу — расстрел</div>
+      <div class="puzyr zholty">Отметил главу: накапало 5 песо</div>
+      <div class="puzyr krasny">Пропустил встречу: расстрел</div>
     </div>
 
     <div class="setka dva" style="margin-top:48px">
@@ -550,6 +560,175 @@ Lean Coffee: 7 тем по 7 минут
   </div>
 </section>
 
+<section id="ofis">
+  <div class="shirina">
+    <div class="zagolovok-sekcii"><span class="nomer-sekcii">4</span><h2>Плакаты для офиса</h2></div>
+    <p class="pod-zagolovkom">38 плакатов для стен офиса: 60×80 и 90×120 см. На каждом QR, он ведёт на приветствие Че,
+    оттуда кнопки «Группа 1» и «Группа 2» сразу в клуб. Нажми на плакат, откроется PDF для печати.</p>
+    <h3 class="ofis-gruppa">Приглашения · 10</h3>
+    <div class="ofis">
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b1.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v1.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Приглашает">
+        <p>Приглашает</p><span>Приглашение В1 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b2.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v2.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Товарищ!">
+        <p>Товарищ!</p><span>Приглашение В2 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b3.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v3.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Hasta la vista">
+        <p>Hasta la vista</p><span>Приглашение В3 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b4.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v4.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Че зовёт">
+        <p>Че зовёт</p><span>Приглашение В4 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b6.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v6.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Объявление">
+        <p>Объявление</p><span>Приглашение В6 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b7.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v7.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Огромные буквы">
+        <p>Огромные буквы</p><span>Приглашение В7 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b8.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v8.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Сплит">
+        <p>Сплит</p><span>Приглашение В8 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b9.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v9.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Карта клуба">
+        <p>Карта клуба</p><span>Приглашение В9 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b11.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v11.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Чёрная карта">
+        <p>Чёрная карта</p><span>Приглашение В11 · PDF для печати</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/pdf/b10.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/v10.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Полка Че">
+        <p>Полка Че</p><span>Приглашение В10 · PDF для печати</span>
+      </a>
+    </div>
+    <h3 class="ofis-gruppa">Салатовые · 16</h3>
+    <div class="ofis">
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b1.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b1.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Читай как Чегевара">
+        <p>Читай как Чегевара</p><span>№1 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b2.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b2.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Устрой переворот страницы">
+        <p>Устрой переворот страницы</p><span>№2 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b3.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b3.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Банк клуба ЧЕ: карта">
+        <p>Банк клуба ЧЕ: карта</p><span>№3 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b4.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b4.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вива ла книга! 5 песо за главу">
+        <p>Вива ла книга! 5 песо за главу</p><span>№4 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b5.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b5.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вызов принят">
+        <p>Вызов принят</p><span>№5 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b6.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b6.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Хочешь изменить мир?">
+        <p>Хочешь изменить мир?</p><span>№6 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b7.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b7.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: За непрочитанную главу: расстрел">
+        <p>За непрочитанную главу: расстрел</p><span>№7 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b8.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b8.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Аста ла глава, сьемпре">
+        <p>Аста ла глава, сьемпре</p><span>№8 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b9.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b9.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Аста ла виста, скука">
+        <p>Аста ла виста, скука</p><span>№9 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b10.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b10.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вся власть читателям">
+        <p>Вся власть читателям</p><span>№10 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b11.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b11.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Не листай ленту, листай книгу">
+        <p>Не листай ленту, листай книгу</p><span>№11 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b12.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b12.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Книга на 400 страниц? Вызов принят">
+        <p>Книга на 400 страниц? Вызов принят</p><span>№12 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b13.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b13.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Берет не выдаём. Книги да">
+        <p>Берет не выдаём. Книги да</p><span>№13 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b14.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b14.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Непрочитанная глава? Расстрел">
+        <p>Непрочитанная глава? Расстрел</p><span>№14 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b15.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b15.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Книжный суп">
+        <p>Книжный суп</p><span>№15 · салатовый · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b16.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b16.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Че читаем? 12 портретов">
+        <p>Че читаем? 12 портретов</p><span>№16 · салатовый · PDF</span>
+      </a>
+    </div>
+    <h3 class="ofis-gruppa">Цветные · 12</h3>
+    <div class="ofis">
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b17.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b17.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Устрой переворот страницы">
+        <p>Устрой переворот страницы</p><span>№17 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b18.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b18.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Банк клуба ЧЕ: карта">
+        <p>Банк клуба ЧЕ: карта</p><span>№18 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b19.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b19.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вива ла книга! 5 песо за главу">
+        <p>Вива ла книга! 5 песо за главу</p><span>№19 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b20.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b20.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вызов принят">
+        <p>Вызов принят</p><span>№20 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b21.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b21.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Хочешь изменить мир?">
+        <p>Хочешь изменить мир?</p><span>№21 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b22.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b22.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: За непрочитанную главу: расстрел">
+        <p>За непрочитанную главу: расстрел</p><span>№22 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b23.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b23.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Аста ла глава, сьемпре">
+        <p>Аста ла глава, сьемпре</p><span>№23 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b24.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b24.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Не листай ленту, листай книгу">
+        <p>Не листай ленту, листай книгу</p><span>№24 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b25.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b25.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Книга на 400 страниц? Вызов принят">
+        <p>Книга на 400 страниц? Вызов принят</p><span>№25 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b26.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b26.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Непрочитанная глава? Расстрел">
+        <p>Непрочитанная глава? Расстрел</p><span>№26 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b27.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b27.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Вся власть читателям">
+        <p>Вся власть читателям</p><span>№27 · цветной · PDF</span>
+      </a>
+      <a class="ofis-karta" href="https://maria177777773.github.io/knizhnyy-klub/bannery/pdf/b28.pdf" target="_blank" rel="noopener">
+        <img src="img/ofis/b28.webp" width="600" height="800" loading="lazy" decoding="async" alt="Плакат клуба: Книжный суп">
+        <p>Книжный суп</p><span>№28 · цветной · PDF</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="dalshe">
   <div class="shirina">
     <div class="zagolovok-sekcii"><h2>Заполню дальше</h2></div>
@@ -568,13 +747,34 @@ Lean Coffee: 7 тем по 7 минут
   <div class="shirina">
     <div class="zagolovok-sekcii"><h2>Открыть и потрогать</h2></div>
     <div class="ssylki">
-      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/app/">
-        <b>Живой прототип</b><span>maria177777773.github.io/knizhnyy-klub/app/</span>
+      <a class="ssylka" href="https://t.me/club_che_bot" target="_blank" rel="noopener">
+        <b>Клуб в Telegram</b><span>t.me/club_che_bot</span>
       </a>
-      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/pochemu-che/">
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/privet/" target="_blank" rel="noopener">
+        <b>Куда ведёт QR с плакатов</b><span>maria177777773.github.io/knizhnyy-klub/privet/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/bannery/" target="_blank" rel="noopener">
+        <b>Плакаты для офиса: PDF</b><span>maria177777773.github.io/knizhnyy-klub/bannery/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/priglashenie/" target="_blank" rel="noopener">
+        <b>Плакаты-приглашения</b><span>maria177777773.github.io/knizhnyy-klub/priglashenie/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/znachki/" target="_blank" rel="noopener">
+        <b>Значки клуба</b><span>maria177777773.github.io/knizhnyy-klub/znachki/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/video/" target="_blank" rel="noopener">
+        <b>Видео Че</b><span>maria177777773.github.io/knizhnyy-klub/video/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/klub-prostoy/" target="_blank" rel="noopener">
+        <b>Как упростили приложение</b><span>maria177777773.github.io/knizhnyy-klub/klub-prostoy/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/pochemu-che/" target="_blank" rel="noopener">
         <b>Почему клуб назван ЧЕ</b><span>maria177777773.github.io/knizhnyy-klub/pochemu-che/</span>
       </a>
-      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/vse/">
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/app/" target="_blank" rel="noopener">
+        <b>Демо приложения</b><span>maria177777773.github.io/knizhnyy-klub/app/</span>
+      </a>
+      <a class="ssylka" href="https://maria177777773.github.io/knizhnyy-klub/vse/" target="_blank" rel="noopener">
         <b>Все материалы</b><span>maria177777773.github.io/knizhnyy-klub/vse/</span>
       </a>
     </div>
@@ -587,7 +787,7 @@ Lean Coffee: 7 тем по 7 минут
     скилл сценария встречи, субагент-ресёрчер, план из 8 шагов.</p>
     <p><b>Практика 2.</b> Поверхность участника и HR, сквозной сценарий целиком, две итерации
     с настоящими дефектами.</p>
-    <p><b>Сейчас.</b> Шаг 3: вопросы по прочитанному и подбор книг.</p>
+    <p><b>Сейчас.</b> Клуб работает в Telegram: две группы по 10 человек, первая книга «Стратегия голубого океана» с вопросами Че по главам, 38 плакатов для офиса.</p>
   </div>
 </footer>
 
